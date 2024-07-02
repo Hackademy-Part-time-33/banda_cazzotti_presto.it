@@ -7,8 +7,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{env('APP_NAME')}}</title>
 </head>
-<body>
-    <x-navbar/>
-    {{$slot}}
+<body >
+    <x-navbar></x-navbar>
+    <div class="p-xl-5">
+        {{$slot}}
+
+    </div>
+  
 </body>
 </html>
