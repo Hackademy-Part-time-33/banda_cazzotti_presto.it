@@ -27,19 +27,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contacts')}}">Contatti</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#">
-                            Lista prodotti
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Pick and build</a></li>
-                            <li><a class="dropdown-item" href="#">Scuola</a></li>
-                            <li><a class="dropdown-item" href="#">Abbigliamento</a></li>
-                            <li><a class="dropdown-item" href="#">Accessori per la casa</a></li>
-                            <li><a class="dropdown-item" href="#">Carte regalo</a></li>
+                    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Lista prodotti 
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Pick and build</a></li>
+                              <li><a class="dropdown-item" href="#">Accessori per la casa</a></li>
+                              <li><a class="dropdown-item" href="#">Scuola</a></li>
+                              <li><a class="dropdown-item" href="#">Contenitori</a></li>
+                              <li><a class="dropdown-item" href="#">Abbigliamento</a></li>
+                              <li><a class="dropdown-item" href="#">Giocattoli e pelouche</a></li>
 
-
-                        </ul>
+                            </ul>
                     </li>
 
                 </ul>
