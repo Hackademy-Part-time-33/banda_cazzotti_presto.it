@@ -5,15 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class ArticleController extends Controller
+class ArticleController extends Controller implements HasMiddleware
 {
     /**
      * Display a listing of the resource.
      */
+    public static function middleware():array
+    {
+        return [new Middleware('auth', only: ['create'])];
+    } 
     public function index()
     {
-        //
+        $articles= Article::orderBy('created_at', 'desc')->paginate(5);
+        return view('article.index', compact('article'));
     }
 
     /**
@@ -21,7 +28,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('article.create');
     }
 
     /**
@@ -29,7 +36,7 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request)
     {
-        //
+        
     }
 
     /**
@@ -37,7 +44,8 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
+
     }
 
     /**
