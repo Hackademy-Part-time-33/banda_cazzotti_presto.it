@@ -15,7 +15,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public static function middleware():array
     {
-        return [new Middleware('auth', only: ['create'])];
+        return [new Middleware('auth', only: ['index'])];
     } 
     public function index()
     {
