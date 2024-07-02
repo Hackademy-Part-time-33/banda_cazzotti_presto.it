@@ -35,7 +35,4 @@
           </div>
         </div>
       </nav>
-
-
-
 </x-main>
