@@ -49,8 +49,15 @@
 
                 </ul>
 
+                @guest
                 <a href="{{ route('login') }}" class="btn btn-primary">Accedi</a>
                 <a href="{{ route('register') }}" class="btn btn-primary">Registrati</a>
+            @endguest
+            
+            @auth
+                Benvenuto {{auth()->name}}
+            @endauth
+            
                 {{-- <a  class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
                     role="button"><i class="fab fa-github"></i></a> --}}
             </div>
