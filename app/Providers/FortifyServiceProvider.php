@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
@@ -51,13 +53,13 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.register');
         });
 
-        /* Fortify::authenticateUsing(function (Request $request) {
+         /* Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('email', $request->email)->first();
      
             if ($user &&
                 Hash::check($request->password, $user->password)) {
                 return $user;
             }
-        }); */
+        });  */
     }
 }
