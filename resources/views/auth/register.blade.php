@@ -3,8 +3,7 @@
     @csrf
     <div class="mb-3">
       <label for="email" class="form-label">Email </label>
-      <input type="email" class="form-control" name="password" value="{{ old('email') }}" id="email" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" aria-describedby="emailHelp">
     </div>
     
     @error('email')
@@ -34,6 +33,7 @@
       <input type="password" class="form-control" name="password_confirmation" id="passsword_confirmation">
     </div>
     
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-dark">Registrati</button>
+    <a href="{{ route('login') }}" class="btn btn-outline-dark">Gia registrato? Accedi?</a>
   </form>
 </x-main>
