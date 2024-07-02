@@ -1,0 +1,17 @@
+@import 'bootstrap';
+
+
+/* -----------HOME */
+#carouselExampleIndicators{
+    height: 700px;
+}
+
+
+
+#img-carousel{
+height: 700px;;
+} 
+
+#offerteHome{
+    background:linear-gradient( rgb(247, 247, 5), rgb(184, 167, 19));
+}
