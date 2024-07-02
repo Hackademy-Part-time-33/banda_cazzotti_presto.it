@@ -1,4 +1,13 @@
 @import 'bootstrap';
 
 
-/* -----------WELCOME */
+/* -----------HOME */
+#carouselExampleIndicators{
+    height: 700px;
+}
+
+
+
+#img-carousel{
+height: 700px;;
+} 
