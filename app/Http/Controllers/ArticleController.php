@@ -13,7 +13,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles= Article::orderBy('created_at', 'desc')->paginate(5);
+        return view('article.index', compact('article'));
     }
 
     /**
@@ -37,7 +38,8 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
+
     }
 
     /**
