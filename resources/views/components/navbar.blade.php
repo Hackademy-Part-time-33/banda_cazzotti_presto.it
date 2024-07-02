@@ -34,12 +34,15 @@
                             Lista prodotti
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Pick and build</a></li>
-                            <li><a class="dropdown-item" href="#">Accessori per la casa</a></li>
-                            <li><a class="dropdown-item" href="#">Scuola</a></li>
-                            <li><a class="dropdown-item" href="#">Contenitori</a></li>
-                            <li><a class="dropdown-item" href="#">Abbigliamento</a></li>
-                            <li><a class="dropdown-item" href="#">Giocattoli e pelouche</a></li>
+
+                            @forelse ($categories as $category)
+
+                            <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
+                            @empty 
+                            Nessuna categoria
+
+                            @endforelse
+                          
 
                         </ul>
                     </li>
