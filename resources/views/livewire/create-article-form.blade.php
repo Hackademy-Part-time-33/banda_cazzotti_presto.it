@@ -6,7 +6,7 @@
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione:</label>
-        <textarea id="description" cols="30" rows="10" class="form-control" wire:model="description"></textarea>
+        <textarea id="description" cols="30" rows="10" class="form-control" wire:model.focus="description"></textarea>
     </div>
     <div class="mb-3">
 
