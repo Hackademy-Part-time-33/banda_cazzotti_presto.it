@@ -3,7 +3,7 @@
     <!-- Container wrapper -->
     <div class="container">
         <!-- Navbar brand -->
-        <a class="navbar-brand me-2" href="https://mdbgo.com/">
+        <a class="navbar-brand me-2" href="{{route('homepage')}}">
             <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
                 loading="lazy" style="margin-top: -1px;" />
         </a>
@@ -19,22 +19,26 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home </a>
+                        <a class="nav-link" href="{{route('homepage')}}">Home </a>
                     </li>
-
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('about')}}">Chi siamo </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('contacts')}}">Contatti</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
+                        <a class="nav-link dropdown-toggle" href="#">
+                            Lista prodotti
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Pick and build</a></li>
+                            <li><a class="dropdown-item" href="#">Scuola</a></li>
+                            <li><a class="dropdown-item" href="#">Abbigliamento</a></li>
+                            <li><a class="dropdown-item" href="#">Accessori per la casa</a></li>
+                            <li><a class="dropdown-item" href="#">Carte regalo</a></li>
+
+
                         </ul>
                     </li>
 
