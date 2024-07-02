@@ -35,7 +35,7 @@
 
 
 {{--    -------OFFERTE --}}
-
+<div id="offerteHome">
 <div class="d-flex justify-content-between col-12">
     <div class="container">
         <div class="row">
@@ -65,4 +65,12 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
+<div>
 </x-main>
