@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,5 +24,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
+        if(Schema::hasTable('categories')){
+            View::share('categories', Category::orderBy('name')->get());
+        }
     }
 }
