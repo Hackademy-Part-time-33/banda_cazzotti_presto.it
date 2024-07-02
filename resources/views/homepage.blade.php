@@ -2,7 +2,7 @@
     {{--   CAROSELLO INIZIALE --}}
     
 
-    <div id="carouselExampleIndicators" class="carousel carousel-dark slide border border-2 border-warning ">
+    <div id="carouselExampleIndicators" class="carousel carousel-dark slide border border-5 border-warning ">
      <div class="carousel-indicators">
        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -33,7 +33,36 @@
    </div>
 
 
-   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
-  </svg>
+
+{{--    -------OFFERTE --}}
+
+<div class="d-flex justify-content-between col-12">
+    <div class="container">
+        <div class="row">
+
+    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+   <a href="#"><img src="LEGOFACE.jfif" alt="legoimg" id="legoface"></a>
+   <label for="legoface">I Nostri Cataloghi</label>
+    </div>
+
+    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+    <a href="#"><img src="LEGOFRIEND.jfif" alt="legoimg" id="legofriend" class="rounded-circle"></a>
+    <label for="legofriend">Giochi di ruolo</label>
+    </div>
+
+    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+    <a href="#"><img src="LEGOGIOCONDA.jfif" alt="legoimg" id="legogioconda"></a>
+    <label for="legogioconda">Le Nostre Opere</label>
+    </div>
+
+    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+    <a href="#"><img src="legobaby.jfif" alt="legoimg" id="legobaby"></a>
+    <label for="legobaby">Adatto Per I Bambini</label>
+    </div>
+
+    </div>
+
+</div>
+</div>
+</div>
 </x-main>
