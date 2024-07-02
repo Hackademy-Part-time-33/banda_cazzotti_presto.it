@@ -18,13 +18,5 @@ class Category extends Model
         return $this->hasMany(Category::class);
     }
 
-    public function user(): BelongsTo
-    {
-        return $this->BelongsTo(User::class);
-    }
-
-    public function category(): BelongsTo
-    {
-        return $this->BelongsTo(Category::class);
-    }
+   
 }
