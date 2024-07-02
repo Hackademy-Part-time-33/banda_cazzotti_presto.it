@@ -8,7 +8,7 @@
     <title>{{env('APP_NAME')}}</title>
 </head>
 <body >
-    <x-navbar></x-navbar>
+    
     <div class="p-xl-5">
         {{$slot}}
 
