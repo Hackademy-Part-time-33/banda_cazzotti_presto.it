@@ -1,6 +1,6 @@
 <x-main>
     {{--   CAROSELLO INIZIALE --}}
-    <x-navbar>  </x-navbar>
+    
 
     <div id="carouselExampleIndicators" class="carousel slide">
      <div class="carousel-indicators">
