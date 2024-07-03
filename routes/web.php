@@ -12,4 +12,4 @@ Route::get('/contatti', [PageController::class,'contacts'])->name('contacts');
 
 Route::resource('articles', ArticleController::class);
 
-
+Route::get("/category/{category}", [ArticleController::class,'byCategory'])->name('byCategory');

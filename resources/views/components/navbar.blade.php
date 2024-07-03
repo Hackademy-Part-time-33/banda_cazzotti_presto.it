@@ -36,7 +36,7 @@
                         <ul class="dropdown-menu">
 
                             @forelse ($categories as $category)
-                                <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
+                                <li><a class="dropdown-item" href='{{route('byCategory',['category'=>$category])}}'>{{ $category->name }}</a></li>
                             @empty
                                 Nessuna categoria
                             @endforelse
