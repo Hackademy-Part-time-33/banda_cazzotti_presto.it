@@ -1,18 +1,12 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-    <!-- Container wrapper -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded">
+
     <div class="container-fluid">
         <!-- Navbar brand -->
-
         <a class="navbar-brand me-2" href="{{ route('homepage') }}">
-            <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger" height="50" alt="Site Logo" loading="lazy"
-                style="margin-top: -1px;" />
+            <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
+                loading="lazy" style="margin-top: -1px;" />
         </a>
-
-
-
-
-
         <!-- Left links -->
 
         <div class="d-flex align-items-end">
@@ -58,7 +52,10 @@
                         <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
                     </li>
 
-
+                    <a class="navbar-brand mt-1 me-4">
+                        <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
+                            style="margin-top: -1px;" />
+                    </a>
 
                 </ul>
                 @guest
@@ -68,7 +65,7 @@
                     </div>
                 @else
                     <div class="d-grid gap-2 align-items-center d-md-block">
-                        <p class="mt-1 text-center  fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
+                        <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
                             <div>
@@ -82,10 +79,6 @@
                 </div>
             @endguest
 
-
-
-            {{-- <a  class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
-                    role="button"><i class="fab fa-github"></i></a> --}}
         </div>
 
     </div>
