@@ -29,58 +29,67 @@
                 <!-- Left links -->
 
                 <ul class="navbar-nav me-auto mx-2  mb-lg-0">
-                    <li class="nav-item mx-3 ">
+                    <li class="nav-item anm_link mx-3 ">
                         <a class="nav-link" href="{{ route('homepage') }}">Home </a>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="{{ route('about') }}">Chi siamo </a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
-                    </li>
-
                     <li class="nav-item mx-3 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Lista prodotti
+                        <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorie prodotti
                         </a>
                         <ul class="dropdown-menu">
 
                             @forelse ($categories as $category)
-                                <li><a class="dropdown-item" href='{{route('byCategory',['category'=>$category])}}'>{{ $category->name }}</a></li>
+                                <li><a class="dropdown-item"
+                                        href='{{ route('byCategory', ['category' => $category]) }}'>{{ $category->name }}</a>
+                                </li>
                             @empty
                                 Nessuna categoria
                             @endforelse
-
-
                         </ul>
                     </li>
+                    <li class="nav-item mx-3 anm_link">
+                        <a class="nav-link" href="{{ route('articles.index') }}">Tutti i prodotti</a>
+                    </li>
+                    <li class="nav-item mx-3 anm_link">
+                        <a class="nav-link" href="{{ route('about') }}">Chi siamo </a>
+                    </li>
+                    <li class="nav-item mx-3 anm_link">
+                        <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
+                    </li>
+
+
 
                 </ul>
                 @guest
                     <div class="d-grid gap-2 d-md-block">
-                        <a href="{{ route('login') }}" class="btn" id="btn_nav"> Accedi</a>
-                        <a href="{{ route('register') }}" class="btn" id="btn_nav">Registrati</a>
+                        <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
+                        <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                     </div>
                 @else
-                    <div class="d-grid gap-2 d-md-block">
-                        <p>Benvenuto {{ auth()->user()->name }}</p>
+                    <div class="d-grid gap-2 align-items-center d-md-block">
+                        <p class="mt-1 text-center  fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
-                            <button class="btn" type="submit" id="btn_nav">Log out</button>
+                            <div>
+                                <button class="btn custom-button" type="submit" id="btn_nav">Esci</button>
                         </form>
+                        <a href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">Inserisci un
+                            annuncio</a>
 
                     </div>
-                @endguest
+
+                </div>
+            @endguest
 
 
 
-                {{-- <a  class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
+            {{-- <a  class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
                     role="button"><i class="fab fa-github"></i></a> --}}
-            </div>
-
         </div>
-        <!-- Collapsible wrapper -->
+
+    </div>
+    <!-- Collapsible wrapper -->
     </div>
     <!-- Container wrapper -->
 </nav>
