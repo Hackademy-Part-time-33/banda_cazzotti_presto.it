@@ -4,3 +4,14 @@
     background-color: #fdf102;
     color: black;
 }
+
+#nav_toggler {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.collapse.show {
+    margin-top: 3rem;
+}
