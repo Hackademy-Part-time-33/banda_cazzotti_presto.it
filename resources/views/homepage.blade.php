@@ -38,6 +38,7 @@
 <div id="offerteHome">
 
 <div class="d-flex justify-content-between col-12">
+
     <div class="container mt-2">
         <div class="row">
 
@@ -62,18 +63,113 @@
     </div>
 
     </div>
-
+    
 </div>
 </div>
 
-<h1>Le Nostre Offerte</h1>
+{{-- ----------Prodotti in primo piano --}}
+<div class="">
+<h1 class="m-5 text-center  fs-1">I preferiti Di QUesta Settimana</h1>
+</div>
+
+<div class="container">
+  <div class="row d-flex justify-content-between">
+
+  <div  class=" col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5">
+    <img src='immagini-progetto/tansformer.webp' class="img-fluid">
+    <h2><span>Nuovo set Bumblebee Transformers</span></h2>
+    <p><span>Cattura l'attenzione con il prossimo Autobot nell'universo dei Transformers LEGO®</span></p>
+    <a href="#"><span>Compra ora</span></a>
+  </div>
+  <div class="  col-lg-3 col-sm-12  d-flex flex-column mt-5 mb-5">
+    <img src='immagini-progetto/stealer.webp ' class="img-fluid">
+    <h2><span>Scopri le novità</span></h2> 
+    <p><span>>Esplora i set LEGO® più recenti e straordinari attualmente disponibili</span></p>
+    <a href="#">Compra ora</a>
+  </div>
+  <div class="  col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5" >
+    <img src='immagini-progetto\play.webp' class="img-fluid">
+    <h2><span>Unisciti ai dispettosi Minions</span></h2>
+    <p><span>>Dai vita alla casa di Gru con i nuovi set Cattivissimo Me 4 LEGO®</span></p>
+    <a href="#">Compra ora</a>
+  </div>
+
+ </div>
 </div>
 
 
-
-
+{{-- ------------secondo carosello, vari articoli --}}
 
 
 
 <div>
+  <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
+<div id="album-rotator" class="w-100">
+  <div id="album-rotator-holder">
+
+<script>
+
+
+</script>
+      <a target="_top" class="album-item" href="#">
+          <span class="album-details">
+              <span class="icon"><i class="far fa-at"></i> smpnjn</span>
+              <span class="title">Click to</span>
+              <span class="subtitle">Follow</span>
+              <span class="subtext">On Twitter</span>
+          </span>
+      </a>
+
+
+      <a target="_top" class="album-item" href="https://fjolt.com/article/apple-cards-webl-gl-javascript">
+          <span class="album-details">
+              <span class="title">Read the</span>
+              <span class="subtitle">Tutorial</span>
+              <span class="subtext">View tutorial for this effect</span>
+          </span>
+      </a>
+      <a target="_top" class="album-item" href="https://twitter.com/smpnjn">
+          <span class="album-details">
+              <span class="title">Finally</span>
+              <span class="subtitle">We Go</span>
+              <span class="subtext">Some text to describe this item</span>
+          </span>
+      </a>
+      <a target="_top" class="album-item" href="https://twitter.com/smpnjn">
+          <span class="album-details">
+              <span class="title">And</span>
+              <span class="subtitle">One More</span>
+              <span class="subtext">Some text to describe this item</span>
+          </span>
+      </a>
+      <a class="album-item" href="https://twitter.com/smpnjn">
+          <span class="album-details">
+              <span class="title">And</span>
+              <span class="subtitle">Finally..</span>
+              <span class="subtext">Some text to describe this item</span>
+          </span>
+      </a>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  <script src="https://kit.fontawesome.com/48764efa36.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 </x-main>
+

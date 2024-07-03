@@ -4,7 +4,7 @@
     <div class="container">
         <!-- Navbar brand -->
         <a class="navbar-brand me-2" href="{{ route('homepage') }}">
-            <img src="LogoLegoNavbar.png" height="50" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
+            <img src="{{asset("LogoLegoNavbar.png")}}" class="bg-danger" height="50" alt="Site Logo" loading="lazy"  style="margin-top: -1px;" />
         </a>
 
 
@@ -33,22 +33,34 @@
                             Lista prodotti
                         </a>
                         <ul class="dropdown-menu">
-
+{{-- 
                             @forelse ($categories as $category)
                                 <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
                             @empty
                                 Nessuna categoria
-                            @endforelse
+                            @endforelse --}}
 
 
                         </ul>
                     </li>
 
                 </ul>
-                <div class="d-grid gap-2 d-md-block">
+                @guest
+                    <div class="d-grid gap-2 d-md-block">
                     <a href="{{ route('login') }}" class="btn" id="btn_nav"> Accedi</a>
                     <a href="{{ route('register') }}" class="btn" id="btn_nav">Registrati</a>
                 </div>
+                @else
+                <div class="d-grid gap-2 d-md-block">
+                   <p>Benvenuto {{auth()->user()->name}}</p>
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <button class="btn" type="submit" id="btn_nav">Log out</button>
+                    </form>
+                    
+                </div>
+                @endguest
+                
 
 
                 {{-- <a  class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
