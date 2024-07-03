@@ -11,3 +11,5 @@ Route::get('/chi-siamo', [PageController::class,'about'])->name('about');
 Route::get('/contatti', [PageController::class,'contacts'])->name('contacts');
 
 Route::resource('articles', ArticleController::class);
+
+Route::get('/articles', [ArticleController::class, 'index']);
