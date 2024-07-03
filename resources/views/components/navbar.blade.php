@@ -33,12 +33,12 @@
                             Lista prodotti
                         </a>
                         <ul class="dropdown-menu">
-
+{{-- 
                             @forelse ($categories as $category)
                                 <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
                             @empty
                                 Nessuna categoria
-                            @endforelse
+                            @endforelse --}}
 
 
                         </ul>
