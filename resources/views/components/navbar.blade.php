@@ -50,7 +50,7 @@
                     <a href="{{ route('register') }}" class="btn" id="btn_nav">Registrati</a>
                 </div>
 
-                
+
                 {{-- <a  class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
                     role="button"><i class="fab fa-github"></i></a> --}}
             </div>
