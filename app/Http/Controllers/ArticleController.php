@@ -15,12 +15,12 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public static function middleware():array
     {
-        return [new Middleware('auth', only: ['index'])];
+        return [new Middleware('auth', only: ['create'])];
     } 
     public function index()
     {
         $articles= Article::orderBy('created_at', 'desc')->paginate(5);
-        return view('article.index', compact('article'));
+        return view('articles.index', compact('article'));
     }
 
     /**
@@ -28,7 +28,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function create()
     {
-        return view('article.create');
+        return view('articles.create');
     }
 
     /**
@@ -44,7 +44,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function show(Article $article)
     {
-        return view('article.show', compact('article'));
+        return view('articles.show', compact('article'));
 
     }
 
