@@ -1,0 +1,11 @@
+@import 'bootstrap';
+
+#carouselExampleIndicators{
+    width: 40%;
+    height: 40%;
+}
+
+#img-carousel{
+    width: 40%;
+    height: 80%;   
+}
