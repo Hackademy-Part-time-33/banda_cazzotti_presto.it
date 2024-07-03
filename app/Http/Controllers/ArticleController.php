@@ -45,6 +45,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function show(Article $article)
     {
+        
         return view('articles.show', compact('article'));
 
     }
