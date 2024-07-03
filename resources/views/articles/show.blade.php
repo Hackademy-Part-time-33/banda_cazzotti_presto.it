@@ -9,6 +9,7 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="LEGO.jfif" class="d-block w-100  p-5" id="img-carousel" alt="img-1">

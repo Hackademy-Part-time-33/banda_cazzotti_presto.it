@@ -1,6 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+
+use App\Models\Article;
 use App\Models\Category;
 
 use App\Models\User;
@@ -25,6 +27,7 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
+       
         User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@admin.it',
@@ -36,5 +39,7 @@ class DatabaseSeeder extends Seeder
                 'name' => $category
             ]);
         }
+        Article::factory(40)->create();
+        
     }
 }
