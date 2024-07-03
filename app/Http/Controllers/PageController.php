@@ -8,7 +8,8 @@ use App\Models\Article;
 class PageController extends Controller
 {
     public function homepage() {
-        return view('homepage');
+        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
+        return view('homepage', compact('articles'));
     }
 
     public function about() {
