@@ -17,6 +17,7 @@
                 <td>{{ $article->description }}</td>
                 <td>{{ $article->price }}</td>
             </tr>
+            @empty
             @endforelse
         </tbody>
     </table>

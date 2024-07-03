@@ -20,7 +20,7 @@ class ArticleController extends Controller implements HasMiddleware
     public function index()
     {
         $articles= Article::orderBy('created_at', 'desc')->paginate(5);
-        return view('articles.index', compact('article'));
+        return view('articles.index', compact('articles'));
     }
 
     /**
