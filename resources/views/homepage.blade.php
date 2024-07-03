@@ -1,3 +1,7 @@
+<head>
+  @vite(['resources/css/home.css', 'resources/js/home.js'])
+  <head>
+    
 <x-main>
     {{--   CAROSELLO INIZIALE --}}
     
