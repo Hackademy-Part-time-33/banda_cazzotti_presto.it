@@ -24,8 +24,24 @@
         <img src="lego3.jfif" class="d-block w-100  p-5" id="img-carousel"  alt="img-3">
       </div>
     </div>
-    
-    
+
+    @forelse ($articles as $article)
+      <div class="col-12">
+        <x-card :article="$article" />
+      </div>
+    @empty
+      <div class="col-12">
+        <h3>
+          Nessun articolo è ancora stato creato
+        </h3>
+      </div>
+    @endforelse
+    <div class="d-flex justify-content-center">
+      <div>
+        {{$articles->links()}}
+      </div>
+    </div>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden ">Previous</span>
