@@ -1,8 +1,9 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
     <!-- Container wrapper -->
-    <div class="container">
+    <div class="container-fluid">
         <!-- Navbar brand -->
+
         <a class="navbar-brand me-2" href="{{ route('homepage') }}">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger" height="50" alt="Site Logo" loading="lazy"
                 style="margin-top: -1px;" />
@@ -10,13 +11,23 @@
 
 
 
-        <!-- Collapsible wrapper -->
+
 
         <!-- Left links -->
 
         <div class="d-flex align-items-end">
-            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <div class="d-inline-block">
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample05" aria-controls="navbar" aria-expanded="false"
+                    aria-label="Toggle navigation" id="nav_toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
                 <!-- Left links -->
+
                 <ul class="navbar-nav me-auto mx-2  mb-lg-0">
                     <li class="nav-item mx-3 ">
                         <a class="nav-link" href="{{ route('homepage') }}">Home </a>
