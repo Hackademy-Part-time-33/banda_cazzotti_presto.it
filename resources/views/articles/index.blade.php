@@ -7,6 +7,7 @@
                 <th>Nome</th>
                 <th>Descrizione</th>
                 <th>Prezzo</th>
+                <th>Categoria</th>
                 <th>Aggiunto il</th>
 
             </tr>
@@ -17,6 +18,7 @@
                 <td>{{ $article->title }}</td>
                 <td>{{ $article->description }}</td>
                 <td>{{ $article->price }}</td>
+                <td>{{ $article->category_id }}</td>
                 <td>{{ $article->created_at }}</td>
 
             </tr>
