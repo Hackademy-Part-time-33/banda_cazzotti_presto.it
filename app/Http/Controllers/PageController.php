@@ -8,7 +8,7 @@ use App\Models\Article;
 class PageController extends Controller
 {
     public function homepage() {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
+        $articles = Article::take(6)->orderBy('created_at', 'desc')->get();
         return view('homepage', compact('articles'));
     }
 

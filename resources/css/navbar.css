@@ -21,7 +21,9 @@
     margin-top: 3rem;
 }
 
-.anm_link {}
+.anm_link {
+    color: black;
+}
 
 .anm_link:hover {
     transform: scale(1.1);

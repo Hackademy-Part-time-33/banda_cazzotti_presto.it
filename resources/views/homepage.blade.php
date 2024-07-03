@@ -25,7 +25,26 @@
       </div>
     </div>
 
+<<<<<<< HEAD
   
+=======
+    @forelse ($articles as $article)
+      <div class="col-12">
+        <x-card :article="$article" />
+      </div>
+    @empty
+      <div class="col-12">
+        <h3>
+          Nessun articolo è ancora stato creato
+        </h3>
+      </div>
+    @endforelse
+    {{-- <div class="d-flex justify-content-center">
+      <div>
+        {{$articles->links()}}
+      </div>
+    </div> --}}
+>>>>>>> 4fc7b6c20743735147a6daa8e40869be8e23541c
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
