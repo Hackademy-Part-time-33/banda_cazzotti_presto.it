@@ -3,7 +3,7 @@
       @csrf
       <div class="mb-3">
         <label for="email" class="form-label">Email </label>
-        <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" aria-describedby="emailHelp">
+        <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" aria-describedby="emailHelp" placeholder="email">
        
       </div>
       
@@ -14,7 +14,7 @@
       
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" name="password" id="passsword">
+        <input type="password" class="form-control" name="password" id="passsword" placeholder="password">
       </div>
       
       @error('password')
