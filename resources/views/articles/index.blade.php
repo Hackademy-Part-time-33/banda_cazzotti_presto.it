@@ -19,8 +19,7 @@
                     <td>{{ $article->description }}</td>
                     <td>{{ $article->price }}</td>
                     <td>{{ $article->category->name }}</td>
-                    <td>{{ $article->created_at }}</td>
-                    
+                    <td>{{ $article->created_at }}</td>                    
                 </tr>
                 @empty
                 @endforelse
