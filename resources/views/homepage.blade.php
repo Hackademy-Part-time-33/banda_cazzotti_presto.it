@@ -25,22 +25,7 @@
       </div>
     </div>
 
-    @forelse ($articles as $article)
-      <div class="col-12">
-        <x-card :article="$article" />
-      </div>
-    @empty
-      <div class="col-12">
-        <h3>
-          Nessun articolo è ancora stato creato
-        </h3>
-      </div>
-    @endforelse
-    <div class="d-flex justify-content-center">
-      <div>
-        {{$articles->links()}}
-      </div>
-    </div>
+  
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -125,7 +110,25 @@
     <div>
       <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
       <div id="album-rotator" class="w-100">
-        <div id="album-rotator-holder" class="d-flex flex-row ">          
+        <div id="album-rotator-holder" class="d-flex flex-row ">  
+              
+          @forelse ($articles as $article)
+          <div class="col-12">
+            <x-card :article="$article" />
+          </div>
+        @empty
+          <div class="col-12">
+            <h3>
+              Nessun articolo è ancora stato creato
+            </h3>
+          </div>
+        @endforelse
+        <div class="d-flex justify-content-center">
+          <div>
+            {{$articles->links()}}
+          </div>
+        </div>
+          <x-card></x-card>
         </div>
       </div>  
     </div>
@@ -163,7 +166,7 @@
     insert();
   </script>
   
-  
+
   
   
 </div>

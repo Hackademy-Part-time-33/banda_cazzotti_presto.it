@@ -1,5 +1,5 @@
 <div class="card mx-auto shadow text-center mb-4">
-    <img src="{{asset("LogoLegoNavbar.png")}}" alt="Immagine {{$article->title}}" >
+    <img src="{{asset("Lego3.jfif")}}" alt="Immagine {{$article->title}}" >
     <div class="card-body">
         <h4 class="card-title">{{$article->title}}</h4>
         <h6 class="card-subtitle ">{{$article->price}} €</h6>
