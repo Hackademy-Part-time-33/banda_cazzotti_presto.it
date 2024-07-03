@@ -105,50 +105,10 @@
 <div>
   <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
 <div id="album-rotator" class="w-100">
-  <div id="album-rotator-holder">
-
-<script>
+  <div id="album-rotator-holder" class="d-flex flex-row ">
 
 
-</script>
-      <a target="_top" class="album-item" href="#">
-          <span class="album-details">
-              <span class="icon"><i class="far fa-at"></i> smpnjn</span>
-              <span class="title">Click to</span>
-              <span class="subtitle">Follow</span>
-              <span class="subtext">On Twitter</span>
-          </span>
-      </a>
-
-
-      <a target="_top" class="album-item" href="https://fjolt.com/article/apple-cards-webl-gl-javascript">
-          <span class="album-details">
-              <span class="title">Read the</span>
-              <span class="subtitle">Tutorial</span>
-              <span class="subtext">View tutorial for this effect</span>
-          </span>
-      </a>
-      <a target="_top" class="album-item" href="https://twitter.com/smpnjn">
-          <span class="album-details">
-              <span class="title">Finally</span>
-              <span class="subtitle">We Go</span>
-              <span class="subtext">Some text to describe this item</span>
-          </span>
-      </a>
-      <a target="_top" class="album-item" href="https://twitter.com/smpnjn">
-          <span class="album-details">
-              <span class="title">And</span>
-              <span class="subtitle">One More</span>
-              <span class="subtext">Some text to describe this item</span>
-          </span>
-      </a>
-      <a class="album-item" href="https://twitter.com/smpnjn">
-          <span class="album-details">
-              <span class="title">And</span>
-              <span class="subtitle">Finally..</span>
-              <span class="subtext">Some text to describe this item</span>
-          </span>
-      </a>
+   
   </div>
 </div>
 
@@ -162,7 +122,31 @@
 
 
 
-
+<script >
+  let immagini =[];
+  
+  let contenitore = document.querySelector('#album-rotator-holder');
+  
+  for(let i=1 ; i<16; i++ ){
+      
+      immagini.push('immagini-progetto/prodotto'+i+'.webp');
+  };
+  
+  function insert(){
+      immagini.forEach(element => {
+      let ancor = document.createElement('a');
+      ancor.setAttribute('target', '_blank')
+      console.log(element);
+      ancor.innerHTML= `<img src='${element}' id='imgCard'> <p>Da aggiungere dopo </p> <h2>prezzo$$$ </h2> <button type="button" class="btn btn-warning">Acquista</button>`;
+      ancor.classList.add('album-item', "d-flex", "flex-column", "col-2");
+    
+      contenitore.appendChild(ancor);
+      
+  });
+  };
+  console.log(contenitore);
+  insert();
+  </script>
 
 
 

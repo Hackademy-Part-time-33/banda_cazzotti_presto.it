@@ -236,16 +236,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
 /* ------------------------------------------ */
 
 
-let immagini =[];
-for(let i=0 ; i<16; i++ ){
-    
-    immagini.push('immagini-progetto/prodotto'+i+'webp');
-};
-function card() {
+
+
+
+/* function card() {
     immagini.forEach(element => {
         let carousel = document.querySelector("#album-rotator-holder");
-        carousel.innerHtml('<img src=`element`>')
+        carousel.innerHtml('<img src=`element`>');
       
         });
-}
+} */
 /* console.log(immagini); */
