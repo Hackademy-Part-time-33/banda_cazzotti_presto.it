@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 ">
 
     <div class="container-fluid">
         <!-- Navbar brand -->
@@ -51,11 +51,12 @@
                     <li class="nav-item mx-3 anm_link">
                         <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
                     </li>
-
-                    <a class="navbar-brand mt-1 me-4">
-                        <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
-                            style="margin-top: -1px;" />
-                    </a>
+                    <div class="inline-block mt-2 me-4">
+                        <a class="navbar-brand ">
+                            <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
+                                class="position-absolute " />
+                        </a>
+                    </div>
 
                 </ul>
                 @guest
