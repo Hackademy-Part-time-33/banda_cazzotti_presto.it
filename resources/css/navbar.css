@@ -5,6 +5,11 @@
     --secondary-color: #dc3545;
 }
 
+nav{
+    width: 100%;
+    height: 150px;
+    position:sticky;
+}
 #btn_nav {
 
     color: black;
@@ -22,7 +27,8 @@
 }
 
 .anm_link {
-    color: black;
+    box-shadow: none;
+    border-bottom: none;
 }
 
 .anm_link:hover {
@@ -32,7 +38,7 @@
 
 .custom-button {
     background-color: var(--primary-color);
-    color: black;
+
     border: none;
     padding: 7px 15px;
     font-size: 15px;
@@ -49,4 +55,8 @@
 .custom-button:active {
     background-color: var(--secondary-color) !important;
 
+}
+
+.nav-active {
+    border-bottom: 4px solid var(--primary-color);
 }
