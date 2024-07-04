@@ -102,7 +102,23 @@
       </div>
     </div>
     
-    
+    <div class="dblock d-flex flex-wrap justify-content-center">
+  
+  
+      @forelse ($articles as $article)
+     
+        <div class="ms-3">
+          <x-card :article="$article" :width="20" />
+        </div>
+      
+     @empty
+     
+        <h3>
+          Nessun articolo è ancora stato creato
+        </h3>
+      
+     @endforelse
+   </div>
     {{-- ------------secondo carosello, vari articoli --}}
     
     
