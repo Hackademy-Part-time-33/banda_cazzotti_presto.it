@@ -24,8 +24,10 @@
         
         
         <button type="submit" class="btn btn-dark">Accedi</button>
-        <a href="{{ route('register') }}" class="btn btn-outline-dark">Non sei
+        <a href="{{ route('register') }}" class="btn btn-outline-dark me-1">Non sei
             registrato?</a>
+            <a href="{{ route('google.redirect') }}" class="btn btn-primary"> Accedi Con Google </a>
     </form>
+    
                 
 </x-main>
