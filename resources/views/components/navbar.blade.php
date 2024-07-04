@@ -72,17 +72,24 @@
                         <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                     </div>
                 @else
-                    <div class="d-grid gap-2 align-items-center d-md-block">
+                    <div class="d-grid gap-2 align-items-center Button">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                         
-                        <a href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">Inserisci un
+                        <div class="container">
+                            <div class="row">
+                        <a href="{{ route('articles.create') }}" class="btn custom-button  col-12" id="btn_nav">Inserisci un
                             annuncio</a>
-
-                            <form action="{{ route('logout') }}" method="post">
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                            <form action="{{ route('logout') }}" class="col-12" method="post">
                                 @csrf
                                 <div>
-                                    <button class="btn custom-button" type="submit" id="btn_nav">Esci</button>
+                                    <button class="btn custom-button col-12"  type="submit" id="btn_nav">Esci</button>
                             </form>
+                            </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

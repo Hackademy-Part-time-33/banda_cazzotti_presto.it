@@ -60,3 +60,8 @@ nav{
 .nav-active {
     border-bottom: 4px solid var(--primary-color);
 }
+
+.Button{
+ 
+    float:inline-end;
+}

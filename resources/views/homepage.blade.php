@@ -26,6 +26,22 @@
     </div>
 
   
+    @forelse ($articles as $article)
+      <div class="col-12">
+        <x-card :article="$article" />
+      </div>
+    @empty
+      <div class="col-12">
+        <h3>
+          Nessun articolo è ancora stato creato
+        </h3>
+      </div>
+    @endforelse
+    <div class="d-flex justify-content-center">
+      <div>
+        {{$articles->links()}}
+      </div>
+    </div>
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -37,7 +53,7 @@
     </button>
   </div>
   
-  <div></div>
+  
   
   {{--    -------OFFERTE --}}
   <div id="offerteHome">
@@ -102,33 +118,52 @@
       </div>
     </div>
     
-    <div class="dblock d-flex flex-wrap justify-content-center">
-  
-  
-      @forelse ($articles as $article)
-     
-        <div class="ms-3">
-          <x-card :article="$article" :width="20" />
-        </div>
-      
-     @empty
-     
-        <h3>
-          Nessun articolo è ancora stato creato
-        </h3>
-      
-     @endforelse
-   </div>
+    
     {{-- ------------secondo carosello, vari articoli --}}
+           
+    @forelse ($articles as $article)
+    <div class="col-12">
+      <x-card :article="$article" />
+    </div>
+  @empty
+    <div class="col-12">
+      <h3>
+        Nessun articolo è ancora stato creato
+      </h3>
+    </div>
+  @endforelse
+  <div class="d-flex justify-content-center">
+    <div>
+      {{$articles->links()}}
+    </div>
+  </div>
+    <x-card></x-card>
     
     
-    
-    <div > 
+    <div>
       <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
       <div id="album-rotator" class="w-100">
         <div id="album-rotator-holder" class="d-flex flex-row ">  
               
-       
+          @forelse ($articles as $article)
+          <div class="col-12">
+            <x-card :article="$article" />
+          </div>
+        @empty
+          <div class="col-12">
+            <h3>
+              Nessun articolo è ancora stato creato
+            </h3>
+          </div>
+        @endforelse
+        <div class="d-flex justify-content-center">
+          <div>
+            {{$articles->links()}}
+          </div>
+        </div>
+          <x-card></x-card>
+        </div>
+      </div>  
     </div>
     
   </div>
