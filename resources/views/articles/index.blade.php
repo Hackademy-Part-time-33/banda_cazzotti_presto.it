@@ -21,7 +21,7 @@
                     <td>{{ Str::ucfirst($article->title) }}</td>
                     <td>{{ Str::limit($article->description,20) }}</td>
                     <td>{{ "€".Str::replace('.', ',', sprintf("%.2f", $article->price))}}</td>
-                    <td>{{ $article->category->name }}</td>
+                    <td><a href="{{route('byCategory', ['category'=>$article->category])}}">{{ $article->category->name }}</a></td>
                     <td>{{ $article->created_at->locale(app()->getLocale())->translatedFormat('d F Y, H:i') }}</td>  
                     <td>
                         <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
