@@ -28,18 +28,30 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
        
+        $user = User::where('email', 'admin@admin.it')->first();
+        if(!$user)
+        {
+       
         User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@admin.it',
             'password' => Hash::make('password'),
         ]);
+    }
 
+    $categ = Category::where('name', $this->categories[0])->first();
+
+        if(!$categ){
+
+        
         foreach ($this->categories as $category) {
             Category::create([
                 'name' => $category
             ]);
         }
-        Article::factory(40)->create();
+    }
+
+        Article::factory(50)->create();
         
     }
 }
