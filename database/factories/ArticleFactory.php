@@ -21,7 +21,7 @@ class ArticleFactory extends Factory
     {
         return [
             'title' => Str::ucfirst(fake()->words(rand(1,5),true)),
-            'description' =>fake()->words(rand(24,50),true),
+            'description' =>fake()->paragraph(rand(5,10)),
             'price' => fake()->randomFloat(2, 9, 500),
             'category_id' => rand(1,Category::all()->count()),
             'user_id' => User::factory() ,
