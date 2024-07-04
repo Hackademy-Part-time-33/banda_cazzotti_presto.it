@@ -1,6 +1,3 @@
-
-
-
 <div class="card">
     <div class="card-header bg-warning ">
      <h3 class="text-danger font-weight-bold">I</h3>
