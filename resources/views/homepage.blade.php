@@ -164,25 +164,7 @@
     insert();
   </script>
   
-{{--   @forelse ($articles as $article)
-  <div class="col-12">
-    <x-card :article="$article" />
-  </div>
-@empty
-  <div class="col-12">
-    <h3>
-      Nessun articolo è ancora stato creato
-    </h3>
-  </div>
-@endforelse
-<div class="d-flex justify-content-center">
-  <div>
-    {{$articles->links()}}
-  </div>
-</div>
-  <x-card></x-card>
-</div>
-</div>   --}}
+
   
   
 </div>
