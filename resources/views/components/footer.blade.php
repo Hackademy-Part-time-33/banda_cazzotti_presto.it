@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<div class="card">
-    <div class="card-header bg-warning ">
-     <h3 class="text-danger font-weight-bold">I</h3>
-    </div>
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-=======
 
 
 
 
     <footer class="row row-cols-1 row-cols-sm-4 row-cols-md-5 py-5 my-5 border-top">
->>>>>>> 186b40f8d976777eb95c67d74f93b40f40ee1402
         <div class="col mb-3">
           <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
