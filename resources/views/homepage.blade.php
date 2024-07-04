@@ -37,7 +37,7 @@
     </button>
   </div>
   
-  
+  <div></div>
   
   {{--    -------OFFERTE --}}
   <div id="offerteHome">
