@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
         ]);
     }
 
-    $categ = Category::where('name', 'LEGO Star Wars')->first();
+    $categ = Category::where('name', $this->categories[0])->first();
 
         if(!$categ){
 
