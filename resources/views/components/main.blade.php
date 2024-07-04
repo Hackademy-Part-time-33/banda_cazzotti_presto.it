@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
     @vite(['resources/css/navbar.css', 'resources/js/navbar.js'])
-   
+    
     <title>{{ env('APP_NAME') }}</title>
 </head>
 
@@ -16,8 +16,10 @@
     <x-navbar />
     <div class="p-xl-5">
         {{ $slot }}
-
-    </div>
+        
+    </div> 
+    
+</footer>
 
 </body>
 
