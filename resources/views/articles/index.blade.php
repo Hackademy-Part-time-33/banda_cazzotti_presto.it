@@ -1,7 +1,7 @@
 <x-main>
     <div class="container-fluid">
         <h1>Lista prodotti</h1>
-        <table class="table">
+        <table class="table table-striped"">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -18,11 +18,11 @@
             <tbody>
                 @forelse($articles as $article)
                 <tr>
-                    <td>{{ $article->title }}</td>
-                    <td>{{ $article->description }}</td>
-                    <td>{{ $article->price }}</td>
+                    <td>{{ Str::ucfirst($article->title) }}</td>
+                    <td>{{ Str::limit($article->description,20) }}</td>
+                    <td>{{ "€".Str::replace('.', ',', sprintf("%.2f", $article->price))}}</td>
                     <td>{{ $article->category->name }}</td>
-                    <td>{{ $article->created_at }}</td>  
+                    <td>{{ $article->created_at->locale(app()->getLocale())->translatedFormat('d F Y, H:i') }}</td>  
                     <td>
                         <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
                         {{-- <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-warning">Modifica</a>
