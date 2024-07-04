@@ -6,8 +6,13 @@ use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Models\Category;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Infomail;
+use Illuminate\Routing\Middleware\ValidateSignature;
+use Illuminate\Console\View\Components\Info;
 
 class ArticleController extends Controller implements HasMiddleware
 {
@@ -16,7 +21,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public static function middleware():array
     {
-        return [new Middleware('auth', only: ['create'])];
+        return [new Middleware('verified', only: ['create'])];
     } 
     public function index()
     {
@@ -37,7 +42,15 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function store(StoreArticleRequest $request)
     {
-        
+       $data = [
+        "firstname" => $request->name,
+        "lastname" => $request->lastname,
+        "email" => $request->email,
+        "message" => $request->message,
+       ];
+
+       Mail::to($request->email)->send(new Infomail($data));
+       return redirect()->route('homepage')->with('Success', 'Mail Inviata con successo!');
     }
 
     /**
