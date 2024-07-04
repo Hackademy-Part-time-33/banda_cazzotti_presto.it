@@ -27,7 +27,6 @@
                         <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
                         {{-- <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-warning">Modifica</a>
                         
-                        <!-- Form per l'eliminazione -->
                         <form action="{{ route('articles.destroy', $article->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
