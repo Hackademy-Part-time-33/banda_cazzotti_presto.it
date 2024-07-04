@@ -25,18 +25,18 @@
                 <ul class="navbar-nav me-auto mx-2  mb-lg-0">
                     <li class="nav-item anm_link mx-3 ">
                         <a class="nav-link @if (request()->routeIs('homepage')) nav-active @endif"
-                            href="{{ route('homepage') }}">Home </a>
+                            href="{{ route('homepage') }}" target="_self">Home </a>
                     </li>
                     <li class="nav-item mx-3 dropdown">
                         <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" target="_self">
                             Categorie prodotti
                         </a>
                         <ul class="dropdown-menu">
 
                             @forelse ($categories as $category)
                                 <li><a class="dropdown-item"
-                                        href='{{ route('byCategory', ['category' => $category]) }}'>{{ $category->name }}</a>
+                                        href='{{ route('byCategory', ['category' => $category]) }}' >{{ $category->name }}</a>
                                 </li>
                             @empty
                                 Nessuna categoria
@@ -45,24 +45,27 @@
                     </li>
                     <li class="nav-item mx-3 anm_link">
                         <a class="nav-link @if (request()->routeIs('articles.index')) nav-active @endif"
-                            href="{{ route('articles.index') }}">Tutti i prodotti</a>
+                            href="{{ route('articles.index') }}" target="_self">Tutti i prodotti</a>
                     </li>
                     <li class="nav-item mx-3 anm_link">
                         <a class="nav-link @if (request()->routeIs('about')) nav-active @endif"
-                            href="{{ route('about') }}">Chi siamo </a>
+                            href="{{ route('about') }}" target="_self">Chi siamo </a>
                     </li>
                     <li class="nav-item mx-3 anm_link">
                         <a class="nav-link @if (request()->routeIs('contacts')) nav-active @endif"
-                            href="{{ route('contacts') }}">Contatti</a>
+                            href="{{ route('contacts') }}" target="_self">Contatti</a>
                     </li>
-                    <div class="inline-block mt-2 me-4">
-                        <a class="navbar-brand ">
-                            <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
-                                class="position-absolute " />
-                        </a>
-                    </div>
-
+                    <li>
+                        <div class="inline-block mt-2 me-4">
+                            <a class="navbar-brand " target="_self">
+                                <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
+                                    class="position-absolute " />
+                            </a>
+                        </div>
+    
+                    </li>
                 </ul>
+                
                 @guest
                     <div class="d-grid gap-2 d-md-block">
                         <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
@@ -71,14 +74,15 @@
                 @else
                     <div class="d-grid gap-2 align-items-center d-md-block">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <div>
-                                <button class="btn custom-button" type="submit" id="btn_nav">Esci</button>
-                        </form>
+                        
                         <a href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">Inserisci un
                             annuncio</a>
 
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <div>
+                                    <button class="btn custom-button" type="submit" id="btn_nav">Esci</button>
+                            </form>
                     </div>
 
                 </div>
