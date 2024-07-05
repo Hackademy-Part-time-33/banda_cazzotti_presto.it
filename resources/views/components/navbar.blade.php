@@ -28,7 +28,7 @@
                     </li>
                     <li class="nav-item mx-3 dropdown">
                         <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" target="_self">
                             Categorie prodotti
                         </a>
                         <ul class="dropdown-menu">
@@ -43,7 +43,7 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-3 anm_link">
-                        <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
+                        <<<<<<< HEAD <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
                             href="{{ route('articles.index') }}">Tutti i prodotti</a>
                     </li>
                     <li class="nav-item mx-3 anm_link">
@@ -65,22 +65,56 @@
 
                 </ul>
 
+                =======
+                <a class="nav-link @if (request()->routeIs('articles.index')) nav-active @endif"
+                    href="{{ route('articles.index') }}" target="_self">Tutti i prodotti</a>
+                </li>
+                <li class="nav-item mx-3 anm_link">
+                    <a class="nav-link @if (request()->routeIs('about')) nav-active @endif" href="{{ route('about') }}"
+                        target="_self">Chi siamo </a>
+                </li>
+                <li class="nav-item mx-3 anm_link">
+                    <a class="nav-link @if (request()->routeIs('contacts')) nav-active @endif"
+                        href="{{ route('contacts') }}" target="_self">Contatti</a>
+                </li>
+                <li>
+                    <div class="inline-block mt-2 me-4">
+                        <a class="navbar-brand " target="_self">
+                            <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
+                                class="position-absolute " />
+                        </a>
+                    </div>
+
+                </li>
+                </ul>
+
+                >>>>>>> 31a538227642774e1d63a0250e017ce09c63e18c
                 @guest
                     <div class="d-grid gap-2 d-md-block">
                         <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
                         <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                     </div>
                 @else
-                    <div class="d-grid gap-2 align-items-center d-md-block">
+                    <div class="d-grid gap-2 align-items-center Button">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <div>
-                                <button class="btn custom-button" type="submit" id="btn_nav">Esci</button>
-                        </form>
-                        <a href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">Inserisci un
-                            annuncio</a>
 
+                        <div class="container">
+                            <div class="row">
+                                <a href="{{ route('articles.create') }}" class="btn custom-button  col-12"
+                                    id="btn_nav">Inserisci un
+                                    annuncio</a>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <form action="{{ route('logout') }}" class="col-12" method="post">
+                                        @csrf
+                                        <div>
+                                            <button class="btn custom-button col-12" type="submit"
+                                                id="btn_nav">Esci</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

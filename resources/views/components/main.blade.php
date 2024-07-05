@@ -14,7 +14,7 @@
 
 <body>
     <x-navbar />
-    <div class="p-xl-5">
+    <div>
         {{ $slot }}
         
     </div> 

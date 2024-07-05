@@ -26,6 +26,7 @@
     </div>
 
   
+   
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,24 +103,32 @@
       </div>
     </div>
     
-    <div class="dblock d-flex flex-wrap justify-content-center">
-  
-  
-      @forelse ($articles as $article)
-     
-        <div class="ms-3">
-          <x-card :article="$article" :width="20" />
-        </div>
-      
-     @empty
-     
+
+    <h2 class="text-danger text-center font-weight-bold">Nuovi Prodotti</h2>
+    <div class=" d-flex  flex-wrap justify-content-between flex-row border border-3 border-danger m-5 p-3">
+   @forelse ($articles as $article)
+      <div class="">
+        <x-card :article="$article" />
+      </div>
+    @empty
+      <div class="">
         <h3>
           Nessun articolo è ancora stato creato
         </h3>
+      </div>
+    @endforelse
+
+
+
+    
+    <div class="d-flex justify-content-center">
+      <div>
       
-     @endforelse
-   </div>
-    {{-- ------------secondo carosello, vari articoli --}}
+      </div>
+    </div> 
+    </div>
+    
+{{--     ------------secondo carosello, vari articoli --}}
     
     
     
