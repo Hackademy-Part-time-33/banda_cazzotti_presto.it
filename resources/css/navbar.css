@@ -3,7 +3,9 @@
 :root {
     --primary-color: #fdf102;
     --secondary-color: #dc3545;
+    --third-color: #f8f9fa;
 }
+
 
 #btn_nav {
 
@@ -37,7 +39,7 @@
     border: none;
     padding: 7px 15px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background-color 0.5s, color 0.5s;
 
 }
