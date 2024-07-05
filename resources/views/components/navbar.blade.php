@@ -65,27 +65,7 @@
 
                 </ul>
 
-                <a class="nav-link @if (request()->routeIs('articles.index')) nav-active @endif"
-                    href="{{ route('articles.index') }}" target="_self">Tutti i prodotti</a>
-                </li>
-                <li class="nav-item mx-3 anm_link">
-                    <a class="nav-link @if (request()->routeIs('about')) nav-active @endif" href="{{ route('about') }}"
-                        target="_self">Chi siamo </a>
-                </li>
-                <li class="nav-item mx-3 anm_link">
-                    <a class="nav-link @if (request()->routeIs('contacts')) nav-active @endif"
-                        href="{{ route('contacts') }}" target="_self">Contatti</a>
-                </li>
-                <li>
-                    <div class="inline-block mt-2 me-4">
-                        <a class="navbar-brand " target="_self">
-                            <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
-                                class="position-absolute " />
-                        </a>
-                    </div>
 
-                </li>
-                </ul>
 
 
                 @guest
