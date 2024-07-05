@@ -3,7 +3,7 @@
 
     <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand me-2" href="{{ route('homepage') }}">
+        <a class="navbar-brand ms-5" href="{{ route('homepage') }}">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
                 loading="lazy" style="margin-top: -1px;" />
         </a>
