@@ -103,26 +103,32 @@
       </div>
     </div>
     
-{{--     <div class="dblock d-flex flex-wrap justify-content-center">
+
+    <h2 class="text-danger text-center font-weight-bold">Nuovi Prodotti</h2>
+    <div class=" d-flex  flex-wrap justify-content-between flex-row border border-3 border-danger m-5 p-3">
    @forelse ($articles as $article)
-      <div class="col-12">
+      <div class="">
         <x-card :article="$article" />
       </div>
     @empty
-      <div class="col-12">
+      <div class="">
         <h3>
           Nessun articolo è ancora stato creato
         </h3>
       </div>
     @endforelse
+
+
+
+    
     <div class="d-flex justify-content-center">
       <div>
-        {{$articles->links()}}
+      
       </div>
     </div> 
-   --}}
+    </div>
     
-    {{-- ------------secondo carosello, vari articoli --}}
+{{--     ------------secondo carosello, vari articoli --}}
     
     
     
