@@ -54,7 +54,7 @@
         @enderror 
         ">
 
-            <option label disabled> Seleziona una categoria </option>
+            <option label> Seleziona una categoria </option>
 
             @foreach ($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>

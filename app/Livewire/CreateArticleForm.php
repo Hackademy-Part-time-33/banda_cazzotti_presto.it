@@ -9,13 +9,16 @@ use Livewire\Component;
 
 class CreateArticleForm extends Component
 {
-    #[Validate('required|min:5')]
+    #[Validate('required', message: 'Per favore inserisci un titolo.')]
+    #[Validate('min:5', message: 'il titolo è troppo corto (minimo 5 caratteri).')]
     public $title;
-    #[Validate('required|min:10')]
+    #[Validate('required', message: 'Per favore inserisci una descrizione.')]
+    #[Validate('min:10', message: 'La descrizione è troppo corta (minimo 10 caratteri).')]
     public $description;
-    #[Validate('required|numeric')]
+    #[Validate('required', message: 'Per favore inserisci una prezzo, per i decimali usa il punto.')]
+    #[Validate('numeric', message: 'Il prezzo deve essere un numero, per i decimali usa il punto.')]
     public $price;
-    #[Validate('required')]
+    #[Validate('required', message: 'Per favore scegli una categoria.')]
     public $category;
     public $article;
 
