@@ -1,7 +1,7 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 ">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav">
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <!-- Navbar brand -->
         <a class="navbar-brand ms-5" href="{{ route('homepage') }}">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
@@ -19,7 +19,7 @@
             </div>
 
 
-            <div class="collapse navbar-collapse" id="navbarsExample05">
+            <div class="collapse navbar-collapse " id="navbarsExample05">
                 <!-- Left links -->
 
                 <ul class="navbar-nav me-auto mx-2  mb-lg-0">
@@ -74,35 +74,31 @@
                         <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                     </div>
                 @else
-                    <div class="d-grid gap-2 align-items-center Button">
+                    <div class="align-items-center">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
 
                         <div class="container">
                             <div class="row">
-                                <a href="{{ route('articles.create') }}" class="btn custom-button  col-12"
-                                    id="btn_nav">Inserisci un
-                                    annuncio</a>
-                            </div>
-                            <div class="container">
-                                <div class="row">
-                                    <form action="{{ route('logout') }}" class="col-12" method="post">
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <a href="{{ route('articles.create') }}" class="btn custom-button w-100"
+                                        id="btn_nav">Inserisci un annuncio</a>
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <form action="{{ route('logout') }}" method="post" class="w-100">
                                         @csrf
-                                        <div>
-                                            <button class="btn custom-button col-12" type="submit"
-                                                id="btn_nav">Esci</button>
+                                        <button class="btn custom-button w-100" type="submit" id="btn_nav">Esci</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
-            @endguest
+                @endguest
+
+            </div>
 
         </div>
-
-    </div>
-    <!-- Collapsible wrapper -->
+        <!-- Collapsible wrapper -->
     </div>
     <!-- Container wrapper -->
 </nav>

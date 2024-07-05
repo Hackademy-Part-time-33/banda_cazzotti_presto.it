@@ -6,6 +6,12 @@
     --third-color: #f8f9fa;
 }
 
+.mynav {
+    height: 9rem;
+    padding: auto;
+    margin: auto;
+}
+
 #btn_nav {
 
     color: black;
