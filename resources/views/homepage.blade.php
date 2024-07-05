@@ -46,10 +46,10 @@
     <div class="d-flex justify-content-between col-12">
       
       <div class="container mt-2">
-        <div class="row">
+        <div class="row  ">
           
-          <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
-            <a href="#"><img src="LEGOFACE.jfif" alt="legoimg" id="legoface"></a>
+          <div class="d-flex flex-column justify-content-sm-center col-xs-12 col-sm-6  col-lg-3 ">
+            <a href="#" class=""><img src="LEGOFACE.jfif" alt="legoimg" id="legoface"></a>
             <label for="legoface">I Nostri Cataloghi</label>
           </div>
           
@@ -135,9 +135,9 @@
     <div > 
       <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
       <div id="album-rotator" class="w-100">
-        <div id="album-rotator-holder" class="d-flex flex-row ">  
+        <div id="album-rotator-holder" class="d-flex flex-row  ">  
               
-       
+     
     </div>
     
   </div>
@@ -163,7 +163,7 @@
         ancor.setAttribute('target', '_blank')
         console.log(element);
         ancor.innerHTML= `<img src='${element}' id='imgCard'> <p>Da aggiungere dopo </p> <h2>prezzo$$$ </h2> <button type="button" class="btn btn-warning">Acquista</button>`;
-        ancor.classList.add('album-item', "d-flex", "flex-column", "col-2");
+        ancor.classList.add('album-item', "d-flex", "flex-column", "col-12" , "col-md-2");
         
         contenitore.appendChild(ancor);
         
