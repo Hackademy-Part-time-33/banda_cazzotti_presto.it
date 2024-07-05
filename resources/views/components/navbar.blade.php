@@ -43,7 +43,7 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-3 anm_link">
-                        <<<<<<< HEAD <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
+                        <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
                             href="{{ route('articles.index') }}">Tutti i prodotti</a>
                     </li>
                     <li class="nav-item mx-3 anm_link">
@@ -65,7 +65,6 @@
 
                 </ul>
 
-                =======
                 <a class="nav-link @if (request()->routeIs('articles.index')) nav-active @endif"
                     href="{{ route('articles.index') }}" target="_self">Tutti i prodotti</a>
                 </li>
@@ -88,7 +87,7 @@
                 </li>
                 </ul>
 
-                >>>>>>> 31a538227642774e1d63a0250e017ce09c63e18c
+
                 @guest
                     <div class="d-grid gap-2 d-md-block">
                         <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
