@@ -149,3 +149,16 @@ h1 {
     width: 50%;
     align-self: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .carousel2 {
+    width: 300px;
+    }
+
+    .carousel{
+        width: 400px;
+        height: auto;
+        margin-left: 50px;
+    }
+    
+  }

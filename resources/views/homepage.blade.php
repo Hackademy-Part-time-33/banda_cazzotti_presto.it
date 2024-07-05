@@ -6,7 +6,7 @@
   {{--   CAROSELLO INIZIALE --}}
   
   
-  <div id="carouselExampleIndicators" class="carousel carousel-dark slide border border-5 border-warning ">
+  <div id="carouselExampleIndicators" class="carousel carousel-dark slide border border-5 border-warning carousel ">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -105,7 +105,7 @@
     
 
     <h2 class="text-danger text-center font-weight-bold">Nuovi Prodotti</h2>
-    <div class=" d-flex  flex-wrap justify-content-between flex-row border border-3 border-danger m-5 p-3">
+    <div class=" d-flex  flex-wrap justify-content-between flex-row border border-3 border-danger m-5 p-3 ">
    @forelse ($articles as $article)
       <div class="">
         <x-card :article="$article" />
@@ -135,7 +135,7 @@
     <div > 
       <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
       <div id="album-rotator" class="w-100">
-        <div id="album-rotator-holder" class="d-flex flex-row  ">  
+        <div id="album-rotator-holder" class="d-flex flex-row  carousel2">  
               
      
     </div>
