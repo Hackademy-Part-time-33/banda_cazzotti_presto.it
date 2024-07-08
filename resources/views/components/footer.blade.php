@@ -1,5 +1,5 @@
 <div class="container">
-    <footer class="row  py-5 my-5  d-flex justify-content-center">
+    <footer class="row  pt-5 mt-5  d-flex justify-content-center">
         <div class="col mb-3">
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                 <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
