@@ -55,14 +55,17 @@
                             href="{{ route('contacts') }}">Contatti</a>
                     </li>
                     <li>
-                        <div class="inline-block mt-2 me-4">
-                            <a>
-                                <input id="searchInput" class="search" type="text" name="search"
-                                    placeholder="Search..">
-                                <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
-                                    class="position-relative" />
-                            </a>
-                        </div>
+                        <form class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}" method='GET'>
+
+                            <div class='input-group'>
+                        
+                                <input id="searchInput" type="search" name="query" class="search form-control" placeholder="Cerca Articoli" aria-label="search">
+                                <button type="submit"> <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
+                                    class="position-relative" /></button>
+                        
+                            </div>
+                        </form>
+                       
                     </li>
 
                     </li>

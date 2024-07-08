@@ -6,7 +6,8 @@ use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Models\Category;
-use GuzzleHttp\Psr7\Request;
+
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Mail;
@@ -91,5 +92,14 @@ class ArticleController extends Controller implements HasMiddleware
     {
         // dd($category->articles);
         return view('articles.byCategory',['articles'=>$category->articles, 'category'=>$category]);
+    }
+
+    public function searchArticles(Request $request)
+    {
+        
+        $query= $request->input('query');
+        
+        $articles = Article::search($query)->/* where('is_accepted',true)-> */paginate(10);
+        return view('articles.searched',compact('articles','query'));
     }
 }
