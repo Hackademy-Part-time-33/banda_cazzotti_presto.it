@@ -29,3 +29,4 @@ Route::patch("/accept/{article}", [RevisorController::class,'accept'])->name('ac
 Route::patch("/reject/{article}", [RevisorController::class,'reject'])->name('reject');
 Route::get('/search/article',[ArticleController::class,'searchArticles'])->name('article.search');
 
+Route::get("/revisor/request", [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
