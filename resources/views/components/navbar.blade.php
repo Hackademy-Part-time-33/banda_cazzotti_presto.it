@@ -59,7 +59,7 @@
 
                             <div class='input-group'>
                         
-                                <input id="searchInput" type="search" name="query" class="search form-control" placeholder="Cerca Articoli" aria-label="search">
+                                <input id="" type="search" name="query" class="search form-control" placeholder="Cerca Articoli" aria-label="search">
                                 <button type="submit"> <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
                                     class="position-relative" /></button>
                         

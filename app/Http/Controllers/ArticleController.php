@@ -99,7 +99,7 @@ class ArticleController extends Controller implements HasMiddleware
         
         $query= $request->input('query');
         
-        $articles = Article::search($query)->/* where('is_accepted',true)-> */paginate(10);
+        $articles = Article::search($query)->where('is_accepted',true)->paginate(10);
         return view('articles.searched',compact('articles','query'));
     }
 }
