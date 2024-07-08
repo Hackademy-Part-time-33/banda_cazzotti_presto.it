@@ -7,7 +7,7 @@
 }
 
 .mynav {
-    height: 9rem;
+    height: 7rem;
     padding: auto;
     margin: auto;
 }
@@ -66,4 +66,18 @@
 .Button {
 
     float: inline-end;
+}
+
+.search {
+    visibility: hidden;
+
+}
+
+/* Classe per espandere il campo input */
+.search.expanded {
+    border-radius: 5px;
+    width: 70%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    visibility: visible;
 }

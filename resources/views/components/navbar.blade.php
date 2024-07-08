@@ -56,13 +56,16 @@
                     </li>
                     <li>
                         <div class="inline-block mt-2 me-4">
-                            <a class="navbar-brand ">
-                                <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
-                                    class="position-absolute " />
+                            <a>
+                                <input id="searchInput" class="search" type="text" name="search"
+                                    placeholder="Search..">
+                                <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
+                                    class="position-relative" />
                             </a>
                         </div>
                     </li>
 
+                    </li>
                 </ul>
 
 
@@ -96,9 +99,15 @@
                 @endguest
 
             </div>
-
         </div>
         <!-- Collapsible wrapper -->
     </div>
-    <!-- Container wrapper -->
+    {{-- modal --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
 </nav>
