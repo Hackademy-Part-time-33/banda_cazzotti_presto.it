@@ -49,6 +49,7 @@
       <h4 class="fw-bold">{{Str::replace('.', ',', sprintf("%.2f", $article->price))}} €</h4>
       <h5>Descrizione</h5>
       <p>{{$article->description}}</p>
+      <p>Categoria: <a href="{{route('byCategory', ['category' => $article->category])}}">{{$article->category->name}}</a></p>
     </div>
   </col-4>
   </div>
