@@ -57,12 +57,17 @@
                     <li>
                         <div class="inline-block mt-2 me-4">
                             <a class="navbar-brand ">
-                                <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo" loading="lazy"
-                                    class="position-absolute " />
+                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#myModal">
+                                    <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
+                                        class="position-relative " />
+                                </button>
+
                             </a>
                         </div>
+
                     </li>
 
+                    </li>
                 </ul>
 
 
@@ -100,5 +105,13 @@
         </div>
         <!-- Collapsible wrapper -->
     </div>
-    <!-- Container wrapper -->
+    {{-- modal --}}
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content d-flex">
+                <form class="form-inline d-flex">
+                    @csrf
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
 </nav>
