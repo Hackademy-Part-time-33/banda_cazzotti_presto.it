@@ -77,7 +77,10 @@
 .search.expanded {
     border-radius: 5px;
     width: 70%;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
     visibility: visible;
+}
+
+.search.expanded:active {
+    visibility: visible;
+    background-attachment: var(--secondary-color);
 }
