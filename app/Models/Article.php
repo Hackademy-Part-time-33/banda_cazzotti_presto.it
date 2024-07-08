@@ -9,8 +9,8 @@ use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-    use Searchable;
-    use HasFactory;
+    use Searchable, HasFactory;
+   
     protected $fillable =['title', 'description','price','category_id','user_id'];
 
     public function user() 
@@ -28,6 +28,7 @@ class Article extends Model
         $this->save();
         return true;
     }
+
     public function toSearchableArray() {
         return [
             'id'=>$this->id,
@@ -37,5 +38,9 @@ class Article extends Model
         ];
     }
 
+    public static function toBeRevidesCount() 
+    {
+        return Article::where('is_accepted', null)->count();
+    }
 }
 
