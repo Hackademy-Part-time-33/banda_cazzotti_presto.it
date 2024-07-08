@@ -56,15 +56,13 @@
                     </li>
                     <li>
                         <div class="inline-block mt-2 me-4">
-                            <a class="navbar-brand ">
-                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#myModal">
-                                    <img src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
-                                        class="position-relative " />
-                                </button>
-
+                            <a>
+                                <input id="searchInput" class="search" type="text" name="search"
+                                    placeholder="Search..">
+                                <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo"
+                                    class="position-relative" />
                             </a>
                         </div>
-
                     </li>
 
                     </li>
@@ -101,17 +99,15 @@
                 @endguest
 
             </div>
-
         </div>
         <!-- Collapsible wrapper -->
     </div>
     {{-- modal --}}
-    <div class="modal" id="myModal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content d-flex">
-                <form class="form-inline d-flex">
-                    @csrf
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
 </nav>
