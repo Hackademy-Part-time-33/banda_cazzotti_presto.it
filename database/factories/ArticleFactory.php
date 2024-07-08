@@ -25,6 +25,7 @@ class ArticleFactory extends Factory
             'price' => fake()->randomFloat(2, 9, 500),
             'category_id' => rand(1,Category::all()->count()),
             'user_id' => User::factory() ,
+            'is_accepted'=>true,
         ];
     }
 }
