@@ -24,7 +24,8 @@
 
                 <ul class="navbar-nav me-auto mx-2  mb-lg-0">
                     <li class="nav-item anm_link mx-3 ">
-                        <a class="nav-link " href="{{ route('homepage') }}">Home </a>
+                        <a class="nav-link @if (request()->routeIs('homepage')) nav-active @endif "
+                            href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item mx-3 dropdown">
                         <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
@@ -43,15 +44,15 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-3 anm_link">
-                        <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
+                        <a class="nav-link @if (request()->routeIs('articles.index')) nav-active @endif"
                             href="{{ route('articles.index') }}">Tutti i prodotti</a>
                     </li>
                     <li class="nav-item mx-3 anm_link">
-                        <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
+                        <a class="nav-link @if (request()->routeIs('about')) nav-active @endif"
                             href="{{ route('about') }}">Chi siamo </a>
                     </li>
                     <li class="nav-item mx-3 anm_link">
-                        <a class="nav-link @if (request()->routeIs('homepage')) link-active @endif"
+                        <a class="nav-link @if (request()->routeIs('contacts')) nav-active @endif"
                             href="{{ route('contacts') }}">Contatti</a>
                     </li>
                     <li>
