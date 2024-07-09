@@ -33,15 +33,10 @@ Route::get("/revisor/request", [RevisorController::class,'becomeRevisor'])->midd
 
 Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
-<<<<<<< HEAD
 
-=======
-Route::get('revisor', function(){
-    return view('become-revisor');
-})->name('page.revisor');
+
 
 
 
 Route::get('/workwithus' , [RevisorController::class, 'workWithUs'])->middleware('auth')->name('lavora-con-noi');
-Route::post('/workwithus-send' , [RevisorController::class, 'workWithUsSend'])->middleware('auth')->name('lavora-con-noi-invia');
->>>>>>> 74b9a2942435f3407022dfc1295b0a50af10f8a9
+
