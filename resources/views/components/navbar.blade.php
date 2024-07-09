@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse bg-sucsess " id="navbarsExample05">
                 <!-- Left links -->
 
-                <ul class="navbar-nav me-auto mx-2  mb-lg-0">
+                <ul class="navbar-nav  d-flex align-items-center mx-2  mb-lg-0">
                     <li class="nav-item anm_link mx-3 ">
                         <a class="nav-link @if (request()->routeIs('homepage')) nav-active @endif "
                             href="{{ route('homepage') }}">Home</a>
