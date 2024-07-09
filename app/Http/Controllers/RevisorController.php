@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Mail\BecomeRevisor;
-use App\Mail\WorkWithUs;
 use App\Models\Article;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -48,15 +46,9 @@ class RevisorController extends Controller
         return redirect()->back();
     }
     
-    public function workWithUs()
+    public function showWork()
     {
         return view('lavora-con-noi');
     }
     
-    public function workWithUsSend() 
-    {
-        return view('lavora-con-noi-invia');
-        Mail::to('armentielia@gmail.com')->send(new WorkWithUs(Auth::user()));
-        return redirect()->route('homepage')->with('message', 'Complimenti, hai richiesto di lavorare con noi!');
-    }
 }
