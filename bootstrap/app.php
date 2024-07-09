@@ -18,16 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'isRevisor' => IsRevisor::class
         ]);
     })
-    ->withMiddleware(function (Middleware $middleware) {
-        $middleware->alias([
-            'auth' => BecomeRevisor::class
-        ]);
-    })
-    ->withMiddleware(function (Middleware $middleware) {
-        $middleware->alias([
-            'auth' => WorkWithUs::class
-        ]);
-    })
+    
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();

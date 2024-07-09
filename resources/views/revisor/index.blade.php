@@ -17,10 +17,10 @@
 <div class="col-md-8">
  <div class="row justify-content-center">
 
-    @for ($i=0; $i<6; $i++)
+    @for ($i=1; $i<6; $i++)
 
       <div class="col-6 col-md-4 mb-4 text-center">
-        <img src="immagini-progetto/prodotto1.webp" class="img-fluid rounded shadow" alt="immaginesegna">
+        <img src="{{asset("immagini-progetto/prodotto$i.webp")}}" class="img-fluid rounded shadow" alt="immaginesegna">
 
       </div>
 
@@ -30,8 +30,8 @@
 </div>
 </div>
 
-
-<div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
+<div class="row d-flex justify-content-center">
+<div class="col-md-4 ps-4 d-flex flex-column justify-content-between mt-5 ">
     <div>
         <h1>{{$article_to_check->title}}</h1>
         <h3>Autore: {{$article_to_check->user->name}}</h3>
@@ -40,16 +40,17 @@
         <p class="h6"> {{$article_to_check->description}}</p>
     </div>
 
-    <div class="d-flex pb-4 justify-cointent-around">
+    <div class="d-flex pb-4 justify-cointent-around ">
       <form action="" method="post">
         @csrf
-        <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+        <button class="btn btn-danger py-2 px-5 fw-bold m-2">Rifiuta</button>
       </form>
 
       <form action="" method="post">
-        <button class="btn btn-danger py-2 px-5 fw-bold">Accetta</button>
+        <button class="btn btn-danger py-2 px-5 fw-bold m-2">Accetta</button>
       </form>
     </div>
+</div>
 </div>
 @else 
 <div class="row justify-content-center align-items-center height-custom text-center">

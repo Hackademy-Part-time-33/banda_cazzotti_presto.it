@@ -9,7 +9,7 @@
 <body>
 
     <div>
-        <h1>L'utente chiede di lavorare con noi</h1>
+        <h1>L'utente {{ $user->name}} chiede di lavorare con noi</h1>
         <h2>Ecco i suoi dati</h2>
         <p>Nome : {{ $user->name}}</p>
         <p>Email : {{ $user->email}}</p>
