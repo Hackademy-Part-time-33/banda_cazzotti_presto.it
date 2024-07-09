@@ -33,3 +33,7 @@ Route::get("/revisor/request", [RevisorController::class,'becomeRevisor'])->midd
 
 Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
+Route::get('revisor', function(){
+    return view('become-revisor');
+})->name('page.revisor');
+
