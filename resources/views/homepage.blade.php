@@ -5,7 +5,7 @@
 <x-main>
   {{--   CAROSELLO INIZIALE --}}
   
-  
+  <div class="container">
   <div id="carouselExampleIndicators" class="carousel carousel-dark slide border border-5 border-warning carousel ">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -23,6 +23,7 @@
       <div class="carousel-item">
         <img src="lego3.jfif" class="d-block w-100  p-5" id="img-carousel"  alt="img-3">
       </div>
+    </div>
     </div>
 
   
