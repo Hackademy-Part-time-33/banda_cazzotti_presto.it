@@ -29,7 +29,7 @@ Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::get('/search/article', [ArticleController::class, 'searchArticles'])->name('articles.search');
 
-Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])
+Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])
     ->middleware('auth')
     ->name('become.revisor');
 
@@ -38,6 +38,10 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 Route::get('revisor', function () {
     return view('become-revisor');
 })->name('page.revisor');
+
+Route::get('/workwithus', [RevisorController::class, 'showWork'])
+    ->middleware('auth')
+    ->name('lavora-con-noi');
 
 Route::get('/workwithus', [RevisorController::class, 'workWithUs'])
     ->middleware('auth')
