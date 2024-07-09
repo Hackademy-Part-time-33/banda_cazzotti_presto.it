@@ -27,6 +27,20 @@
                     <td>{{Str::ucfirst($article->user->name)}}</td>
                     <td>
                         <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
+
+                        @if ($article->is_accepted === null)
+                        <form action="{{ route('accept', $article->id) }}" method="POST" >
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-success">Accetta</button>
+                        </form>
+                        <form action="{{ route('reject', $article->id) }}" method="POST" >
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-danger">Rifiuta</button>
+                        </form>
+                    @endif
+
                         {{-- <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-warning">Modifica</a>
                         
                         <form action="{{ route('articles.destroy', $article->id) }}" method="POST" style="display: inline;">
