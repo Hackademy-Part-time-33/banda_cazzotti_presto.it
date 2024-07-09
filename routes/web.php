@@ -22,7 +22,7 @@ Route::get("/category/{category}", [ArticleController::class,'byCategory'])->nam
 Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 
-Route::get("/revisor/index", [RevisorController::class,'index'])->name('revisor.index');
+Route::get("/revisor/index", [RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 
 Route::patch("/accept/{article}", [RevisorController::class,'accept'])->name('accept');
 
@@ -32,3 +32,6 @@ Route::get('/search/article',[ArticleController::class,'searchArticles'])->name(
 Route::get("/revisor/request", [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+Route::get('/workwithus' , [RevisorController::class, 'workWithUs'])->middleware('auth')->name('lavora-con-noi');
+Route::post('/workwithus-send' , [RevisorController::class, 'workWithUsSend'])->middleware('auth')->name('lavora-con-noi-invia');
