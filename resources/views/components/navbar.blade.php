@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav">
 
-    <div class="container-fluid ">
+    <div class="container-fluid bg-body-tertiary">
         <!-- Navbar brand -->
         <a class="navbar-brand ms-5" href="{{ route('homepage') }}">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
@@ -19,7 +19,7 @@
             </div>
 
 
-            <div class="collapse navbar-collapse " id="navbarsExample05">
+            <div class="collapse navbar-collapse bg-sucsess " id="navbarsExample05">
                 <!-- Left links -->
 
                 <ul class="navbar-nav me-auto mx-2  mb-lg-0">
