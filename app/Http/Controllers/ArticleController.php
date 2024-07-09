@@ -96,10 +96,30 @@ class ArticleController extends Controller implements HasMiddleware
 
     public function searchArticles(Request $request)
     {
-        
+        // dd($request->input('categories'));
         $query= $request->input('query');
+        $price= (int)$request->input('price');
+    //     $articles=Article::where('price','<', $price)->get();
+      
+    //     if($request->input('categories')){
+    //        foreach ($request->input('categories') as $category) {
+       
+    //     $articles->where('category_id',(int)$category);
         
-        $articles = Article::search($query)->where('is_accepted',true)->paginate(10);
-        return view('articles.searched',compact('articles','query'));
+    //   } 
+    //     }
+      
+    //     $articles->search($query);
+           
+       
+
+        
+        
+
+
+        $articles = Article::search($query)->where('is_accepted',true)->get();
+        // $articles->orderBy('price', 'desc')->get();   
+    //  $articles = Article::search($query)->where('price','<', $price)->paginate(10);
+        return view('articles.searched',compact('articles','query','price'));
     }
 }
