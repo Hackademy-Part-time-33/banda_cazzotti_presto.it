@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse bg-sucsess " id="navbarsExample05">
                 <!-- Left links -->
 
-                <ul class="navbar-nav me-auto mx-2  mb-lg-0">
+                <ul class="navbar-nav  d-flex align-items-center mx-2  mb-lg-0">
                     <li class="nav-item anm_link mx-3 ">
                         <a class="nav-link @if (request()->routeIs('homepage')) nav-active @endif "
                             href="{{ route('homepage') }}">Home</a>
@@ -32,10 +32,10 @@
                             data-bs-toggle="dropdown" aria-expanded="false" target="_self">
                             Categorie prodotti
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu bg-body-tertiary">
 
                             @forelse ($categories as $category)
-                                <li><a class="dropdown-item"
+                                <li><a class="dropdown-item nav-link"
                                         href='{{ route('byCategory', ['category' => $category]) }}'>{{ $category->name }}</a>
                                 </li>
                             @empty
@@ -67,7 +67,6 @@
                                 </button>
                             </div>
                         </form>
-
                     </li>
                 </ul>
 
@@ -82,29 +81,25 @@
                 @else
                     <div class="align-items-center">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
-
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-6 d-flex justify-content-center">
-                                    <a href="{{ route('articles.create') }}" class="btn custom-button w-100"
-                                        id="btn_nav">Inserisci un annuncio</a>
+                                <div class="col-md-6 ">
+                                    <button href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">
+                                        Inserisci un annuncio
+                                    </button>
                                 </div>
                                 <div class="col-md-6 d-flex justify-content-center">
-                                    <form action="{{ route('logout') }}" method="post" class="w-100">
+                                    <form action="{{ route('logout') }}" method="post">
                                         @csrf
-                                        <button class="btn custom-button w-100" type="submit" id="btn_nav">Esci</button>
+                                        <button class="btn custom-button  btn_esci" type="submit"
+                                            id="btn_nav">Esci</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 @endguest
-
             </div>
         </div>
-        <!-- Collapsible wrapper -->
     </div>
-
-
 </nav>

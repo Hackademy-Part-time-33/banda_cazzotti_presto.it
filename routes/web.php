@@ -5,7 +5,7 @@ use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RevisorController;
-
+use App\Http\Controllers\AnnouncementController;
 
 Route::get('/', [PageController::class,'homepage'])->name('homepage');
 
@@ -32,6 +32,12 @@ Route::get('/search/article',[ArticleController::class,'searchArticles'])->name(
 Route::get("/revisor/request", [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+Route::get('revisor', function(){
+    return view('become-revisor');
+})->name('page.revisor');
+
+
 
 Route::get('/workwithus' , [RevisorController::class, 'workWithUs'])->middleware('auth')->name('lavora-con-noi');
 Route::post('/workwithus-send' , [RevisorController::class, 'workWithUsSend'])->middleware('auth')->name('lavora-con-noi-invia');

@@ -88,7 +88,7 @@
     </footer>
     <div class="row text-center mb-3">
         <h5>Vuoi diventare revisore?</h5>
-        <p>Clicca il pulsangte per avviare la richiesta</p>
+        <p>Clicca il pulsante per avviare la richiesta</p>
         <div>
             <a href="{{ route('become.revisor') }}" class="btn btn-danger">Diventa revisore</a>
         </div>
