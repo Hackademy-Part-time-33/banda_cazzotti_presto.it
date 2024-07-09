@@ -29,12 +29,14 @@ Route::patch("/accept/{article}", [RevisorController::class,'accept'])->name('ac
 Route::patch("/reject/{article}", [RevisorController::class,'reject'])->name('reject');
 Route::get('/search/article',[ArticleController::class,'searchArticles'])->name('articles.search');
 
-Route::get("/revisor/request", [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::post("/revisor/request", [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 
 
+Route::get('/workwithus' , [RevisorController::class, 'showWork'])->middleware('auth')->name('lavora-con-noi');
+ 
 
 Route::get('/workwithus' , [RevisorController::class, 'workWithUs'])->middleware('auth')->name('lavora-con-noi');
 Route::post('/workwithus-send' , [RevisorController::class, 'workWithUsSend'])->middleware('auth')->name('lavora-con-noi-invia');

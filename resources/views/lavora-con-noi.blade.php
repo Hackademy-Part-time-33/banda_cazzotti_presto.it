@@ -1,9 +1,9 @@
 <x-main>
-    <form class="p-5 border rounded" action="{{ route('lavora-con-noi') }}" method="POST">
+    <form class="p-5 border rounded" action="{{ route('become.revisor') }}" method="GET">
         @csrf
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" aria-describedby="emailHelp" placeholder="email">
+            <input type="email" class="form-control" name="email" value="{{ auth()->user()->mail }}" id="email" aria-describedby="emailHelp" placeholder="email">
         </div>
 
         @error('email')
