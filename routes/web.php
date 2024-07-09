@@ -42,6 +42,3 @@ Route::get('/workwithus', [RevisorController::class, 'showWork'])
     ->middleware('auth')
     ->name('lavora-con-noi');
 
-Route::get('/workwithus', [RevisorController::class, 'workWithUs'])
-    ->middleware('auth')
-    ->name('lavora-con-noi');
