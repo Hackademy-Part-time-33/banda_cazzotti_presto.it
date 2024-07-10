@@ -91,6 +91,7 @@
         <p>Clicca il pulsante per avviare la richiesta</p>
         <div>
             <a href="{{ route('become.revisor') }}" class="btn btn-danger">Diventa revisore</a>
+            
         </div>
     </div>
 

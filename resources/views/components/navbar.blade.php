@@ -9,10 +9,7 @@
         </a>
         <!-- Left links -->
 
-        <button href="#" class="btn  btn-danger" id="btn_nav">
-           Lavora con noi
-        </button>
-
+        
         <div class="d-flex align-items-end">
             <div class="d-inline-block">
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
