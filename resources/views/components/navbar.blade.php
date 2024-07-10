@@ -28,8 +28,9 @@
                             href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item mx-3 dropdown">
-                        <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" target="_self">
+                        <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif""
+                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            target="_self">
                             Categorie prodotti
                         </a>
                         <ul class="dropdown-menu bg-body-tertiary">
@@ -68,9 +69,17 @@
                             </div>
                         </form>
                     </li>
+                    {{-- non funziona  --}}
+                    <li>@auth
 
 
-
+                            @if (Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a href="{{ route('revisor.index') }}">Zona revisore</a>
+                        </li>
+                        @endif
+                    @endauth
+                    </li>
                 </ul>
                 @guest
                     <div class="d-grid gap-2 d-md-block">
