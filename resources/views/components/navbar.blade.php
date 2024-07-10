@@ -69,12 +69,15 @@
                         </form>
                     </li>
                     {{-- non funziona  --}}
-                    <li>
+                    <li>@auth
+                        
+                    
                         @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a href="{{ route('revisor.index') }}">Zona revisore</a>
                     </li>
                     @endif
+                    @endauth
                     </li>
                 </ul>
 
