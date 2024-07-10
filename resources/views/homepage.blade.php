@@ -1,9 +1,6 @@
-<head>
-    @vite(['resources/css/home.css', 'resources/js/home.js'])
 
-    <head>
 
-        <x-main>
+        <x-main :entry="$entry">
             {{--   CAROSELLO INIZIALE --}}
 
             <div class="container">
