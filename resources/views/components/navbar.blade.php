@@ -68,19 +68,10 @@
                             </div>
                         </form>
                     </li>
-                    {{-- non funziona  --}}
-                    <li>
-                        @if (Auth::user()->is_revisor)
-                    <li class="nav-item">
-                        <a href="{{ route('revisor.index') }}">Zona revisore</a>
-                    </li>
-                    @endif
-                    </li>
+
+
+
                 </ul>
-
-
-
-
                 @guest
                     <div class="d-grid gap-2 d-md-block">
                         <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
@@ -89,14 +80,21 @@
                 @else
                     <div class="align-items-center">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
-                        <div class="container">
+                        <div class="container-flex">
                             <div class="row">
-                                <div class="col-md-6 ">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <button href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">
                                         Inserisci un annuncio
                                     </button>
                                 </div>
-                                <div class="col-md-6 d-flex justify-content-center">
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    @if (Auth::user()->is_revisor)
+                                        <button class="btn custom-button" id="btn_nav  href="{{ route('revisor.index') }}">
+                                            Zona revisore
+                                        </button>
+                                    @endif
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <form action="{{ route('logout') }}" method="post">
                                         @csrf
                                         <button class="btn custom-button  btn_esci" type="submit"
