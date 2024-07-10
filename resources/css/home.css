@@ -168,12 +168,3 @@ h1 {
     }
 
 }
-
-.cust-button {
-    background-color: var(--secondary-color);
-    padding: 7px 15px;
-    font-size: 15px;
-    border-radius: 10px;
-    transition: background-color 0.5s, color 0.5s;
-
-}

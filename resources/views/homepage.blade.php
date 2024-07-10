@@ -85,25 +85,25 @@
         </div>
 
         <div class="container">
-            <div class="row d-flex justify-content-between">
+            <div class="row d-flex justify-content-between  justify-content-center">
 
-                <div class=" col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5">
+                <div class=" col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5   ">
                     <img src='immagini-progetto/tansformer.webp' class="img-fluid">
-                    <h2><span>Nuovo set Bumblebee Transformers</span></h2>
-                    <p><span>Cattura l'attenzione con il prossimo Autobot nell'universo dei Transformers
-                            LEGO®</span></p>
+                    <h2 class="fs-4 fw-bold ">Nuovo set Bumblebee Transformers</h2>
+                    <p>Cattura l'attenzione con il prossimo Autobot nell'universo dei Transformers
+                        LEGO®</p>
                     <button class="btn btn-outline-danger">Compra ora</button>
                 </div>
-                <div class="  col-lg-3 col-sm-12 d-flex flex-column mt-5 mb-5">
+                <div class="  col-lg-3 col-sm-12 d-flex flex-column mt-5 mb-5   ">
                     <img src='immagini-progetto/stealer.webp ' class="img-fluid">
-                    <h2><span>Scopri le novità</span></h2>
-                    <p><span>>Esplora i set LEGO® più recenti e straordinari attualmente disponibili</span></p>
+                    <h2 class="fw-bold">Scopri le novità</h2>
+                    <p><span>Esplora i set LEGO® più recenti e straordinari attualmente disponibili</p>
                     <button class="btn btn-outline-danger">Compra ora</button>
                 </div>
-                <div class="  col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5">
+                <div class="  col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5   ">
                     <img src='immagini-progetto\play.webp' class="img-fluid">
-                    <h2><span>Unisciti ai dispettosi Minions</span></h2>
-                    <p><span>Dai vita alla casa di Gru con i nuovi set Cattivissimo Me 4 LEGO®</span></p>
+                    <h2 class="fw-bold">Unisciti ai dispettosi Minions</h2>
+                    <p>Dai vita alla casa di Gru con i nuovi set Cattivissimo Me 4 LEGO®</p>
                     <button class="btn btn-outline-danger">Compra ora</button>
                 </div>
 
