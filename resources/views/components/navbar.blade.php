@@ -70,16 +70,7 @@
                         </form>
                     </li>
                     {{-- non funziona  --}}
-                    <li>@auth
-
-
-                            @if (Auth::user()->is_revisor)
-                        <li class="nav-item">
-                            <a href="{{ route('revisor.index') }}">Zona revisore</a>
-                        </li>
-                        @endif
-                    @endauth
-                    </li>
+                    <li>
                 </ul>
                 @guest
                     <div class="d-grid gap-2 d-md-block">
