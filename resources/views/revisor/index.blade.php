@@ -41,12 +41,15 @@
     </div>
 
     <div class="d-flex pb-4 justify-cointent-around ">
-      <form action="" method="post">
+      <form action="{{route('reject',['article'=>$article_to_check])}}" method="post">
         @csrf
+        @method('PATCH')
         <button class="btn btn-danger py-2 px-5 fw-bold m-2">Rifiuta</button>
       </form>
 
-      <form action="" method="post">
+      <form action="{{route('accept',['article'=>$article_to_check])}}" method="post">
+        @csrf
+        @method('PATCH')
         <button class="btn btn-danger py-2 px-5 fw-bold m-2">Accetta</button>
       </form>
     </div>
