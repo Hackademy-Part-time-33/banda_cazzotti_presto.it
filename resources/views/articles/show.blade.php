@@ -50,6 +50,7 @@
       <h5>Descrizione</h5>
       <p>{{$article->description}}</p>
       <p>Categoria: <a href="{{route('byCategory', ['category' => $article->category])}}">{{$article->category->name}}</a></p>
+      <p>Autore del prodotto: {{$article->user->name}}</p>
     </div>
   </col-4>
   </div>
