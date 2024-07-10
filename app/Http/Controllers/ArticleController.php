@@ -98,7 +98,7 @@ class ArticleController extends Controller implements HasMiddleware
     {
         // dd($request->input('categories'));
         $query= $request->input('query');
-        $price= (int)$request->input('price');
+        // $price= (int)$request->input('price');
     //     $articles=Article::where('price','<', $price)->get();
       
     //     if($request->input('categories')){
@@ -117,9 +117,9 @@ class ArticleController extends Controller implements HasMiddleware
         
 
 
-        $articles = Article::search($query)->where('is_accepted',true)->get();
+        // $articles = Article::search($query)->where('is_accepted',true)->get();
         // $articles->orderBy('price', 'desc')->get();   
     //  $articles = Article::search($query)->where('price','<', $price)->paginate(10);
-        return view('articles.searched',compact('articles','query','price'));
+        return view('articles.searched',compact('query'));
     }
 }
