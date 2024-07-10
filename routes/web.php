@@ -27,6 +27,9 @@ Route::get('/revisor/index', [RevisorController::class, 'index'])
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
+
+Route::patch('/delete-operation/{article}', [RevisorController::class, 'deleteOperation'])->name('cancella-operazione');
+
 Route::get('/search/article', [ArticleController::class, 'searchArticles'])->name('articles.search');
 
 Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])

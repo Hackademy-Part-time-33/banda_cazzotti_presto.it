@@ -34,6 +34,14 @@ class RevisorController extends Controller
         ->back()
         ->with('message', "Hai rifiutato l'articolo $article->title");
     }
+
+    public function deleteOperation(Article $article) 
+    {
+        $article->setAccepted(null);
+        return redirect()
+        ->back()
+        ->with('message', "Hai eliminato la tua operazione precedente $article->title");
+    }
     
     public function becomeRevisor()
     {

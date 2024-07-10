@@ -28,7 +28,7 @@
                             href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item mx-3 dropdown">
-                        <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif""
+                        <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             target="_self">
                             Categorie prodotti
@@ -83,15 +83,15 @@
                         <div class="container-flex">
                             <div class="row">
                                 <div class="col-md-4 d-flex justify-content-center">
-                                    <button href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">
+                                    <a href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">
                                         Inserisci un annuncio
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
-                                    @if (Auth::user()->is_revisor)
-                                        <button class="btn custom-button" id="btn_nav  href="{{ route('revisor.index') }}">
+                                    @if (auth()->user()->is_revisor)
+                                        <a class="btn custom-button" id="btn_nav"  href="{{ route('revisor.index') }}">
                                             Zona revisore
-                                        </button>
+                                        </a>
                                     @endif
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">

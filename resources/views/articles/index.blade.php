@@ -10,7 +10,21 @@
                     <th>Categoria</th>
                     <th>Aggiunto il</th>
                     <th>Autore</th>
-                    <th>Azioni</th>              
+                    
+                    @auth
+
+                        @if (!auth()->user()->isRevisor)
+
+                        <th>Approvazione</th>
+                        
+
+                        
+                        @endif
+
+                        @endauth     
+
+                        <th>Azioni</th>   
+
                 </tr>
             </thead>
             <thead>
@@ -25,10 +39,38 @@
                     <td><a href="{{route('byCategory', ['category'=>$article->category])}}">{{ $article->category->name }}</a></td>
                     <td>{{ $article->created_at->locale(app()->getLocale())->translatedFormat('d F Y, H:i') }}</td>  
                     <td>{{Str::ucfirst($article->user->name)}}</td>
-                    <td>
-                        <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
+                    
+                        
+                        @auth
 
-                        @if ($article->is_accepted === null)
+                        @if (!auth()->user()->isRevisor)
+                        <td>
+                            {{$article->is_accepted ? 'Articolo accettato' : 'Articolo rifiutato'}}
+                        </td>
+                        
+                        <td>
+                            <form action="{{ route('cancella-operazione', $article->id) }}" method="POST" >
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-success">Annulla</button>
+                            </form>
+                        </td>
+                        
+                        @endif
+
+                        @endauth
+                        
+                        
+                        
+                        
+                        <td>
+                            <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
+                        </td>
+                        
+                        
+                        
+                        
+                        {{--  @if ($article->is_accepted === null)
                         <form action="{{ route('accept', $article->id) }}" method="POST" >
                             @csrf
                             @method('PATCH')
@@ -39,8 +81,8 @@
                             @method('PATCH')
                             <button type="submit" class="btn btn-danger">Rifiuta</button>
                         </form>
-                    @endif
-
+                        @endif --}}
+                        
                         {{-- <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-warning">Modifica</a>
                         
                         <form action="{{ route('articles.destroy', $article->id) }}" method="POST" style="display: inline;">
@@ -48,7 +90,7 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di voler eliminare questo prodotto?')">Elimina</button>
                         </form> --}}
-                    </td>              
+                               
                 </tr>
                 @empty
                 @endforelse
