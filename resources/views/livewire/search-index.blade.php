@@ -12,11 +12,11 @@
             <div class="col-12 col-md-3">
                 {{-- <form wire:submit='search'> --}}
 
-                    <span class="ms-5" style="width:30%">Articoli visualizzati: <select class="d-inline form-select form-select-sm"
-                        wire:model.live='paginateNumber' style="width:20%">
-                        <option value="4">4</option>
-                        <option selected value="8">8</option>
-                        <option selected value="12">12</option>
+                    <span class="mx-4" style="width:30%">Articoli visualizzati: <select class="d-inline form-select form-select-sm"
+                        wire:model.live='paginateNumber' style="width:30%">
+                        <option value="5">5</option>
+                        <option selected value="10">10</option>
+                        <option selected value="15">15</option>
                     </select>
                 </span>
                 <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
@@ -31,9 +31,9 @@
                             <div class="form-check">
                                 @forelse ($categories as $category)
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="{{ $category->name }}" wire:model.live='categoriesChecked' name="categories[]"
+                                    <input class="form-check-input" wire:click="resetpage" type="checkbox" id="{{ $category->name }}" wire:model.live='categoriesChecked' name="categories[]"
                                         value="{{ $category->id }}">
-                                    <label class="form-check-label" for="{{ $category->name }}">{{ $category->name }}</label>
+                                    <label class="form-check-label" wire:click="resetpage" for="{{ $category->name }}">{{ $category->name }}</label>
                                 </div>
                                 @empty
                                 Nessuna categoria
@@ -52,8 +52,12 @@
                       </h2>
                       <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
                         <div class="accordion-body">
-                            <input id="inputPrice" wire:model.live='price'class="w-100" type="range" value="1000" min="0" max="1000">
-                            <p  {{-- id="priceNumber" --}}>{{$price}}</p>
+                            <input id="inputPrice" wire:model.live='price'class="w-100" type="range" value="1000" min="0" max="{{$priceMax}}">
+                            <div class="d-flex justify-content-between ">
+                              <p class="me-1">0</p>
+                              <strong class="text me-auto" style="margin-left: {{($price*80)/$priceMax}}%">{{$price}}</strong>
+                              <p class="ms-1">{{$priceMax}}</p>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -74,28 +78,63 @@
                 <button class="btn btn-secondary m-4 ms-2" id="clearButton" >CLEAR FILTERS</button> --}}
             {{-- </form> --}}
             </div>
-            <div id="cardWrapper" class="col-12 col-md-9 d-flex justify-content-evenly flex-wrap">
-                <!-- card prodotti creati con JS  -->
-                  @forelse ($articles as $article)
-                <div class="col-12 col-lg-3  col-md-6">
-                    <x-card :article="$article" :width=18  />
-                </div>
-            @empty
-                <div class="col-12 ">
-                    <h3 class="text-center">
-                        Nessun Articolo Corrispondente alla ricerca
-                    </h3>
-                    <p class="text-center">prova a cambiare i parametri di ricerca</p>
-                </div>
-            @endforelse
+            <div id="cardWrapper" class="col-12 col-md-9" x-data="{ canLoadMore:@entangle('canLoadMore')}" 
+            @scroll.window.trottle="
+
+            isScrolled= window.scrollY+window.innerHeight>=document.documentElement.scrollHeight;
+             if(isScrolled && canLoadMore){
+            @this.loadMore()}">
+
+            <div class="d-flex justify-content-center h3">
+              <select class="d-inline form-select form-select-sm mt-3"
+                wire:model.live='priceOrTitle' style="width:35%">
+                <option value="">Ordinamento:</option>
+                <option value="title">titolo</option>
+                <option selected value="price">prezzo</option>
+                <option selected value="category_id">Categoria</option>
+              </select>
+              <span class="mt-3 ms-2" wire:click="order()"> @if ($Direction=='asc')
+                ↑@else
+                ↓
+              @endif</span>
+        
+              {{-- <p wire:click="orderPrice()">Prezzo @if ($priceDirection=='asc')
+                ↑@else
+                ↓
+              @endif</p>
+              <p wire:click="orderTitle()">Titolo @if ($titleDirection=='asc')
+                ↑@else
+                ↓
+              @endif</p> --}}
+            </div>
+                <div class="d-flex {{-- justify-content-evenly --}} flex-wrap">
+                  <!-- card prodotti creati con JS  -->
+                    @forelse ($articles as $article)
+                  <div class="mx-auto mx-md-4 mt-4">
+                      <x-card :article="$article" :width=18  />
+                  </div>
+                              @empty
+                  <div class="col-12 ">
+                      <h3 class="text-center">
+                          Nessun Articolo Corrispondente alla ricerca
+                      </h3>
+                      <p class="text-center">prova a cambiare i parametri di ricerca</p>
+                  </div>
+                              @endforelse
+                </div> 
+                <div class="d-flex justify-content-center">
+        @if ($canLoadMore)
+           <div>
+            {{-- {{ $articles->links() }} --}}
+            <button class="btn btn-secondary" wire:click="loadMore">Mostra più articoli</button>
+        </div>
+        @endif
+                 
+    </div>
             </div>    
           
         </div>
     </div>
 
-    <div class="d-flex justify-content-center">
-        <div>
-            {{ $articles->links() }}
-        </div>
-    </div>
+   
 </main>

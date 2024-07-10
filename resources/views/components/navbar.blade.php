@@ -28,7 +28,7 @@
                             href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item mx-3 dropdown">
-                        <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
+                        <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif"" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" target="_self">
                             Categorie prodotti
                         </a>
