@@ -32,6 +32,8 @@ class ArticleController extends Controller implements HasMiddleware
             if (auth()->user()->is_revisor) {
                 $articles= Article::orderBy('created_at', 'desc')->paginate(5);
                 
+            }else{
+                $articles= Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(5);
             }
             
         }
