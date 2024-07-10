@@ -1,6 +1,12 @@
 @import 'bootstrap';
 
 
+:root {
+    --primary-color: #fdf102;
+    --secondary-color: #dc3545;
+    --third-color: #f8f9fa;
+}
+
 /* -----------HOME */
 #carouselExampleIndicators {
     height: 700px;
@@ -160,5 +166,14 @@ h1 {
         height: auto;
         margin-left: 50px;
     }
+
+}
+
+.cust-button {
+    background-color: var(--secondary-color);
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s;
 
 }

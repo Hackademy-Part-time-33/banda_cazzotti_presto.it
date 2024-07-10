@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2 sticky-top">
 
     <div class="container-fluid bg-body-tertiary">
         <!-- Navbar brand -->
@@ -9,7 +9,7 @@
         </a>
         <!-- Left links -->
 
-        
+
         <div class="d-flex align-items-end">
             <div class="d-inline-block">
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
