@@ -86,6 +86,7 @@
 
 
     </footer>
+
     <div class="row text-center mb-3">
         <h5>Vuoi diventare revisore?</h5>
         <p>Clicca il pulsante per avviare la richiesta</p>
