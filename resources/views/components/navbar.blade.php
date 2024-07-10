@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2">
 
     <div class="container-fluid bg-body-tertiary">
         <!-- Navbar brand -->
@@ -29,8 +29,9 @@
                             href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item mx-3 dropdown">
-                        <a class="nav-link anm_link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" target="_self">
+                        <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif""
+                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            target="_self">
                             Categorie prodotti
                         </a>
                         <ul class="dropdown-menu bg-body-tertiary">
@@ -69,11 +70,9 @@
                             </div>
                         </form>
                     </li>
+                    {{-- non funziona  --}}
+                    <li>
                 </ul>
-
-
-
-
                 @guest
                     <div class="d-grid gap-2 d-md-block">
                         <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
@@ -82,14 +81,21 @@
                 @else
                     <div class="align-items-center">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
-                        <div class="container">
+                        <div class="container-flex">
                             <div class="row">
-                                <div class="col-md-6 ">
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <button href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">
                                         Inserisci un annuncio
                                     </button>
                                 </div>
-                                <div class="col-md-6 d-flex justify-content-center">
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    @if (Auth::user()->is_revisor)
+                                        <button class="btn custom-button" id="btn_nav  href="{{ route('revisor.index') }}">
+                                            Zona revisore
+                                        </button>
+                                    @endif
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
                                     <form action="{{ route('logout') }}" method="post">
                                         @csrf
                                         <button class="btn custom-button  btn_esci" type="submit"
