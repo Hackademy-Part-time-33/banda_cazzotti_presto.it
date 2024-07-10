@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2">
 
     <div class="container-fluid bg-body-tertiary">
         <!-- Navbar brand -->
@@ -67,6 +67,14 @@
                                 </button>
                             </div>
                         </form>
+                    </li>
+                    {{-- non funziona  --}}
+                    <li>
+                        @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a href="{{ route('revisor.index') }}">Zona revisore</a>
+                    </li>
+                    @endif
                     </li>
                 </ul>
 
