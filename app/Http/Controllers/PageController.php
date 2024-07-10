@@ -8,8 +8,10 @@ use App\Models\Article;
 class PageController extends Controller
 {
     public function homepage() {
+        $entry=['resources/css/home.css','resources/js/home.js'];
+      
         $articles = Article::where('is_accepted' , true)->orderBy('created_at', 'desc')->take(6)->get();
-        return view('homepage', compact('articles'));
+        return view('homepage', compact('articles', 'entry'));
     }
 
     public function about() {
