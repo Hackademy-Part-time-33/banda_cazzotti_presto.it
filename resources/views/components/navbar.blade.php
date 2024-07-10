@@ -89,13 +89,8 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
-<<<<<<< HEAD
-                                    @if (auth()->user()->is_revisor)
-                                        <a class="btn custom-button" id="btn_nav"  href="{{ route('revisor.index') }}">
-=======
                                     @if (Auth::user()->is_revisor)
                                         <button class="btn custom-button" id="btn_nav href="{{ route('revisor.index') }}">
->>>>>>> 8849c784bbbef3aa42be188d13568f40de0ce1b9
                                             Zona revisore
                                         </a>
                                     @endif
