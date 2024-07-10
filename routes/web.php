@@ -38,6 +38,8 @@ Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])
 
 Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
+
+
 Route::get('/workwithus' , [RevisorController::class, 'showWork'])->middleware('auth')->name('lavora-con-noi');
  
 
