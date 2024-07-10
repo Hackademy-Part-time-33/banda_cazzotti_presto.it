@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2 sticky-top">
 
     <div class="container-fluid bg-body-tertiary">
         <!-- Navbar brand -->
@@ -9,7 +9,7 @@
         </a>
         <!-- Left links -->
 
-        
+
         <div class="d-flex align-items-end">
             <div class="d-inline-block">
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
@@ -20,7 +20,7 @@
             </div>
 
 
-            <div class="collapse navbar-collapse bg-sucsess " id="navbarsExample05">
+            <div class="collapse navbar-collapse " id="navbarsExample05">
                 <!-- Left links -->
 
                 <ul class="navbar-nav  d-flex align-items-center mx-2  mb-lg-0">
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
                                     @if (Auth::user()->is_revisor)
-                                        <button class="btn custom-button" id="btn_nav  href="{{ route('revisor.index') }}">
+                                        <button class="btn custom-button" id="btn_nav href="{{ route('revisor.index') }}">
                                             Zona revisore
                                         </button>
                                     @endif
@@ -98,8 +98,8 @@
                                 <div class="col-md-4 d-flex justify-content-center">
                                     <form action="{{ route('logout') }}" method="post">
                                         @csrf
-                                        <button class="btn custom-button  btn_esci" type="submit"
-                                            id="btn_nav">Esci</button>
+                                        <button class="btn custom-button btn_esci" id="btn_nav"
+                                            type="submit">Esci</button>
                                     </form>
                                 </div>
                             </div>

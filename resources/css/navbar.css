@@ -45,17 +45,16 @@
 
 .custom-button {
     background-color: var(--primary-color);
-
-    border: none;
     padding: 7px 15px;
     font-size: 15px;
-    border-radius: 3px;
+    border-radius: 10px;
     transition: background-color 0.5s, color 0.5s;
 
 }
 
 .custom-button:hover {
     background-color: var(--secondary-color);
+    box-shadow: #282a35 1px 1px;
 
 }
 
@@ -83,5 +82,5 @@
 
 .search.expanded:active {
     visibility: visible;
-    background-attachment: var(--secondary-color);
+
 }
