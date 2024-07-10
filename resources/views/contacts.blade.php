@@ -1,4 +1,4 @@
-<x-main>
+<x-main >
 
     <div class="container my-5">
         <form action="{{ route('articles.store') }}" method="POST">

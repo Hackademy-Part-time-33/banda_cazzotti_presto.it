@@ -1,6 +1,6 @@
 
 
-        <x-main :entry="$entry">
+        <x-main >
             {{--   CAROSELLO INIZIALE --}}
 
 
