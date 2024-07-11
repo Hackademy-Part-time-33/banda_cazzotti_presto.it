@@ -62,7 +62,6 @@
                     <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                 </div>
             @else
-                <hr>
                 <div class="align-items-center me-3">
                     <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                     <div class="container-flex">
