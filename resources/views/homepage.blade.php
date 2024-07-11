@@ -141,8 +141,9 @@
 
 
                 <div>
-                    <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
+                  
                     <div id="album-rotator" class="w-100">
+                        <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
                         <div id="album-rotator-holder" class="d-flex flex-row  carousel2">
 
 
