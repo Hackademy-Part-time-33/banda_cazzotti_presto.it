@@ -7,11 +7,11 @@ use App\Models\Article;
 
 class PageController extends Controller
 {
-    public function homepage() {
+    public function homepage( Category $category) {
        
-      
+      $category = Category::all();
         $articles = Article::where('is_accepted' , true)->orderBy('created_at', 'desc')->take(6)->get();
-        return view('homepage', compact('articles'));
+        return view('homepage', compact('articles', 'category'));
     }
 
     public function about() {
