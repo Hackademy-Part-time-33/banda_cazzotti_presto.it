@@ -55,13 +55,13 @@
                     </button>
                 </div>
             </form>
+            <hr>
             @guest
                 <div class="d-grid gap-2 d-md-block">
                     <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
                     <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                 </div>
             @else
-                <hr>
                 <div class="align-items-center">
                     <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                     <div class="container-flex">
