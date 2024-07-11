@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
                                     @if (Auth::user()->is_revisor)
-                                        <button class="btn custom-button" id="btn_nav href="{{ route('revisor.index') }}">
+                                        <a class="btn custom-button" id="btn_nav" href="{{ route('revisor.index') }}">
                                             Zona revisore
                                         </a>
                                     @endif

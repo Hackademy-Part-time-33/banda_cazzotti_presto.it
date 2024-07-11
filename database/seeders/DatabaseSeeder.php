@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@admin.it',
             'password' => Hash::make('password'),
+            'is_revisor'=> true,
         ]);
     }
 
@@ -52,6 +53,10 @@ class DatabaseSeeder extends Seeder
     }
 
         Article::factory(50)->create();
+        Article::factory(5)->create([
+            'is_accepted' => null,
+        ]);
+       
         
     }
 }
