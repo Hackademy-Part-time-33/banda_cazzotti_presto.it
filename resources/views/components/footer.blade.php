@@ -92,7 +92,7 @@
                 <h5>Vuoi diventare revisore?</h5>
                 <p>Clicca il pulsante per avviare la richiesta</p>
                 <div>
-                    <a href="{{ route('become.revisor') }}" class="btn btn-danger">Diventa revisore</a>
+                    <a href="{{ route('lavora-con-noi') }}" class="btn btn-danger">Diventa revisore</a>
                 </div>
             </div>
         @endif
