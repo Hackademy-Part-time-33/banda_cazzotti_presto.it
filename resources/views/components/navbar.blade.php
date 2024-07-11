@@ -1,7 +1,7 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2 sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary rounded z-3 mynav mb-2 sticky-top ">
 
-    <div class="container-fluid bg-body-tertiary">
+    <div class="container-fluid bg-body-tertiary  ">
         <!-- Navbar brand -->
         <a class="navbar-brand ms-5" href="{{ route('homepage') }}">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
@@ -32,7 +32,7 @@
                         <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             target="_self">
-                            Categorie prodotti
+                            Categorie
                         </a>
                         <ul class="dropdown-menu bg-body-tertiary">
 
@@ -70,7 +70,7 @@
                             </div>
                         </form>
                     </li>
-                    {{-- non funziona  --}}
+
                     <li>
                 </ul>
                 @guest
@@ -82,31 +82,51 @@
                     <div class="align-items-center">
                         <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                         <div class="container-flex">
-                            <div class="row">
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <a href="{{ route('articles.create') }}" class="btn custom-button" id="btn_nav">
-                                        Inserisci un annuncio
+
+                            <div class="d-flex">{{-- aaaa --}}
+                                <div class="dropdown col-6-md-12 me-2">
+                                    <a class="btn custom-button dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                            <path fill-rule="evenodd"
+                                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                        </svg>
+                                        {{ auth()->user()->name }}
                                     </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('articles.create') }}"">Inserisci un
+                                                annuncio</a>
+                                        </li>
+                                        @if (Auth::user()->is_revisor)
+                                            <li>
+                                                <a class=" dropdown-item" href="{{ route('revisor.index') }}">Zona revisore
+                                                </a>
+                                            </li>
+                                        @endif
+                                    </ul>
                                 </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    @if (Auth::user()->is_revisor)
-                                        <a class="btn custom-button" id="btn_nav" href="{{ route('revisor.index') }}">
-                                            Zona revisore
-                                        </a>
-                                    @endif
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
+                                <div class="col-6-md-12 d-flex justify-content-center">
                                     <form action="{{ route('logout') }}" method="post">
                                         @csrf
-                                        <button class="btn custom-button btn_esci" id="btn_nav"
-                                            type="submit">Esci</button>
+                                        <button class="btn custom-button" id="btn_nav" type="submit"> <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                                            </svg></button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endguest
-            </div>
+                </div>
+            @endguest
         </div>
+    </div>
     </div>
 </nav>
