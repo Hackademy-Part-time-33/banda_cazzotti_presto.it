@@ -4,7 +4,7 @@
         <div class="col-3">
             <div class="rounded shadow bg-body-secondary m-3">
                 <h1>
-                    Revisor Dashboard
+                    Revisor Dashboard !
                 </h1>
             </div>
         </div>
