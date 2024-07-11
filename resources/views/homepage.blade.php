@@ -52,25 +52,25 @@
                 <div class="row  ">
 
                     <div class="d-flex flex-column justify-content-sm-center col-xs-12 col-sm-6  col-lg-3 ">
-                        <a href="#" class=""><img src="LEGOFACE.jfif" alt="legoimg" id="legoface"></a>
+                        <a href="#" class=""><img src="LEGOFACE.jfif" alt="legoimg" class="img-fluid" id="legoface"></a>
                         <label for="legoface">I Nostri Cataloghi</label>
                     </div>
 
-                    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
-                        <a href="#"><img src="LEGOFRIEND.jfif" alt="legoimg" id="legofriend"
-                                class="rounded-circle"></a>
-                        <label for="legofriend">Giochi di ruolo</label>
-                    </div>
+                            <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+                                <a href="#"><img src="LEGOFRIEND.jfif" alt="legoimg" id="legofriend"
+                                        class="rounded-circle"></a>
+                                <label for="legofriend">Giochi di ruolo</label>
+                            </div>
 
-                    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
-                        <a href="#"><img src="LEGOGIOCONDA.jfif" alt="legoimg" id="legogioconda"></a>
-                        <label for="legogioconda">Le Nostre Opere</label>
-                    </div>
+                            <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+                                <a href="#"><img src="LEGOGIOCONDA.jfif" alt="legoimg" id="legogioconda"></a>
+                                <label for="legogioconda">Le Nostre Opere</label>
+                            </div>
 
-                    <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
-                        <a href="#"><img src="legobaby.jfif" alt="legoimg" id="legobaby"></a>
-                        <label for="legobaby">Adatto Per I Bambini</label>
-                    </div>
+                            <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
+                                <a href="#"><img src="legobaby.jfif" alt="legoimg" id="legobaby"></a>
+                                <label for="legobaby">Adatto Per I Bambini</label>
+                            </div>
 
                 </div>
 
@@ -79,7 +79,7 @@
 
         {{-- ----------Prodotti in primo piano --}}
         <div class="">
-            <h1 class="m-5 text-center  fs-1">I preferiti Di QUesta Settimana</h1>
+            <h1 class="m-5 text-center  fs-1">I preferiti Di Questa Settimana</h1>
         </div>
 
         <div class="container">
@@ -139,13 +139,14 @@
 
         <div>
 
-            <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
+     
             <div id="album-rotator" class="w-100">
+                <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
                 <div id="album-rotator-holder" class="d-flex flex-row  carousel2">
                     <div>
 
                         <div id="album-rotator" class="w-100">
-                            <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
+                        
                             <div id="album-rotator-holder" class="d-flex flex-row  carousel2">
 
 
@@ -198,13 +199,12 @@
                     {{--     ------------secondo carosello, vari articoli --}}
 
 
-
+                    <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
                     <div>
-
                         <div id="album-rotator" class="w-100">
-                            <h1 class="m-5 text-center  fs-1">Set in evidenza</h1>
+                          
                             <div id="album-rotator-holder" class="d-flex flex-row  carousel2">
-
+                          
 
                             </div>
 
