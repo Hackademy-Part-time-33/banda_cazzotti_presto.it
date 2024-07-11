@@ -54,24 +54,24 @@
                         <div class="row  ">
 
                             <div class="d-flex flex-column justify-content-sm-center col-xs-12 col-sm-6  col-lg-3 ">
-                                <a href="#" class=""><img src="LEGOFACE.jfif" alt="legoimg"
+                                <a href="#" class=""><img src="LEGOFACE.jfif" alt="legoimg" class="img-fluid"
                                         id="legoface"></a>
                                 <label for="legoface">I Nostri Cataloghi</label>
                             </div>
 
                             <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
                                 <a href="#"><img src="LEGOFRIEND.jfif" alt="legoimg" id="legofriend"
-                                        class="rounded-circle"></a>
+                                        class="img-fluid"></a>
                                 <label for="legofriend">Giochi di ruolo</label>
                             </div>
 
                             <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
-                                <a href="#"><img src="LEGOGIOCONDA.jfif" alt="legoimg" id="legogioconda"></a>
+                                <a href="#"><img src="LEGOGIOCONDA.jfif" alt="legoimg" id="legogioconda" class="img-fluid"></a>
                                 <label for="legogioconda">Le Nostre Opere</label>
                             </div>
 
                             <div class="d-flex flex-column col-xs-12 col-sm-6  col-lg-3">
-                                <a href="#"><img src="legobaby.jfif" alt="legoimg" id="legobaby"></a>
+                                <a href="#"><img src="legobaby.jfif" alt="legoimg" id="legobaby" class="img-fluid"></a>
                                 <label for="legobaby">Adatto Per I Bambini</label>
                             </div>
 
