@@ -1,4 +1,4 @@
-<x-main :entry="$entry">
+<x-main>
 <div class="container-fluid">
     <div class='row'>
         <div class="col-3">
