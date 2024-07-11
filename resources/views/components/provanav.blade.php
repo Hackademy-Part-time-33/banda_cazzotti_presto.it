@@ -61,7 +61,7 @@
                 </div>
             @else
                 <hr>
-                <div class="align-items-center">
+                <div class="align-items-center me-3">
                     <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                     <div class="container-flex">
 
@@ -79,12 +79,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('articles.create') }}"">Inserisci un
+                                        <a class="dropdown-item" href="{{ route('articles.create') }}">Inserisci un
                                             annuncio</a>
                                     </li>
                                     @if (Auth::user()->is_revisor)
                                         <li>
                                             <a class=" dropdown-item" href="{{ route('revisor.index') }}">Zona revisore
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevidesCount()}}</span>
                                             </a>
                                         </li>
                                     @endif
