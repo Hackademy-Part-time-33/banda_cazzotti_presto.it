@@ -67,20 +67,40 @@
     border-bottom: 4px solid var(--primary-color);
 }
 
+.search {
+    width: 0;
+    opacity: 0;
+    transition: width 0.8s ease, opacity 0.8s ease;
+}
 
 .search {
-    visibility: hidden;
+    width: 0;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    border: none;
 
 }
 
-/* Classe per espandere il campo input */
 .search.expanded {
     border-radius: 5px;
     width: 70%;
-    visibility: visible;
+    opacity: 1;
 }
 
-.search.expanded:active {
-    visibility: visible;
+.search:focus {
+    outline: none;
 
+    box-shadow: none;
+}
+
+@media (max-width: 576px) {
+    .search {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .search.expanded {
+        width: 100%;
+    }
 }

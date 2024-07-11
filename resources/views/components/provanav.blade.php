@@ -44,6 +44,7 @@
                         href="{{ route('contacts') }}"> Contatti</a>
                 </li>
             </ul>
+            {{-- search --}}
             <form id="searchForm" class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}"
                 method="GET">
                 <div class="input-group">
@@ -64,8 +65,8 @@
                 <div class="align-items-center">
                     <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                     <div class="container-flex">
-
-                        <div class="d-flex">{{-- aaaa --}}
+                        {{-- dropdown area utente --}}
+                        <div class="d-flex justify-content-center">
                             <div class="dropdown col-6-md-12 me-2">
                                 <a class="btn custom-button dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,6 +94,7 @@
                             <div class="col-6-md-12 d-flex justify-content-center">
                                 <form action="{{ route('logout') }}" method="post">
                                     @csrf
+                                    {{-- tasto esci --}}
                                     <button class="btn custom-button" id="btn_nav" type="submit"> <svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
