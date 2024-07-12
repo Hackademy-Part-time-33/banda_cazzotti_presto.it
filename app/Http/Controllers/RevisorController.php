@@ -14,7 +14,7 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $article_to_check = Article::where('is_accepted', null)->orderBy('created_at', 'desc')->first();
+        $article_to_check = Article::where('is_accepted', null)->orderBy('created_at', 'desc')->whereNot('user_id', auth()->user()->id)->first();
         return view('revisor.index', compact('article_to_check'));
     }
     
@@ -42,9 +42,9 @@ class RevisorController extends Controller
         ->with('message', "Hai eliminato la tua operazione precedente $article->title");
     }
     
-    public function becomeRevisor()
+    public function becomeRevisor(Request $request)
     {
-        Mail::to('armentielia@gmail.com')->send(new BecomeRevisor(Auth::user()));
+        Mail::to('armentielia@gmail.com')->send(new BecomeRevisor(Auth::user(), $request->message));
         return redirect()->route('homepage')->with('message', 'Complimenti, hai richiesto di diventare un revisore!');
     }
     

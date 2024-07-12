@@ -41,7 +41,7 @@ class Article extends Model
 
     public static function toBeRevidesCount() 
     {
-        return Article::where('is_accepted', null)->count();
+        return Article::where('is_accepted', null)->whereNot('user_id', auth()->user()->id)->count();
     }
 }
 
