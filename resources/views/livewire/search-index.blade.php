@@ -78,12 +78,7 @@
                 <button class="btn btn-secondary m-4 ms-2" id="clearButton" >CLEAR FILTERS</button> --}}
             {{-- </form> --}}
             </div>
-            <div id="cardWrapper" class="col-12 col-md-9" x-data="{ canLoadMore:@entangle('canLoadMore')}" 
-            @scroll.window.trottle="
-
-            isScrolled= window.scrollY+window.innerHeight>=document.documentElement.scrollHeight;
-             if(isScrolled && canLoadMore){
-            @this.loadMore()}">
+            <div id="cardWrapper" class="col-12 col-md-9">
 
             <div class="d-flex justify-content-center h3">
               <select class="d-inline form-select form-select-sm mt-3"
