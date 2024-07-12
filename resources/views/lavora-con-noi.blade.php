@@ -1,5 +1,5 @@
 <x-main>
-    <form class="p-5 border rounded" action="{{ route('become.revisor') }}" method="GET">
+    <form class="p-5 border rounded" action="{{ route('become.revisor') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
