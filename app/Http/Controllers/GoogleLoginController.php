@@ -26,7 +26,9 @@ class GoogleLoginController extends Controller
             $user = User::create([
                 'name' => $googleUser->name, 
                 'email' => $googleUser->email, 
-                'password' => Hash::make(rand(100000,999999))]);
+                'password' => Hash::make(rand(100000,999999)),
+                'email_verified_at'=> now(), 
+            ]);
         }
 
         Auth::login($user);
