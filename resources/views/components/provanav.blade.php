@@ -43,6 +43,14 @@
                     <a class="nav-link @if (request()->routeIs('contacts')) nav-active @endif"
                         href="{{ route('contacts') }}"> Contatti</a>
                 </li>
+                @auth
+                    @if (!auth()->user()->is_revisor)
+                        <li class="nav-item mx-3 anm_link">
+                            <a class="nav-link @if (request()->routeIs('lavora-con-noi')) nav-active @endif"
+                                href="{{ route('lavora-con-noi') }}"> Lavora con noi</a>
+                        </li>
+                    @endif
+                @endauth
             </ul>
             {{-- search --}}
             <form id="searchForm" class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}"
