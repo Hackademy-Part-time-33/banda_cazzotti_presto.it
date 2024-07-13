@@ -9,6 +9,7 @@
             </div>{{--  --}}
         </div>
         <div class="row">
+            {{-- <div class="col-12 col-md-3 "></div> --}}
             <div class="col-12 col-md-3">
             {{-- <form wire:submit='search'> --}}
                 
@@ -89,12 +90,7 @@
 <button class="btn btn-secondary m-4 ms-2" id="clearButton" >CLEAR FILTERS</button> --}}
 {{-- </form> --}}
 </div>
-<div id="cardWrapper" class="col-12 col-md-9" x-data="{ canLoadMore: @entangle('canLoadMore') }"
-@scroll.window.trottle="
-
-            isScrolled= window.scrollY+window.innerHeight>=document.documentElement.scrollHeight;
-             if(isScrolled && canLoadMore){
-            @this.loadMore()}">
+<div id="cardWrapper" class="col-12 col-md-9">
 
 <div class="d-flex justify-content-center h3">
     <select class="d-inline form-select form-select-sm mt-3" wire:model.live='priceOrTitle'
@@ -121,10 +117,10 @@
         ↓
         @endif</p> --}}
     </div>
-    <div class="d-flex {{-- justify-content-evenly --}} flex-wrap">
+    <div class="d-flex justify-content-evenly flex-wrap">
         <!-- card prodotti creati con JS  -->
         @forelse ($articles as $article)
-        <div class="mx-auto mx-md-4 mt-4">
+        <div class="mx-auto mx-md-3 mt-4">
             <x-card :article="$article" :width=18 />
         </div>
         @empty
