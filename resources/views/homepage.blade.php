@@ -53,7 +53,7 @@
                     <div class="container mt-2">
                         <div class="row ">
 
-                            <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center" data-test="quicklinks" style="background-color: rgb(228, 229, 236);">
+                            <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center list-unstyled" data-test="quicklinks" style="background-color: rgb(228, 229, 236);">
                                 @forEach($category as $category)
                                 <li data-test="quicklink-link" class="QuickLinks_li__z6b2v "><a href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I" data-test="quicklink-link-0" target="" class="QuickLinks_labelDark__UY_rw" rel="noreferrer"><picture data-test="quicklink-image" fit="crop"> 
                                         <source type="image/webp" srcset="{{asset('immagini-progetto/prodotto'.$category->id.'.webp')}}" media="(min-width: 900px)" width="120" height="97"><img alt="" decoding="async" loading="lazy" style="object-fit: fill;" src="https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?fit=crop&amp;quality=80&amp;width=120&amp;height=97&amp;dpr=1">
