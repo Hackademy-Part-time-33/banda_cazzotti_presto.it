@@ -239,11 +239,25 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 
-/* function card() {
-    immagini.forEach(element => {
-        let carousel = document.querySelector("#album-rotator-holder");
-        carousel.innerHtml('<img src=`element`>');
-      
-        });
-} */
-/* console.log(immagini); */
+/* ----------------CAROSELLO NUOVIPRODOTTI SWIPER */
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });

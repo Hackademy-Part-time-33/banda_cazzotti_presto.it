@@ -8,21 +8,14 @@
 }
 
 /* -----------HOME */
-#carouselExampleIndicators {
-    height: 700px;
+#firtSection{
+    background-image: url("C:\Users\cuomo\wa\banda_cazzotti_presto.it\public\immagini-progetto\prodotto16.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 500px;
 }
-
-
-
-#img-carousel {
-    height: 700px;
-    
-    ;
-}
-
-/* #offerteHome {
-    background: linear-gradient(#fcc404, rgb(223, 208, 75));
-} */
 
 
 
@@ -41,7 +34,9 @@ body {
     overflow: hidden;
     position: relative;
     word-break: keep-all;
-    padding: 2rem 0;
+    padding-left: 2rem 0;
+    padding-right: 2rem 0;
+    padding-bottom: 2rem 0;
     
 }
 
@@ -162,21 +157,19 @@ h1 {
     .carousel2 {
         width: 300px;
     }
-
+/* 
     .carousel {
         width: 400px;
         height: auto;
         margin-left: 50px;
-    }
+    } */
 
 }
-/* #legocard{
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-    height: 100%;
-} */
+
+.dimensione{
+    width: 300px;
+ 
+}
 
 #lista{
     background-color: transparent;
@@ -192,4 +185,12 @@ h1 {
 #card{
     width: 110px;
     height: 50px;
+}
+
+#album-rotator{
+    overflow: hidden;
+}
+
+.swiper-pagination>span{
+background-color: #dc3545;
 }
