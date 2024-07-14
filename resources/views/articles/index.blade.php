@@ -13,7 +13,7 @@
                     
                     @auth
 
-                        @if (!auth()->user()->isRevisor)
+                        @if (auth()->user()->is_revisor)
 
                         <th>Approvazione</th>
                         
@@ -43,7 +43,7 @@
                         
                         @auth
 
-                        @if (!auth()->user()->isRevisor)
+                        @if (auth()->user()->is_revisor)
                         <td>
                             {{$article->is_accepted ? 'Articolo accettato' : 'Articolo rifiutato'}}
                         </td>
