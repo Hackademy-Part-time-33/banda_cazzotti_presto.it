@@ -20,23 +20,12 @@
             
             <div class="carousel-inner">
             @foreach ($article->images as $key=>$image)
-    <div class="carousel-item active">
+    <div class="carousel-item @if ($loop->first) active @endif">
                   <img src="{{ Storage::url($image->path) }}" class="d-block w-100  p-5" id="img-carousel" alt="Immagine {{$key+1}} dell'articolo {{$article->title}}">
                 </div>
             @endforeach
               
-              <div class="carousel-item">
-                <img src="{{ asset('LEGO.jfif') }}" class="d-block w-100  p-5" id="img-carousel"  alt="img-2">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>{{$article->title}}</h5>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="{{ asset('lego3.jfif') }}" class="d-block w-100  p-5" id="img-carousel"  alt="img-3">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>{{$article->title}}</h5>
-                </div>
-              </div>
+             
             </div>
             @if ($article->images->count()>1)
                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
