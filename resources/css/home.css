@@ -9,7 +9,7 @@
 
 /* -----------HOME */
 #firtSection {
-    background-image: url("C:\wa\prg_presto.it\public\immagini-progetto\prodotto16.webp");
+    background-image: url("../public/immagini-progetto/prodotto16.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
@@ -48,7 +48,7 @@ body {
     /* transition: all 0.01s linear; */
 }
 
-div#album-rotator-holder {}
+#album-rotator-holder {}
 
 #album-rotator:after {
     content: '';
@@ -68,7 +68,6 @@ div#album-rotator-holder {}
     position: relative;
     width: 250px;
     -webkit-user-drag: none;
-    user-drag: none;
     height: 300px;
     user-select: none;
     border-radius: 10px;
