@@ -6,9 +6,14 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateArticleForm extends Component
 {
+    use WithFileUploads;
+    public $images = [];
+    public $temporary_images;
+
     #[Validate('required', message: 'Per favore inserisci un titolo.')]
     #[Validate('min:5', message: 'il titolo è troppo corto (minimo 5 caratteri).')]
     #[Validate('max:254', message: 'il titolo è troppo lungo (massimo 254 caratteri).')]
@@ -42,4 +47,5 @@ class CreateArticleForm extends Component
     {
         return view('livewire.create-article-form');
     }
+
 }
