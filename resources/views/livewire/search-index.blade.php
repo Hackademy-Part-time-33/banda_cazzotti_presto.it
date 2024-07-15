@@ -8,9 +8,9 @@
                 </h1>
             </div>{{--  --}}
         </div>
-        <div class="row">
+        <div class="row" >
             {{-- <div class="col-12 col-md-3 "></div> --}}
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3 position-sticky" >
             {{-- <form wire:submit='search'> --}}
                 
                 
