@@ -180,6 +180,9 @@ h1 {
 
 #preferiti {
     margin-top: 50px;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    text-shadow: #333 1px 1px;
 }
 
 

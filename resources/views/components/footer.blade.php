@@ -4,8 +4,9 @@
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                 <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
                     loading="lazy" style="margin-top: -1px;" />
+                <p class="text-body-secondary pt-5">© 2024</p>
             </a>
-            <p class="text-body-secondary">© 2024</p>
+
         </div>
 
 
