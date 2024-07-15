@@ -11,7 +11,14 @@
         </div>
     </div>
     
-    @if ($article_to_check)
+    @if ($article_to_check->image && $article_to_check->image->count())
+
+    @foreach ($article_to_check->images as $key->image)
+    <div class="col-6 col-md-4 mb-4 text-center">
+        <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow d-block w-75"
+        alt="Immagine {{$key + 1}} dell'articolo {{$article_to_check->title}}">
+    </div>
+    @endforeach
     
     <div id="carouselExampleIndicators" class="carousel slide mt-5">
         <div class="carousel-indicators">
