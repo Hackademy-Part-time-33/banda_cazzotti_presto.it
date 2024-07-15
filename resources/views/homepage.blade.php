@@ -5,13 +5,17 @@
 </header>
 
 <x-main>
+
+    
+
+   
     {{--   IMMAGINE INIZIALE --}}
-
-    <div id="firtSection" style=" background-image: url('{{asset("immagini-progetto/tansformer.webp")}}')" >
-
-
+    <div class="container">
+   
+    <div id="firtSection" style=" background-image: url('{{asset("immagini-progetto/tansformer.webp")}}')" class="" >
+     </div>
+    
     </div>
-
     {{--  --------------FineImmagine --}}
 
 
