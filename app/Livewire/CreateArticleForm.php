@@ -6,9 +6,14 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateArticleForm extends Component
 {
+    use WithFileUploads;
+    public $images = [];
+    public $temporary_images;
+
     #[Validate('required', message: 'Per favore inserisci un titolo.')]
     #[Validate('min:5', message: 'il titolo è troppo corto (minimo 5 caratteri).')]
     #[Validate('max:254', message: 'il titolo è troppo lungo (massimo 254 caratteri).')]
@@ -37,6 +42,25 @@ class CreateArticleForm extends Component
         ]);
         session()->flash('success', 'Articolo creato correttamente');
         $this->reset();
+    }
+
+    public function updatedTemporaryImages()
+    {
+        
+        if ($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            'temporary_images' => 'max:6'
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key){
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
     }
     public function render()
     {

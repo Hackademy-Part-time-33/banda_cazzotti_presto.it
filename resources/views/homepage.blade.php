@@ -7,7 +7,7 @@
 <x-main>
     {{--   IMMAGINE INIZIALE --}}
 
-    <div id=firtSection>
+    <div id="firtSection" style=" background-image: url('{{asset("immagini-progetto/tansformer.webp")}}')" >
 
 
     </div>
