@@ -15,7 +15,7 @@
 
 <body>
     <x-provanav />
-    <div class="@if (request()->routeIs('articles.search'))  @else  container @endif">
+    <div class="@if (request()->routeIs('articles.search')) @else  container @endif">
 
         {{ $slot }}
 
