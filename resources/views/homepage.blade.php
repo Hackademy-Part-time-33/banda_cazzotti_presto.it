@@ -94,7 +94,7 @@
 
 
         {{--  ------NUoviProdotti --}}
-        >>>>>>> 52fffe2e5a8f4265c673fe4257473e29a7a06c2a
+
         <div class="container">
 
             <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/tansformer.webp') }}')">
@@ -141,9 +141,9 @@
                     <div class="row ">
                         <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 list-unstyled"
                             data-test="quicklinks" style="background-color: transparent">
-                            @foreach ($category as $category)
-                                <li data-test="quicklink-link " class="QuickLinks_li__z6b2v "><a
-                                        href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
+                            @foreach ($categories as $category)
+                                <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
+                                    <a href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
                                         data-test="quicklink-link-0" target=""
                                         class="QuickLinks_labelDark__UY_rw categ_home" rel="noreferrer">
                                         <picture data-test="quicklink-image" fit="crop">
