@@ -2,4 +2,6 @@
 
 return [
     
+    'hello' => 'Hola',
+    'allArticles' => 'Tutti gli articoli'
 ];
