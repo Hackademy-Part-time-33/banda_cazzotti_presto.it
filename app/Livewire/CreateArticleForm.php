@@ -10,6 +10,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 
 class CreateArticleForm extends Component
 {
