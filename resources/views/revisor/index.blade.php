@@ -28,7 +28,7 @@
             @endif">
                 
                 <div class="col-6 col-md-4 mb-4 text-center">
-                    <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow d-block w-75"
+                    <img src="{{ $image->getUrl(300,300) }}" class="img-fluid rounded shadow d-block w-75"
                     alt="Immagine {{$key + 1}} dell'articolo {{$article_to_check->title}}">
                 </div>
             </div>
