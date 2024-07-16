@@ -10,7 +10,7 @@
     @vite(['resources/css/home.css', 'resources/js/home.js'])
     @vite(['resources/css/navbar.css', 'resources/js/navbar.js'])
 
-    <title>{{ env('APP_NAME') }}</title>
+    <title>{{ config('app.name') }}</title>
 </head>
 
 <body>

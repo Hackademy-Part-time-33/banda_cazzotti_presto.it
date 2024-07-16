@@ -9,31 +9,26 @@
         <div class="row {{-- flex-column flex-lg-row --}}">
           
           
-          <col-8 class="col-12 col-lg-7 mt-5 mt-lg-0">
+          <div class="col-12 col-lg-7 mt-5 mt-lg-0">
+          @if ($article->images->count()>0)
           <div id="carouselExampleIndicators" class="carousel w-100 carousel-dark slide border border-5 border-warning ">
-            <div class="carousel-indicators">
+           {{--  <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+            </div> --}}
+            
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="{{ asset('LEGO2.jfif') }}" class="d-block w-100  p-5" id="img-carousel" alt="img-1">
-              </div>
-              <div class="carousel-item">
-                <img src="{{ asset('LEGO.jfif') }}" class="d-block w-100  p-5" id="img-carousel"  alt="img-2">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>{{$article->title}}</h5>
+            @foreach ($article->images as $key=>$image)
+    <div class="carousel-item @if ($loop->first) active @endif">
+                  <img src="{{ Storage::url($image->path) }}" class="d-block w-100  p-5" id="img-carousel" alt="Immagine {{$key+1}} dell'articolo {{$article->title}}">
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="{{ asset('lego3.jfif') }}" class="d-block w-100  p-5" id="img-carousel"  alt="img-3">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>{{$article->title}}</h5>
-                </div>
-              </div>
+            @endforeach
+              
+             
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            @if ($article->images->count()>1)
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden ">Previous</span>
             </button>
@@ -41,9 +36,14 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
+            @endif
+           
           </div>
-        </col-8>
-        <col-4 class="col-12 col-lg-4 flex-fill">
+          @else
+          <img src="{{asset('LogoLegoNavbar.png')}}" class="img-fluid" alt="Nessun immagine">
+          @endif
+        </div>
+        <div class="col-12 col-lg-4 flex-fill">
         <div class="{{-- d-flex flex-column --}} m-5">
           <h3>{{$article->title}}</h3>
           <h4 class="fw-bold">{{Str::replace('.', ',', sprintf("%.2f", $article->price))}} €</h4>
@@ -52,7 +52,7 @@
           <p>Categoria: <a href="{{route('byCategory', ['category' => $article->category])}}">{{$article->category->name}}</a></p>
           <p>Autore del prodotto: {{$article->user->name}}</p>
         </div>
-      </col-4>
+      </div>
     </div>
   </div>
 </x-main>

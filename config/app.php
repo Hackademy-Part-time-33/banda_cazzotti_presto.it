@@ -14,6 +14,9 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    
+    'api' => env('API_KEY', 'NULL'),
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -78,11 +81,14 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'it'),
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+
+    // Aggiungo le lingue supportate
+    'locales' => ['en', 'it'],
 
     /*
     |--------------------------------------------------------------------------
