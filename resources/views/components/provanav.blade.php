@@ -50,8 +50,15 @@
                                 href="{{ route('lavora-con-noi') }}"> Lavora con noi</a>
                         </li>
                     @endif
-                @endauth
+                @endauth                
             </ul>
+
+            {{-- inserisco le lingue richieste --}}
+            <x-locale lang="it"/>
+            <x-locale lang="en"/>
+            <x-locale lang="es"/>
+
+
             {{-- search --}}
             <form id="searchForm" class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}"
                 method="GET">
