@@ -1,20 +1,15 @@
-<header>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</header>
-
 <x-main>
 
-    
 
-   
+
+
     {{--   IMMAGINE INIZIALE --}}
-    <div class="container">
-   
-    <div id="firtSection" style=" background-image: url('{{asset("immagini-progetto/tansformer.webp")}}')" class="" >
-     </div>
-    
+    <div class="container-fluid">
+
+        <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/tansformer.webp') }}')"
+            class="mt-2">
+        </div>
+
     </div>
     {{--  --------------FineImmagine --}}
 
@@ -30,8 +25,8 @@
                     <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 list-unstyled"
                         data-test="quicklinks" style="background-color: transparent">
                         @foreach ($category as $category)
-                            <li data-test="quicklink-link " class="QuickLinks_li__z6b2v "><a
-                                    href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
+                            <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
+                                <a href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
                                     data-test="quicklink-link-0" target=""
                                     class="QuickLinks_labelDark__UY_rw categ_home" rel="noreferrer">
                                     <picture data-test="quicklink-image" fit="crop">
@@ -49,7 +44,7 @@
                                 </a>
                             </li>
                         @endforEach
-
+                    </ul>
 
                 </div>
             </div>
@@ -105,7 +100,7 @@
                         <!-- Slides -->
                         @forelse ($articles as $article)
                             <div class="swiper-slide">
-                                <x-card :article="$article" :width=15 :height=480/>
+                                <x-card :article="$article" :width=15 :height=480 />
                             </div>
                         @empty
                             <div class="">
@@ -114,7 +109,7 @@
                                 </h3>
                             </div>
                         @endforelse
-                        
+
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
@@ -155,7 +150,6 @@
 
         </div>
     </div>
-    </div>
 
 
     <script>
@@ -171,7 +165,7 @@
         function insert() {
             immagini.forEach(element => {
                 let ancor = document.createElement('a');
-                ancor.setAttribute('target', '_blank')
+                ancor.setAttribute('target', '_blank');
 
                 console.log(element);
 
@@ -194,8 +188,6 @@
 
         const swiper = new Swiper(...)
     </script>
-
-    </div>
     <script src="https://kit.fontawesome.com/48764efa36.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
