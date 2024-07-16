@@ -114,7 +114,7 @@
                                 </h3>
                             </div>
                         @endforelse
-                        ...
+                        
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>

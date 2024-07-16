@@ -1,5 +1,5 @@
 <div>
-    <div class="card mx-auto shadow text-center m-4" style="width: {{$width ?? 20}}rem; height : {{$height ?? 400}}px">
+    <div class="card mx-auto shadow text-center {{-- m-4 --}}" style="width: {{$width ?? 20}}rem; height : {{$height ?? 400}}px">
         <img src="{{$article->images->isNotEmpty()? Storage::url($article->images->first()->path):asset("LogoLegoNavbar.png")}}" class="card-img-top p-3" alt="Immagine dell'articolo {{$article->title}}" >
         <div class="card-body">
             <h4 class="card-title">{{$article->title}}</h4>
