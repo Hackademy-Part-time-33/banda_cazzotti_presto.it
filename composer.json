@@ -12,7 +12,11 @@
         "laravel/socialite": "^5.15",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5",
+<<<<<<< HEAD
+        "spatie/image": "^3.6",
+=======
         "outhebox/blade-flags": "^1.5",
+>>>>>>> eb7a33fa2648c4c594f8dafe7d2595403200c1ab
         "teamtnt/laravel-scout-tntsearch-driver": "^14.0"
     },
     "require-dev": {
