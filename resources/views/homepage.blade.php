@@ -110,7 +110,7 @@
                         @empty
                             <div class="">
                                 <h3>
-                                    Nessun articolo è ancora stato creato
+                                    Nessun articolo è ancora stato creato !
                                 </h3>
                             </div>
                         @endforelse
