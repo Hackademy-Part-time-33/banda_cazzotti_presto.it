@@ -1,7 +1,7 @@
 <x-main>
     <div class="container-fluid pt-2">
         <div class='row'>
-            <div class="col-3 mx-auto">
+            <div class="col-12 col-md-3 mx-auto">
                 <div class="rounded shadow bg-body-secondary ">
                     <h1 class="text-center fw-bold ">
                         Revisor Dashboard !
@@ -10,60 +10,51 @@
             </div>
         </div>
     </div>
+{{--     -----------carosello --}}
+   
     
-    @if ($article_to_check)
-    
-    <div id="carouselExampleIndicators" class="carousel slide mt-5">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            @if ($article_to_check->images->count())
-            @foreach ($article_to_check->images as $key=>$image)
-            
-            <div class="carousel-item @if ($loop->first) active
-                
-            @endif">
-                
-                <div class="col-6 col-md-4 mb-4 text-center">
-                    <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow d-block w-75"
-                    alt="Immagine {{$key + 1}} dell'articolo {{$article_to_check->title}}">
-                </div>
-            </div>
-            @endforeach
-            @else
-            @for ($i = 1; $i < 6; $i++)
-            <div class="carousel-item @if ($i == 1) active
-                
-            @endif">
-            <div class="col-6 col-md-4 mb-4 text-center">
-                <img src="{{ asset("immagini-progetto/prodotto$i.webp") }}" class="img-fluid rounded shadow d-block w-75"
-                alt="immaginesegna">
-            </div>
-        </div>
-        @endfor
-        @endif
-    </div>
-    <button class="carousel-control-prev text-dark" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
 
-<div class="row d-flex justify-content-center">
-    <div class="col-md-4 ps-4 d-flex flex-column justify-content-between mt-5 ">
+
+    @if ($article_to_check)
+<div class="row mt-5">
+    <div class="col-12 col-md-5">
+    <div id="carouselExample" class="carousel slide  border border-danger border-5" >
+        <div class="carousel-innerr">
+          
+          
+          @for ($i = 1; $i < 6; $i++)
+          
+          <div class="carousel-item    @if($i==1) active @endif "  id="carousel1">
+            <div class="w-100 h-100  d-flex justify-content-center align-items-center">
+              <img src="{{ asset("immagini-progetto/prodotto$i.webp") }}" class=" rounded shadow "  alt="immaginesegna" >
+            </div>
+          </div>
+      @endfor
+
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="text-warning fs-1 font-bold "><</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="text-warning fs-1 font-bold ">></span>
+        </button>
+      </div>
+    </div>
+
+  {{--  -------------fineCarosello --}}
+
+
+    <div class="col-12 col-md-5 d-flex justify-content-center">
+    <div class=" ps-4 d-flex flex-column justify-content-between mt-5 ">
         <div>
-            <h1>{{ $article_to_check->title }}</h1>
-            <h3>Autore: {{ $article_to_check->user->name }}</h3>
-            <h4>{{ $article_to_check->price }}£</h4>
-            <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
-            <p class="h6"> {{ $article_to_check->description }}</p>
+            <h1 class="revisiona">{{ $article_to_check->title }}</h1>
+            <h3 class="revisiona"> Autore: {{ $article_to_check->user->name }}</h3>
+            <h4 class="revisiona">{{ $article_to_check->price }}£</h4>
+            <h4 class="fst-italic text-muted revisiona">#{{ $article_to_check->category->name }}</h4>
+            <p class="h6 revisiona"> {{ $article_to_check->description }}</p>
         </div>
         
         <div class="d-flex pb-4 justify-cointent-around ">
@@ -93,6 +84,7 @@
     
 </div>
 @endif
+</div>
 </div>
 
 </x-main>

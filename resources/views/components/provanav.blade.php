@@ -54,6 +54,7 @@
             </ul>
 
             {{-- inserisco le lingue richieste --}}
+            <div class=" d-flex align-items-center justify-content-center" id="bandiereSearch">
             <x-locale lang="it"/>
             <x-locale lang="en"/>
             <x-locale lang="es"/>
@@ -62,15 +63,16 @@
             {{-- search --}}
             <form id="searchForm" class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}"
                 method="GET">
-                <div class="input-group align-items-center justify-content-center">
+                <div class="input-group d-flex align-items-center justify-content-center">
                     <input id="searchInput" type="search" name="query" class="search form-control"
                         placeholder="Cerca Articoli" aria-label="search">
-                    <button id="searchButton" type="button" class="btn ">
+                    <button id="searchButton" type="button" class="btn  d-flex align-items-center justify-content-center">
                         <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo" />
                     </button>
                 </div>
             </form>
             <hr>
+        </div>
             @guest
                 <div class="d-grid gap-2 d-md-block">
                     <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>

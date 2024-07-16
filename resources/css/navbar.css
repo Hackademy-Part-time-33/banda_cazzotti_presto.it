@@ -5,7 +5,11 @@
     --secondary-color: #dc3545;
     --third-color: #f8f9fa;
 }
-
+#bandiereSearch{
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
 .mynav {
     height: 7rem;
     padding: auto;
