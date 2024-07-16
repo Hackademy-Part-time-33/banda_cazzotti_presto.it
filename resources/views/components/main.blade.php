@@ -16,12 +16,14 @@
 <body>
     <x-provanav />
     <div class="@if (request()->routeIs('articles.search')) @else  container @endif">
+        <x-provanav />
+        <div class="@if (request()->routeIs('articles.search')) @else  container @endif">
 
-        {{ $slot }}
+            {{ $slot }}
 
-    </div>
+        </div>
 
-    <x-footer />
+        <x-footer />
 
 </body>
 
