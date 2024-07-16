@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <x-provanav />
+    <x-provanav/>
     <div class="@if (request()->routeIs('articles.search'))  @else  container @endif">
 
         {{ $slot }}

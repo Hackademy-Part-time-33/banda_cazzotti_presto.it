@@ -41,6 +41,8 @@ Route::get('/make/revisor/{user}' , [RevisorController::class, 'makeRevisor'])->
 
 
 Route::get('/workwithus' , [RevisorController::class, 'showWork'])->middleware('auth')->name('lavora-con-noi');
+
+Route::post('/lingua/{lang}' , [PageController::class, 'setLanguage'])->name('setLocale');
  
 
 
