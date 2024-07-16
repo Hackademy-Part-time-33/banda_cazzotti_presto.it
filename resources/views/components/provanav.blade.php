@@ -70,7 +70,7 @@
                     <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
                 </div>
             @else
-                <div class="align-items-center me-3">
+                <div class=" align-items-center me-3">
                     <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{ auth()->user()->name }} !</p>
                     <div class="container-flex">
                         {{-- dropdown area utente --}}
@@ -101,11 +101,11 @@
                                     @endif
                                 </ul>
                             </div>
-                            <div class="col-6-md-12 d-flex justify-content-center">
+                            <div class="col-6-md-12 d-flex justify-content-center ">
                                 <form action="{{ route('logout') }}" method="post">
                                     @csrf
                                     {{-- tasto esci --}}
-                                    <button class="btn custom-button" id="btn_nav" type="submit"> <svg
+                                    <button class="btn custom-button " id="btn_nav" type="submit"> <svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
