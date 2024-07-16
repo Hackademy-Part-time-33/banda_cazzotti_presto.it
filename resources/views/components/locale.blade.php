@@ -1,5 +1,4 @@
 
-
 <form action="{{route('setLocale', $lang)}}" class="d-inline" method="POST">
     @csrf
     <button type="submit" class="btn">
