@@ -21,4 +21,10 @@ class PageController extends Controller
         return view('contacts');
     }
 
+    public function setLanguage($lang){
+
+        session()->put('locale' , $lang);
+        return redirect()->back();
+    }
+
 }
