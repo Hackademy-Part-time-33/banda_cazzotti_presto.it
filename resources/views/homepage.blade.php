@@ -105,7 +105,7 @@
                         <!-- Slides -->
                         @forelse ($articles as $article)
                             <div class="swiper-slide">
-                                <x-card :article="$article" :width=15 />
+                                <x-card :article="$article" :width=15 :height=480/>
                             </div>
                         @empty
                             <div class="">
