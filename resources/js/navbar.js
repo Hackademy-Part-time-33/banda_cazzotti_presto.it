@@ -11,3 +11,6 @@ document.getElementById('searchButton').addEventListener('click', function () {
         searchInput.focus(); // Facoltativo: imposta il focus sul campo input quando si espande
     }
 });
+document.getElementById('dropnav').addEventListener('click', function () {
+    this.classList.add('active');
+});

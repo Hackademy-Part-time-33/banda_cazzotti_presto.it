@@ -49,7 +49,6 @@
     font-size: 15px;
     border-radius: 10px;
     transition: background-color 0.5s, color 0.5s;
-
 }
 
 .custom-button:hover {
@@ -61,6 +60,10 @@
 .custom-button:active {
     background-color: var(--secondary-color) !important;
 
+}
+
+.custom-bottom.active {
+    background-color: var(--secondary-color);
 }
 
 .nav-active {
@@ -92,7 +95,8 @@
 
     box-shadow: none;
 }
-.img-preview{
+
+.img-preview {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

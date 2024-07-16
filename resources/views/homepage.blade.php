@@ -1,19 +1,13 @@
-<header>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</header>
-
 <x-main>
 
 
 
 
     {{--   IMMAGINE INIZIALE --}}
-    <div class="container">
+    <div class="container-fluid">
 
         <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/tansformer.webp') }}')"
-            class="">
+            class="mt-2">
         </div>
 
     </div>
@@ -31,8 +25,8 @@
                     <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 list-unstyled"
                         data-test="quicklinks" style="background-color: transparent">
                         @foreach ($category as $category)
-                            <li data-test="quicklink-link " class="QuickLinks_li__z6b2v "><a
-                                    href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
+                            <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
+                                <a href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
                                     data-test="quicklink-link-0" target=""
                                     class="QuickLinks_labelDark__UY_rw categ_home" rel="noreferrer">
                                     <picture data-test="quicklink-image" fit="crop">
@@ -50,7 +44,7 @@
                                 </a>
                             </li>
                         @endforEach
-
+                    </ul>
 
                 </div>
             </div>
@@ -94,62 +88,61 @@
 
 
     {{--  ------NUoviProdotti --}}
-
     <div class="container">
+        <div class="row d-flex flex-row  justify-content-between">
+            <div class="  col-12 col-md-5">
+                <h2 class="text-danger text-center font-weight-bold">Nuovi Prodotti</h2>
 
-        <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/tansformer.webp') }}')">
-        </div>
 
+                <div class="swiper w-50  h-75 border border-danger border-5 rounded">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        @forelse ($articles as $article)
+                            <div class="swiper-slide">
+                                <x-card :article="$article" :width=15 :height=480 />
+                            </div>
+                        @empty
+                            <div class="">
+                                <h3>
+                                    Nessun articolo è ancora stato creato !
+                                </h3>
+                            </div>
+                        @endforelse
 
-        <div class="swiper w-50  h-75 border border-danger border-5 rounded">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                @forelse ($articles as $article)
-                    <div class="swiper-slide">
-                        <x-card :article="$article" :width=15 :height=480 />
                     </div>
-                @empty
-                    <div class="">
-                        <h3>
-                            Nessun articolo è ancora stato creato !
-                        </h3>
-                    </div>
-                @endforelse
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev text-warning"></div>
+                    <div class="swiper-button-next text-warning"></div>
+
+                    <!-- If we need scrollbar -->
+                </div>
 
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev text-warning"></div>
-            <div class="swiper-button-next text-warning"></div>
-
-            <!-- If we need scrollbar -->
-        </div>
-
-    </div>
-    {{--  ------FineNuoviProdotti --}}
+            {{--  ------FineNuoviProdotti --}}
 
 
 
 
-    {{--     ------------secondo carosello, vari articoli --}}
+            {{--     ------------secondo carosello, vari articoli --}}
 
 
 
 
-    <div class=" col-12 col-md-6 d-flex align-item-start">
-        <div id="album-rotator" class="w-100 ">
-            <h1 class="mb-5 text-center  fs-1 text-danger">Set in evidenza</h1>
-            <div id="album-rotator-holder" class="d-flex flex-row  carousel2 ">
+            <div class=" col-12 col-md-6 d-flex align-item-start">
+                <div id="album-rotator" class="w-100 ">
+                    <h1 class="mb-5 text-center  fs-1 text-danger">Set in evidenza</h1>
+                    <div id="album-rotator-holder" class="d-flex flex-row  carousel2 ">
 
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    </div>
+        </div>
     </div>
 
     <div class="d-flex justify-content-center">
@@ -157,8 +150,6 @@
 
         </div>
     </div>
-    </div>
-
 
 
     <script>
@@ -174,7 +165,7 @@
         function insert() {
             immagini.forEach(element => {
                 let ancor = document.createElement('a');
-                ancor.setAttribute('target', '_blank')
+                ancor.setAttribute('target', '_blank');
 
                 console.log(element);
 
@@ -197,8 +188,6 @@
 
         const swiper = new Swiper(...)
     </script>
-
-    </div>
     <script src="https://kit.fontawesome.com/48764efa36.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
