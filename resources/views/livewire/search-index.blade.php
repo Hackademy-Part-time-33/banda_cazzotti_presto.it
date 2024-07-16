@@ -25,7 +25,7 @@
                     <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne">
                                     Categorie
@@ -53,7 +53,7 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                                     aria-controls="panelsStayOpen-collapseTwo">
                                     Prezzo
@@ -74,7 +74,7 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                                     aria-controls="panelsStayOpen-collapseThree">
                                     Ricerca testuale
@@ -137,7 +137,7 @@
                 </div>
                 <div class="d-flex justify-content-center">
                     @if ($canLoadMore)
-                        <div>
+                        <div class="mt-4">
                             {{-- {{ $articles->links() }} --}}
                             <button class="btn btn-secondary" wire:click="loadMore">Mostra più articoli</button>
                         </div>

@@ -7,7 +7,7 @@
         </div>
         <div class="d-flex flex-wrap justify-content-center  py-5">
             @forelse($articles as $article)
-                <div class="px-3">
+                <div class="p-3">
                     <x-card :article="$article" />
 
                 </div>
