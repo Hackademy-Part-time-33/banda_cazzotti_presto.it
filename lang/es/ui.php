@@ -18,5 +18,7 @@ return [
     'preferites'=>'Los favoritos de la semana',
     'work_with_us'=> 'Trabaja con nosotros',
     'insert_ad'=> 'Publique su anuncio',
-    'reviser_area'=> 'Zona restringida'
+    'reviser_area'=> 'Zona restringida',
+    'new_products'=>'nuevos productos',
+    'buy_now'=>'Comprar ahora',
 ];

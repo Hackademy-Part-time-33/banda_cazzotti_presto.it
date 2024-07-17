@@ -16,6 +16,8 @@ return[
     'preferites'=>'this week s preferites', 
     'work_with_us'=> 'Work with us',
     'insert_ad'=> 'Insert ad',
-    'revisor_area'=> 'Revisor area'
+    'revisor_area'=> 'Revisor area',
+    'new_products'=>'Nuovi prodotti',
+    'buy_now'=> 'Buy now'
 
 ];

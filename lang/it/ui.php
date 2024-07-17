@@ -17,5 +17,7 @@ return[
     'preferites'=>'I preferiti di questa settimana',
     'work_with_us'=> 'Lavora con noi',
     'insert_ad'=> 'Inserisci annuncio',
-    'reviser_area'=> 'Area riservata'
+    'reviser_area'=> 'Area riservata',
+    'new_products'=>'Nuovi prodotti',
+    'buy_now'=>'Compra ora',
 ];
