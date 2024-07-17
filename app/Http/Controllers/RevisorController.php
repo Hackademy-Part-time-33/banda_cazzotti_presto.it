@@ -14,7 +14,7 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $article_to_check = Article::where('is_accepted', null)->orderBy('created_at', 'desc')->whereNot('user_id', auth()->user()->id)->first();
+        $article_to_check = Article::where('is_accepted', null)->orderBy('created_at', 'asc')->whereNot('user_id', auth()->user()->id)->first();
         return view('revisor.index', compact('article_to_check'));
     }
     

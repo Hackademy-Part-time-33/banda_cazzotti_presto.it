@@ -20,25 +20,39 @@
     <div class="col-12 col-md-5">
     <div id="carouselExample" class="carousel slide  border border-danger border-5 overflow-x-hidden" >
         <div class="carousel-innerr">
-          
-          
-          @for ($i = 1; $i < 6; $i++)
+            @if ($article_to_check->images->count())
+            @foreach ($article_to_check->images as $key=>$image)
+            
+            <div class="carousel-item  @if ($loop->first) active @endif" id="carousel1">                                           
+                
+                <div class="w-100 h-100  d-flex justify-content-center align-items-center">
+                    <img src="{{ $image->getUrl(300,300) }}" {{-- class="img-fluid rounded shadow d-block w-75" --}}
+                    alt="Immagine {{$key + 1}} dell'a   
+                    rticolo {{$article_to_check->title}}">
+                </div>
+            </div>
+            @endforeach
+            @else
+            @for ($i = 1; $i < 6; $i++)
           
           <div class="carousel-item    @if($i==1) active @endif "  id="carousel1">
             <div class="w-100 h-100  d-flex justify-content-center align-items-center">
               <img src="{{ asset("immagini-progetto/prodotto$i.webp") }}" class=" rounded shadow "  alt="immaginesegna" >
             </div>
           </div>
-      @endfor
+        @endfor
+        @endif
+          
+       
 
 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          {{-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> --}}
           <span class="text-warning fs-1 font-bold "><</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          {{-- <span class="carousel-control-next-icon" aria-hidden="true"></span> --}}
           <span class="text-warning fs-1 font-bold ">></span>
         </button>
       </div>
@@ -52,7 +66,7 @@
         <div>
             <h1 class="revisiona">{{ $article_to_check->title }}</h1>
             <h3 class="revisiona"> Autore: {{ $article_to_check->user->name }}</h3>
-            <h4 class="revisiona">{{ $article_to_check->price }}£</h4>
+            <h4 class="revisiona">{{ $article_to_check->price }}€</h4>
             <h4 class="fst-italic text-muted revisiona">#{{ $article_to_check->category->name }}</h4>
             <p class="h6 revisiona"> {{ $article_to_check->description }}</p>
         </div>
