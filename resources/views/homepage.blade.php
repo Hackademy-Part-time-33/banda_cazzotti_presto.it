@@ -58,7 +58,7 @@
 
     <div class="container bg-warning rounded p-3">
 
-        <h1 class=" text-center  fs-1 fw-bolder  text-danger" id="preferiti">I preferiti di questa settimana</h1>
+        <h1 class=" text-center  fs-1 fw-bolder  text-danger" id="preferiti">{{__('ui.preferites')}}</h1>
 
         <div class="row d-flex justify-content-between">
 
@@ -67,19 +67,19 @@
                 <h2><span>Nuovo set Bumblebee Transformers</span></h2>
                 <p><span>Cattura l'attenzione con il prossimo Autobot nell'universo dei Transformers
                         LEGO®</span></p>
-                <a href="#"><button class="btn btn-outline-danger">Compra Ora</button></a>
+                <a href="#"><button class="btn btn-outline-danger">{{__('ui.buy_now')}}</button></a>
             </div>
             <div class="  col-lg-3 col-sm-12  d-flex flex-column mt-5 mb-5 align-items-center">
                 <img src='immagini-progetto/stealer.webp ' class="img-fluid">
                 <h2><span>Scopri le novità</span></h2>
                 <p><span>Esplora i set LEGO® più recenti e straordinari attualmente disponibili</span></p>
-                <a href="#"><button class="btn btn-outline-danger">Compra Ora</button></a>
+                <a href="#"><button class="btn btn-outline-danger">{{__('ui.buy_now')}}</button></a>
             </div>
             <div class="  col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5 align-items-center">
                 <img src='immagini-progetto\play.webp' class="img-fluid">
                 <h2><span>Unisciti ai dispettosi Minions</span></h2>
                 <p><span>Dai vita alla casa di Gru con i nuovi set Cattivissimo Me 4 LEGO®</span></p>
-                <a href="#"><button class="btn btn-outline-danger">Compra Ora</button></a>
+                <a href="#"><button class="btn btn-outline-danger">{{__('ui.buy_now')}}</button></a>
             </div>
 
         </div>
@@ -91,7 +91,7 @@
     <div class="container">
         <div class="row d-flex flex-row  justify-content-between">
             <div class="  col-12 col-md-5">
-                <h2 class="text-danger text-center font-weight-bold">Nuovi Prodotti</h2>
+                <h2 class="text-danger text-center font-weight-bold">{{__('ui.new_products')}}</h2>
 
 
                 <div class="swiper w-50  h-75 border border-danger border-5 rounded">

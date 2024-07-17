@@ -13,12 +13,12 @@
             <ul class="navbar-nav mx-auto mb-2 mb-md-0">
                 <li class="nav-item anm_link mx-3 ">
                     <a class="nav-link @if (request()->routeIs('homepage')) nav-active @endif "
-                        href="{{ route('homepage') }}">Home</a>
+                        href="{{ route('homepage') }}">{{__('ui.home')}}</a>
                 </li>
                 <li class="nav-item mx-3 dropdown">
                     <a class="nav-link anm_link dropdown-toggle @if (request()->routeIs('byCategory')) nav-active @endif"
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" target="_self">
-                        Categorie
+                        {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu bg-body-tertiary">
 
@@ -27,27 +27,27 @@
                                     href='{{ route('byCategory', ['category' => $category]) }}'>{{ $category->name }}</a>
                             </li>
                         @empty
-                            Nessuna categoria
+                            {{__('ui.no_categories')}}
                         @endforelse
                     </ul>
                 </li>
                 <li class="nav-item mx-3 anm_link">
                     <a class="nav-link @if (request()->routeIs('articles.index')) nav-active @endif"
-                        href="{{ route('articles.index') }}"> Tutti i prodotti </a>
+                        href="{{ route('articles.index') }}">{{__('ui.products')}} </a>
                 </li>
                 <li class="nav-item mx-3 anm_link">
                     <a class="nav-link @if (request()->routeIs('about')) nav-active @endif" href="{{ route('about') }}">
-                        Chi siamo </a>
+                        {{__('ui.about_us')}} </a>
                 </li>
                 <li class="nav-item mx-3 anm_link">
                     <a class="nav-link @if (request()->routeIs('contacts')) nav-active @endif"
-                        href="{{ route('contacts') }}"> Contatti</a>
+                        href="{{ route('contacts') }}"> {{__('ui.contacts')}}</a>
                 </li>
                 @auth
                     @if (!auth()->user()->is_revisor)
                         <li class="nav-item mx-3 anm_link">
                             <a class="nav-link @if (request()->routeIs('lavora-con-noi')) nav-active @endif"
-                                href="{{ route('lavora-con-noi') }}"> Lavora con noi</a>
+                                href="{{ route('lavora-con-noi') }}"> {{__('ui.work_with_us')}}</a>
                         </li>
                     @endif
                 @endauth
@@ -74,12 +74,12 @@
         </div>
             @guest
                 <div class="d-grid gap-2 d-md-block">
-                    <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> Accedi</a>
-                    <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">Registrati</a>
+                    <a href="{{ route('login') }}" class="btn custom-button" id="btn_nav"> {{__('ui.login')}}</a>
+                    <a href="{{ route('register') }}" class="btn custom-button" id="btn_nav">{{__('ui.register')}}</a>
                 </div>
             @else
                 <div class="align-items-center me-3">
-                    <p class="mt-1 text-center fs-6 fw-semibold">Benvenuto {{__('ui.hello')}} {{ auth()->user()->name }} !</p>
+                    <p class="mt-1 text-center fs-6 fw-semibold">{{__('ui.hello')}} {{ auth()->user()->name }} !</p>
                     <div class="container-flex">
                         {{-- dropdown area utente --}}
                         <div class="d-flex justify-content-center">
@@ -96,12 +96,11 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('articles.create') }}">Inserisci un
-                                            annuncio</a>
+                                        <a class="dropdown-item" href="{{ route('articles.create') }}">{{__('ui.insert_ad')}}</a>
                                     </li>
                                     @if (Auth::user()->is_revisor)
                                         <li>
-                                            <a class=" dropdown-item" href="{{ route('revisor.index') }}">Zona revisore
+                                            <a class=" dropdown-item" href="{{ route('revisor.index') }}">{{__('ui.revisor_area')}}
                                                 <span
                                                     class="{{-- position-absolute top-0 start-100 translate-middle --}} badge rounded-pill bg-danger">{{ \App\Models\Article::toBeRevidesCount() }}</span>
                                             </a>
