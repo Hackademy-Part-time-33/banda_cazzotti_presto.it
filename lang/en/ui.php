@@ -14,7 +14,7 @@ return[
     'products'=>'All products',
     'login'=>'Login',
     'register'=>'Register',
-    'preferites'=>'this week s preferites', 
+    'preferites'=>'Best of the week', 
     'work_with_us'=> 'Work with us',
     'insert_ad'=> 'Insert ad',
     'revisor_area'=> 'Revisor area',
@@ -24,7 +24,13 @@ return[
     'author'=> 'Author',
     'action'=>'Actions',
     'approval'=> 'Approval',
-    'view'=>'View'
+    'view'=>'View',
+    'not_registered'=>'Not registered?',
+    'items_displayed'=>'Items displayed',
+    'title'=>'Title',
+    'sorting'=>'Sorting',
+    'show_more_articles'=>'Show more articles',
+
 
 
 ];

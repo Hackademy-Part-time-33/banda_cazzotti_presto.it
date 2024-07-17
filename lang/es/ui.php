@@ -25,5 +25,11 @@ return [
     'added_the'=> 'Añadió el',
     'author'=> 'Acciones',
     'approval'=> 'Aprobación',
-    'view'=>'Ver'
+    'view'=>'Ver',
+    'not_registered'=>'¿No está registrado?',
+    'items_displayed'=>'artículos expuestos',
+    'title'=>'Título',
+    'sorting'=>'Clasificación',
+    'show_more_articles'=>'Ver más artículos',
+
 ];
