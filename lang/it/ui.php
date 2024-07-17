@@ -2,6 +2,7 @@
 return[
 
     'hello' => 'Ciao',
+    'name'=> 'Nome',
     'allArticles' => 'Tutti gli articoli',
     'home'=> 'Home',
     'no_categories'=> 'Nessuna categoria',
@@ -20,4 +21,11 @@ return[
     'reviser_area'=> 'Area riservata',
     'new_products'=>'Nuovi prodotti',
     'buy_now'=>'Compra ora',
+    'added_the'=> 'Aggiunto il',
+    'author'=> 'Autore',
+    'action'=>'Azioni',
+    'approval'=> 'Approvazione',
+    'view'=>'Visualizza'
+
+
 ];

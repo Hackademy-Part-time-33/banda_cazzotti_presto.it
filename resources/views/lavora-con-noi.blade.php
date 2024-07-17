@@ -1,5 +1,5 @@
 <x-main>
-    <h1 class="display-4 my-4 text-center">Lavora con noi</h1>
+    <h1 class="display-4 my-4 text-center">{{__('ui.work_with_us')}}</h1>
     <form class="p-5 border rounded" action="{{ route('become.revisor') }}" method="POST">
         <p>Vuoi aiutarti a revisionare gli articoli sul sito?</p>
         <p class="m">Compila i campi sotto per mandarci la richiesta</p>

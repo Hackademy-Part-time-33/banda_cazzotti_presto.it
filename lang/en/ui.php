@@ -1,6 +1,7 @@
 <?php
 return[
     'hello' => 'Hello',
+    'name'=>'Name',
     'allArticles' => 'All articles',
     'home'=> 'Homepage',
     'no_categories'=> 'No categories available',
@@ -18,6 +19,12 @@ return[
     'insert_ad'=> 'Insert ad',
     'revisor_area'=> 'Revisor area',
     'new_products'=>'Nuovi prodotti',
-    'buy_now'=> 'Buy now'
+    'buy_now'=> 'Buy now',
+    'added_the'=> 'Added the',
+    'author'=> 'Author',
+    'action'=>'Actions',
+    'approval'=> 'Approval',
+    'view'=>'View'
+
 
 ];

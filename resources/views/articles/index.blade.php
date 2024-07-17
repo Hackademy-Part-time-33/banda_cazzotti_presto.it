@@ -4,18 +4,18 @@
         <table class="table table-striped"">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Descrizione</th>
-                    <th>Prezzo</th>
-                    <th>Categoria</th>
-                    <th>Aggiunto il</th>
-                    <th>Autore</th>
+                    <th>{{__('ui.name')}}</th>
+                    <th>{{__('ui.description')}}</th>
+                    <th>{{__('ui.price')}}</th>
+                    <th>{{__('ui.category')}}</th>
+                    <th>{{__('ui.added_the')}}</th>
+                    <th>{{__('ui.author')}}</th>
                     
                     @auth
 
                         @if (auth()->user()->is_revisor)
 
-                        <th>Approvazione</th>
+                        <th>{{__('ui.approval')}}</th>
                         
 
                         
@@ -23,7 +23,7 @@
 
                         @endauth     
 
-                        <th>Azioni</th>   
+                        <th>{{__('ui.action')}}</th>   
 
                 </tr>
             </thead>
@@ -64,7 +64,7 @@
                         
                         
                         <td>
-                            <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Visualizza</a>
+                            <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">{{__('ui.view')}}</a>
                         </td>
                         
                         

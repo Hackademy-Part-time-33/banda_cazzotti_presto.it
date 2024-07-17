@@ -3,6 +3,7 @@
 return [
     
     'hello' => 'Hola',
+    'name'=> 'Nombre',
     'allArticles' => 'Todos los artículos',
     'home'=> 'Página principal',
     'no_categories'=> 'Sin categoría',
@@ -21,4 +22,8 @@ return [
     'reviser_area'=> 'Zona restringida',
     'new_products'=>'nuevos productos',
     'buy_now'=>'Comprar ahora',
+    'added_the'=> 'Añadió el',
+    'author'=> 'Acciones',
+    'approval'=> 'Aprobación',
+    'view'=>'Ver'
 ];
