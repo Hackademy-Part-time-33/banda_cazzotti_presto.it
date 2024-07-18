@@ -1,6 +1,6 @@
 <div>
     <div class="card mx-auto shadow text-center {{-- m-4 --}}" style="width: {{$width ?? 20}}rem; height : {{$height ?? 400}}px">
-        <img src="{{$article->images->isNotEmpty()? $article->images->first()->getUrl(200,150):asset("LogoLegoNavbar.png")}}" class="card-img-top @if(!$article->images->isNotEmpty()) bg-danger p-3 @else  @endif" alt="Immagine dell'articolo {{$article->title}}" >
+        <img src="{{$article->images->isNotEmpty()? $article->images->first()->getUrl(900,850):asset("LogoLegoNavbar.png")}}" class="card-img-top @if(!$article->images->isNotEmpty()) bg-danger p-3 @else  @endif" alt="Immagine dell'articolo {{$article->title}}" >
         <div class="card-body">
             <h4 class="card-title" >{{Str::limit($article->title, $limit ?? 15) }}</h4>
             <h6 class="card-subtitle ">{{ Str::replace('.', ',', sprintf("%.2f", $article->price))}} €</h6>
