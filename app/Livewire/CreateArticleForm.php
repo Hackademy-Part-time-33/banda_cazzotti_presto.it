@@ -50,6 +50,8 @@ class CreateArticleForm extends Component
                 $newFileName = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
                 dispatch(new ResizeImage($newImage->path, 900, 850));
+                dispatch(new ResizeImage($newImage->path, 600, 550)); 
+                dispatch(new ResizeImage($newImage->path, 900, 850));
                 dispatch(new ResizeImage($newImage->path, 600, 550));
 
             }
