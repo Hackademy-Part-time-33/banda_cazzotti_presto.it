@@ -21,7 +21,8 @@
             <div class="carousel-inner">
             @foreach ($article->images as $key=>$image)
     <div class="carousel-item @if ($loop->first) active @endif">
-                  <img src="{{ $image->getUrl(300,300) }}" class="d-block w-100  p-5" id="img-carousel" alt="Immagine {{$key+1}} dell'articolo {{$article->title}}">
+                  <div class="w-100 d-flex justify-content-center align-items-center">
+                    <img src="{{ $image->getUrl(300,300) }}" class="" id="img-carousel" alt="Immagine {{$key+1}} dell'articolo {{$article->title}}"></div>
                 </div>
             @endforeach
               
