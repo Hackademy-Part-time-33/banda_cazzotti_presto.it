@@ -64,7 +64,7 @@
                 method="GET">
                 <div class="input-group d-flex align-items-center justify-content-center">
                     <input id="searchInput" type="search" name="query" class="search form-control"
-                        placeholder="Cerca Articoli" aria-label="search">
+                        placeholder="{{__('ui.search_article')}}" aria-label="search">
                     <button id="searchButton" type="button" class="btn  d-flex align-items-center justify-content-center">
                         <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo" />
                     </button>

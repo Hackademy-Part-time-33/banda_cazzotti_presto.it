@@ -18,7 +18,7 @@ return[
     'preferites'=>'I preferiti di questa settimana',
     'work_with_us'=> 'Lavora con noi',
     'insert_ad'=> 'Inserisci annuncio',
-    'reviser_area'=> 'Area riservata',
+    'revisor_area'=> 'Area riservata',
     'new_products'=>'Nuovi prodotti',
     'buy_now'=>'Compra ora',
     'added_the'=> 'Aggiunto il',
@@ -31,6 +31,8 @@ return[
     'title'=>'Titolo',
     'sorting'=>'Ordinamento',
     'show_more_articles'=>'Mostra più articoli',
+    'search_article'=>'Cerca articoli',
+    'featured_sets'=>'Set in evidenza'
 
 
 ];

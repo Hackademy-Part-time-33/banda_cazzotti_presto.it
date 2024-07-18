@@ -134,7 +134,7 @@
 
             <div class=" col-12 col-md-6 d-flex align-item-start">
                 <div id="album-rotator" class="w-100 ">
-                    <h1 class="mb-5 text-center  fs-1 text-danger">Set in evidenza</h1>
+                    <h1 class="mb-5 text-center  fs-1 text-danger">{{__('ui.featured_sets')}}</h1>
                     <div id="album-rotator-holder" class="d-flex flex-row  carousel2 ">
 
 
