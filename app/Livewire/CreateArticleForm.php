@@ -64,12 +64,14 @@ class CreateArticleForm extends Component
         if ($this->validate([
             'temporary_images.*' => 'image|max:1024',
             'temporary_images' => 'max:6'
-        ],[
+        ],
+        [
             'temporary_images.*.image' => 'I file devo essere formato: png, jpg, jpeg.',
             /* AVVISI DA RICONTROLLARE */
             'temporary_images.*.max' => 'dimensione massima consentita max 1000 KB',
             'temporary_images.max' => 'dimensione massima consentita max 1000 KB',
-        ],)) {
+        ],
+        )) {
             
             foreach ($this->temporary_images as $image) {
                 if (count($this->images) < 6) {

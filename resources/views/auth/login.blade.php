@@ -23,9 +23,8 @@
         @enderror
         
         
-        <button type="submit" class="btn btn-dark">Accedi</button>
-        <a href="{{ route('register') }}" class="btn btn-outline-dark me-1">Non sei
-            registrato?</a>
+        <button type="submit" class="btn btn-dark">{{__('ui.login')}}</button>
+        <a href="{{ route('register') }}" class="btn btn-outline-dark me-1">{{__('ui.not_registered')}}</a>
             <a href="{{ route('google.redirect') }}" class="btn custom-button"><img src="{{asset('immagini-progetto/googleicon.png')}}" style="width: 1.5rem" alt="Logo di Google"> Accedi Con Google </a>
   </form>
     </form>

@@ -14,7 +14,7 @@
                 {{-- <form wire:submit='search'> --}}
                 <div id="filtri_search">
 
-                    <span class="mx-4" style="width:30%">Articoli visualizzati: <select
+                    <span class="mx-4" style="width:30%">{{__('ui.items_displayed')}}: <select
                             class="d-inline form-select form-select-sm" wire:model.live='paginateNumber'
                             style="width:30%">
                             <option value="5">5</option>
@@ -43,7 +43,7 @@
                                                     for="{{ $category->name }}">{{ $category->name }}</label>
                                             </div>
                                         @empty
-                                            Nessuna categoria
+                                            {{__('ui.no_categories')}}
                                         @endforelse
 
 
@@ -56,7 +56,7 @@
                                 <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                                     aria-controls="panelsStayOpen-collapseTwo">
-                                    Prezzo
+                                    {{__('ui.price')}}
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
@@ -98,10 +98,10 @@
                 <div class="d-flex justify-content-center h3">
                     <select class="d-inline form-select form-select-sm mt-3" wire:model.live='priceOrTitle'
                         style="width:35%">
-                        <option value="">Ordinamento:</option>
-                        <option value="title">titolo</option>
-                        <option selected value="price">prezzo</option>
-                        <option selected value="category_id">Categoria</option>
+                        <option value="">{{__('ui.sorting')}}:</option>
+                        <option value="title">{{__('ui.title')}}</option>
+                        <option selected value="price">{{__('ui.price')}}</option>
+                        <option selected value="category_id">{{__('ui.category')}}</option>
                     </select>
                     <span class="mt-3 ms-2" wire:click="order()">
                         @if ($Direction == 'asc')
@@ -139,7 +139,7 @@
                     @if ($canLoadMore)
                         <div class="mt-4">
                             {{-- {{ $articles->links() }} --}}
-                            <button class="btn btn-secondary" wire:click="loadMore">Mostra più articoli</button>
+                            <button class="btn btn-secondary" wire:click="loadMore">{{__('ui.show_more_articles')}}</button>
                         </div>
                     @endif
 

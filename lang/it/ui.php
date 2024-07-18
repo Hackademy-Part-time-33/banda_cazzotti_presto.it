@@ -25,7 +25,12 @@ return[
     'author'=> 'Autore',
     'action'=>'Azioni',
     'approval'=> 'Approvazione',
-    'view'=>'Visualizza'
+    'view'=>'Visualizza',
+    'not_registered'=>'Non sei registrato?',
+    'items_displayed'=>'Articoli visualizzati',
+    'title'=>'Titolo',
+    'sorting'=>'Ordinamento',
+    'show_more_articles'=>'Mostra più articoli',
 
 
 ];
