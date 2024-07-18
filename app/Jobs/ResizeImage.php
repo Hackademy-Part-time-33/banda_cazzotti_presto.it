@@ -37,10 +37,12 @@ class ResizeImage implements ShouldQueue
         
 
         Image::load($srcPath)
-        ->fit(Fit::Crop, $w,$h)
-        // ->width($w)
-        // ->height($h)
-        // ->crop($w, $h, CropPosition::Center)
+        // ->fit(Fit::Crop, $w,$h)
+        // // ->width($w)
+        // // ->height($h)
+        // // ->crop($w, $h, CropPosition::Center)
+        // ->save($destPath);
+        ->crop($w, $h, CropPosition::Center)
         ->save($destPath);
     }
 }
