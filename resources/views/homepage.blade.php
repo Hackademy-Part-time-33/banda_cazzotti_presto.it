@@ -5,11 +5,14 @@
 
     {{--   IMMAGINE INIZIALE --}}
     <div class="container-fluid">
-
+        <div class="row">
+            <div class="col-12">
+   
         <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/tansformer.webp') }}')"
-            class="mt-2">
+            class="mt-2 ">
         </div>
-
+            </div>
+        </div>
     </div>
     {{--  --------------FineImmagine --}}
 
@@ -19,20 +22,20 @@
 
         <div class="d-flex justify-content-between col-12">
 
-            <div class="container mt-2">
+            <div class="container-fluid mt-2">
                 <div class="row ">
-
-                    <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 list-unstyled"
-                        data-test="quicklinks" style="background-color: transparent">
+                 <div class="col-12">
+                    <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 row-gap-5 row-gap-lg-0 list-unstyled " id="categorie"
+                        data-test="quicklinks" style="background-color: transparent " >
                         @foreach ($category as $category)
                             <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
-                                <a href="/categories/new-sets-and-products?icmp=HP-SHQL-Standard-HP_QUICKLINK_NEW-P-NO-X18YF0AP1I"
+                                <a href=""
                                     data-test="quicklink-link-0" target=""
                                     class="QuickLinks_labelDark__UY_rw categ_home" rel="noreferrer">
                                     <picture data-test="quicklink-image" fit="crop">
                                         <source type="image/webp"
                                             srcset="{{ asset('immagini-progetto/prodotto' . $category->id . '.webp') }}"
-                                            media="(min-width: 900px)" width="120" height="97"><img alt=""
+                                           width="120" height="97"><img alt=""
                                             decoding="async" loading="lazy" style="object-fit: fill;"
                                             src="https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?fit=crop&amp;quality=80&amp;width=120&amp;height=97&amp;dpr=1">
 
@@ -45,6 +48,7 @@
                             </li>
                         @endforEach
                     </ul>
+                </div>
 
                 </div>
             </div>
@@ -88,13 +92,13 @@
 
 
     {{--  ------NUoviProdotti --}}
-    <div class="container">
+    <div class="container mt-3">
         <div class="row d-flex flex-row  justify-content-between">
             <div class="  col-12 col-md-5">
                 <h2 class="text-danger text-center font-weight-bold">{{__('ui.new_products')}}</h2>
 
 
-                <div class="swiper w-50  h-75 border border-danger border-5 rounded">
+                <div class="swiper w-75 h-75 w-lg-50  h-lg-75 border border-danger border-5 rounded">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->

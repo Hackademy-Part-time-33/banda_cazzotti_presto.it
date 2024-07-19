@@ -1,5 +1,6 @@
 <div class="container">
     <footer class="row  pt-5 mt-5  d-flex justify-content-center">
+        <hr>
         <div class="col mb-3">
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                 <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
@@ -11,7 +12,7 @@
 
 
 
-        <div class="col mb-3">
+        <div class="col-6 col-md-3 mb-3">
             <h5>Section</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><svg
@@ -43,7 +44,7 @@
             </ul>
         </div>
 
-        <div class="col mb-3">
+        <div class="col-6 col-md-3 mb-3">
             <h5>Section</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
@@ -55,7 +56,7 @@
         </div>
 
 
-        <div class="col mb-3 d-flex flex-column">
+        <div class="col-6 col-md-3 mb-3 d-flex flex-column">
             <h5>Social</h5>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

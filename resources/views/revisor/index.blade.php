@@ -26,7 +26,7 @@
             <div class="carousel-item  @if ($loop->first) active @endif" id="carousel1">                                           
                 
                 <div class="w-100 h-100  d-flex justify-content-center align-items-center">
-                    <img src="{{ $image->getUrl(300,300) }}" {{-- class="img-fluid rounded shadow d-block w-75" --}}
+                    <img src="{{ $image->getUrl(200,150) }}" {{-- class="img-fluid rounded shadow d-block w-75" --}}
                     alt="Immagine {{$key + 1}} dell'a   
                     rticolo {{$article_to_check->title}}">
                 </div>
