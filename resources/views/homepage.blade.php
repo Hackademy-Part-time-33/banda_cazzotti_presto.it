@@ -29,7 +29,7 @@
                         data-test="quicklinks" style="background-color: transparent " >
                         @foreach ($category as $category)
                             <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
-                                <a href=""
+                                <a href="{{route('byCategory',$category)}}"
                                     data-test="quicklink-link-0" target=""
                                     class="QuickLinks_labelDark__UY_rw categ_home" rel="noreferrer">
                                     <picture data-test="quicklink-image" fit="crop">
