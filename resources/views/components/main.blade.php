@@ -24,6 +24,7 @@
 
         </div>
     </div>
+    <x-scrolltotop />
     <x-footer />
 
 </body>
