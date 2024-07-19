@@ -19,8 +19,8 @@ return [
     'preferites'=>'Los favoritos de la semana',
     'work_with_us'=> 'Trabaja con nosotros',
     'insert_ad'=> 'Publique su anuncio',
-    'reviser_area'=> 'Zona restringida',
-    'new_products'=>'nuevos productos',
+    'revisor_area'=> 'Zona restringida',
+    'new_products'=>'Nuevos productos',
     'buy_now'=>'Comprar ahora',
     'added_the'=> 'Añadió el',
     'author'=> 'Acciones',
@@ -31,5 +31,6 @@ return [
     'title'=>'Título',
     'sorting'=>'Clasificación',
     'show_more_articles'=>'Ver más artículos',
-
+    'search_article'=>'buscar artículos',
+    'featured_sets'=>'Sets destacados'
 ];

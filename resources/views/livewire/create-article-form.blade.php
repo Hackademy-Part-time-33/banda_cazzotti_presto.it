@@ -1,12 +1,14 @@
 <form class="container bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
 
+    <h5><span class="text-danger">*</span> <u>contrassegna un campo obbligatorio</u></h5>
+
     @if (session()->has('success'))
         <div class="alert alert-success text-center">
             {{ session('success') }}
         </div>
     @endif
     <div class="mb-3">
-        <label for="title" class="form-label">Titolo: </label>
+        <label for="title" class="form-label">* Titolo: </label>
         <input type="text"
             class="form-control 
         @error('title')
@@ -19,7 +21,7 @@
         @enderror
     </div>
     <div class="mb-3">
-        <label for="description" class="form-label">Descrizione:</label>
+        <label for="description" class="form-label">* Descrizione:</label>
         <textarea id="description" cols="30" rows="10"
             class="form-control
         @error('description')
@@ -33,7 +35,7 @@
     </div>
     <div class="mb-3">
 
-        <label for="price" class="form-label">Prezzo:</label>
+        <label for="price" class="form-label">* Prezzo:</label>
 
         <input type="text"
             class="form-control
@@ -55,7 +57,7 @@
         @enderror 
         ">
 
-            <option label> Seleziona una categoria </option>
+            <option label>* Seleziona una categoria </option>
 
             @foreach ($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>

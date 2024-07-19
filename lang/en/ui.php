@@ -18,7 +18,7 @@ return[
     'work_with_us'=> 'Work with us',
     'insert_ad'=> 'Insert ad',
     'revisor_area'=> 'Revisor area',
-    'new_products'=>'Nuovi prodotti',
+    'new_products'=>'New products',
     'buy_now'=> 'Buy now',
     'added_the'=> 'Added the',
     'author'=> 'Author',
@@ -30,7 +30,8 @@ return[
     'title'=>'Title',
     'sorting'=>'Sorting',
     'show_more_articles'=>'Show more articles',
-
+    'search_article'=>'Search article',
+    'featured_sets'=>'Featured sets'
 
 
 ];

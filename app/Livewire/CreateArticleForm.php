@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Jobs\ResizeImage;
 use App\Models\Article;
+use App\Models\Category;
 /* use Faker\Core\File; */
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
@@ -31,6 +32,7 @@ class CreateArticleForm extends Component
     #[Validate('max:1000', message: 'il prezzo non può essere maggiore di 1000€.')]
     public $price;
     #[Validate('required', message: 'Per favore scegli una categoria.')]
+    #[Validate('exists:App\Models\Category,id', message: 'Categoria non presente')]
     public $category;
     public $article;
 
@@ -49,7 +51,11 @@ class CreateArticleForm extends Component
             foreach ($this->images as $image) {
                 $newFileName = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage->path, 200, 150));
+                dispatch(new ResizeImage($newImage->path, 500, 500));
+
+                dispatch(new ResizeImage($newImage->path, 238, 137)); 
+                
+
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
