@@ -1,6 +1,6 @@
 <form class="container bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
 
-    <h5><span class="text-danger">*</span> <u>contrassegna un campo obbligatorio</u></h5>
+    <h6><span class="text-danger">*</span> <u>contrassegna un campo obbligatorio</u></h6>
 
     @if (session()->has('success'))
         <div class="alert alert-success text-center">
