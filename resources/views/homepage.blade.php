@@ -116,7 +116,7 @@
 
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination paginazione1"></div>
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev text-warning"></div>
@@ -131,69 +131,67 @@
 
 
 
+
             {{--     ------------secondo carosello, vari articoli --}}
+               
+
+            <div class="  col-12 col-md-5">
+                <h2 class="text-danger text-center font-weight-bold">Tutti i Prodotti</h2>
 
 
-
-
-            <div class=" col-12 col-md-6 d-flex align-item-start">
-                <div id="album-rotator" class="w-100 ">
-                    <h1 class="mb-5 text-center  fs-1 text-danger">{{__('ui.featured_sets')}}</h1>
-                    <div id="album-rotator-holder" class="d-flex flex-row  carousel2 ">
-
+                <div class="swiper swiper2 w-100 h-75 rounded bg-danger">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper ">
+                        <!-- Slides -->
+                        @forelse ($fullArticle as $article)
+                            <div class="swiper-slide w-75">
+                              {{--   <x-card :article="$article" :width=15 :height=480  :limit=10 /> --}}
+                              @if(!$article->images)
+                              <img src="{{$article->images->getUrl()}}" alt="">
+                              @else
+                              <img src="{{asset("LogoLegoNavbar.png")}}" alt="logolego" class="img-fluid">
+                              
+                              @endif
+                              
+                              <h4 class="text-center">{{$article->title}}</h2>
+                              <p class="text-center">{{Str::limit($article->description, $limit ?? 150) }}</p>
+                              <h4 class="text-center">{{$article->price}}</h3>
+                            </div>
+                        @empty
+                            <div class="">
+                                <h3>
+                                    Nessun articolo è ancora stato creato !
+                                </h3>
+                            </div>
+                        @endforelse
 
                     </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination paginazione2"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev visually-hidden"></div>
+                    <div class="swiper-button-next visually-hidden"></div>
+
+                    <!-- If we need scrollbar -->
                 </div>
+
             </div>
+         
+          
+                  {{--    --------FINE SECONDO CAROSELLO --}}
+                 
+                        </div>
+        
+                    </div>
 
-        </div>
-    </div>
+               
+                      
 
-    <div class="d-flex justify-content-center">
-        <div>
-
-        </div>
-    </div>
-
-
-    <script>
-        let immagini = [];
-
-        let contenitore = document.querySelector('#album-rotator-holder');
-
-        for (let i = 1; i < 16; i++) {
-
-            immagini.push('immagini-progetto/prodotto' + i + '.webp');
-        };
-
-        function insert() {
-            immagini.forEach(element => {
-                let ancor = document.createElement('a');
-                ancor.setAttribute('target', '_blank');
-
-                console.log(element);
-
-                ancor.innerHTML =
-                    `<img src='${element}' id='imgCard'> <p>Da aggiungere dopo </p> <h2>prezzo$$$ </h2> <button type="button" class="btn btn-danger">Acquista</button>`;
-                ancor.classList.add('album-item', "d-flex", "flex-column", "col-12", "col-md-2", "w-75",
-                    "bg-warning");
-
-                contenitore.appendChild(ancor);
-
-            });
-        };
-        console.log(contenitore);
-        insert();
-    </script>
-
-
-    <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-
-        const swiper = new Swiper(...)
-    </script>
+                    <script src="jquery.min.js"></script>
+                    <script src="owlcarousel/owl.carousel.min.js">
+                    </script>
     <script src="https://kit.fontawesome.com/48764efa36.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
 </x-main>
