@@ -10,8 +10,9 @@
 /* -----------HOME */
 #firtSection {
   
-    background-position: center;
+    background-position:50% 30%;
     background-repeat: no-repeat;
+    background-size: cover;
     
     
     width: 100%;
