@@ -5,11 +5,7 @@
     --secondary-color: #dc3545;
     --third-color: #f8f9fa;
 }
-#bandiereSearch{
-    height: 100px;
-    padding: 0;
-    margin: 0;
-}
+
 .mynav {
     height: 7rem;
     padding: auto;
@@ -78,13 +74,8 @@
     width: 0;
     opacity: 0;
     transition: width 0.8s ease, opacity 0.8s ease;
-}
-
-.search {
-    width: 0;
-    opacity: 0;
-    transition: width 0.5s ease, opacity 0.5s ease;
     border: none;
+    display: none;
 
 }
 
@@ -92,6 +83,7 @@
     border-radius: 5px;
     width: 70%;
     opacity: 1;
+    display: block;
 }
 
 .search:focus {

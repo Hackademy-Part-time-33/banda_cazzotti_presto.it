@@ -61,28 +61,17 @@
 
 
             {{-- search --}}
-            <p>
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
-                    aria-expanded="false" aria-controls="collapseWidthExample">
-                    <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo" />
-                </button>
-            </p>
-            <div style="min-height: 60px;">
-                <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                    <form id="searchForm" class="inline-block mt-2 me-4" role="search"
-                        action="{{ route('articles.search') }}" method="GET">
-                        <div class="input-group d-flex align-items-center justify-content-center">
-                            <input id="searchInput" type="search" name="query" class="search form-control"
-                                placeholder="{{ __('ui.search_article') }}" aria-label="search">
-                            <button id="searchButton" type="button"
-                                class="btn  d-flex align-items-center justify-content-center">
-
-                            </button>
-                        </div>
-                    </form>
+            <form id="searchForm" class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}"
+                method="GET">
+                <div class="input-group d-flex align-items-center justify-content-center">
+                    <input id="searchInput" type="search" name="query" class="search form-control"
+                        placeholder="{{ __('ui.search_article') }}" aria-label="search">
+                    <button id="searchButton" type="button"
+                        class="btn  d-flex align-items-center justify-content-center">
+                        <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo" />
+                    </button>
                 </div>
-            </div>
-
+            </form>
             <hr>
         </div>
         @guest
