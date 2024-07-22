@@ -81,9 +81,9 @@
 
 .search.expanded {
     border-radius: 5px;
-    width: 70%;
+    width: 150px;
     opacity: 1;
-    display: block;
+    display: flex;
 }
 
 .search:focus {
@@ -109,5 +109,9 @@
 
     .search.expanded {
         width: 100%;
+    }
+
+    #searchInput {
+        width: 50%;
     }
 }
