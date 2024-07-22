@@ -136,26 +136,27 @@
                
 
             <div class="  col-12 col-md-5">
-                <h2 class="text-danger text-center font-weight-bold">Tutti i Prodotti</h2>
+                <h2 class="text-danger text-center font-weight-bold">I primi articoli</h2>
 
 
-                <div class="swiper swiper2 w-100 h-75 rounded bg-danger">
+                <div class="swiper swiper2 w-100 h-75 rounded bg-tansparent">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper ">
                         <!-- Slides -->
                         @forelse ($fullArticle as $article)
-                            <div class="swiper-slide w-75">
+                            <div class="swiper-slide w-75 border border-warning border-2 ms-4 bg-danger" >
                               {{--   <x-card :article="$article" :width=15 :height=480  :limit=10 /> --}}
-                              @if(!$article->images)
-                              <img src="{{$article->images->getUrl()}}" alt="">
+                              @if($article->images->isnotEmpty())
+                              <img src="{{$article->images->first()->getUrl(500,500)}}" alt="" class="img-fluid">
                               @else
                               <img src="{{asset("LogoLegoNavbar.png")}}" alt="logolego" class="img-fluid">
                               
                               @endif
-                              
+                              <div class="d-flex flex-column justify-content-center">
                               <h4 class="text-center">{{$article->title}}</h2>
                               <p class="text-center">{{Str::limit($article->description, $limit ?? 150) }}</p>
                               <h4 class="text-center">{{$article->price}}</h3>
+                              </div>
                             </div>
                         @empty
                             <div class="">
