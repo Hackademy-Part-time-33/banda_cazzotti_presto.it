@@ -9,7 +9,7 @@ use App\Models\Image;
 class PageController extends Controller
 {
     public function homepage(Article $article, Category $category) {
-       $fullArticle=Article::all();
+       $fullArticle=Article::where('is_accepted' , true)->orderBy('created_at', 'asc')->take(50)->get();
       $category = Category::all();
         $articles = Article::where('is_accepted' , true)->orderBy('created_at', 'desc')->take(6)->get();
         $image=Image::all();

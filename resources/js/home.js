@@ -11,11 +11,12 @@ const swiper2 = new Swiper('.swiper2', {
     // Optional parameters
   /*   direction: 'horizontal',
     loop: true, */
-
+    loop: true,
     // If we need pagination
     pagination: {
         el: '.paginazione2',
         clickable: true,
+        
     },
 
     // Navigation arrows
