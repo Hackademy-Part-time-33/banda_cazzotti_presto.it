@@ -1,5 +1,5 @@
 <div>
-    <div class="card border border-warning border-4" style="width: {{$width ?? 20}}px; ">
+    <div class="card border border-warning border-4" style="width: {{$width ?? 20}}px; height:{{$height ?? 20}}px">
         <div class="card-body">
             <div class="d-flex flex-column align-items-center">
           <h5 class="card-title text-danger fw-bold">{{ Str::ucfirst($article->title) }}</h5>
