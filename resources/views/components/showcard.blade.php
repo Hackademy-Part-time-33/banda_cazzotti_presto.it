@@ -17,28 +17,30 @@
           <h6 class="card-subtitle mt-0" id="autor">{{Str::ucfirst($article->user->name)}}</h6>
           </div>
 
-          <label for="category" class="float-start mt-2 text-danger fw-bold">Categoria</label>
-          <a href="{{route('byCategory', ['category'=>$article->category])}}" class="card-link" id="category">{{ $article->category->name }}</a>
-             </div>
+         
+          <a href="{{route('byCategory', ['category'=>$article->category])}}" class="card-link text-decoration-none custom-button mt-4" id="category">{{ $article->category->name }}</a>
+             
          
           @auth
 
           @if (auth()->user()->is_revisor)
-         
-          <div class="d-flex justify-content-between mt-3">
-             <h3> {{$article->is_accepted ? 'Articolo accettato' : 'Articolo rifiutato'}}</h3>
+         <div class="position-absolute bottom-0 mb-4">
+            <hr>
+          <div class="d-flex justify-content-between ">
+             <h3 class="fs-5 me-3"> {{$article->is_accepted ? 'Articolo accettato' : 'Articolo rifiutato'}}</h3>
               <form action="{{ route('cancella-operazione', $article->id) }}" method="POST" >
                   @csrf
                   @method('PATCH')
                   <button type="submit" class="btn btn-success">Annulla</button>
               </form>
             </div>
-          
+          <hr>
           @endif
 
           @endauth
           <a href="{{ route('articles.show', $article->id) }}" class="card-button btn btn-danger w-100 mt-2">{{__('ui.view')}}</a>
-        
         </div>
+        </div>
+    </div>
       </div>
 </div>
