@@ -35,6 +35,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $spoof = $safe->getSpoof();
         $violence = $safe->getViolence();
         $racy = $safe->getRacy();
+
         $likelihoodName = [
             'text-secondary bi bi-circle-fill',
             'text-success bi bi-check-circle-fill',
@@ -43,6 +44,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
             'text-warning bi bi-exclamation-circle-fill',
             'text-danger bi bi-dash-circle-fill'
         ];
+        
         $i->adult = $likelihoodName[$adult];
         $i->spoof = $likelihoodName[$spoof];
         $i->racy = $likelihoodName[$racy];
