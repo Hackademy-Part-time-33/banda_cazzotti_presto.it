@@ -11,7 +11,7 @@ use Illuminate\Queue\SerializesModels;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Spatie\Image\Enums\AlignPosition;
 use Spatie\Image\Enums\Fit;
-use App\Models\Image as SpatieImage;
+use Spatie\Image\Image as SpatieImage;
 
 class RemoveFaces implements ShouldQueue
 {
@@ -43,16 +43,18 @@ class RemoveFaces implements ShouldQueue
         foreach ($faces as $face) {
             $vertices = $face->getBoundingPoly()->getVertices();
 
-            $vertices = [];
+            $bounds = [];
 
             foreach ($vertices as $vertex) {
                 $bounds[] = [$vertex->getX(), $vertex->getY()];
             }
-
-            $w = $bounds[2][0] - $bounds[0][0];
+           
+                 $w = $bounds[2][0] - $bounds[0][0];
             $h = $bounds[2][1] - $bounds[0][1];
+            
+           
 
-            $image = SpatieImage::load($srcPath);
+           $image =  SpatieImage::load($srcPath);
 
             $image->watermark(
                 base_path('resources/img/smile.png'),
@@ -64,8 +66,10 @@ class RemoveFaces implements ShouldQueue
                 fit: Fit::Stretch
             );
 
+            $image->save($srcPath);
+
         }
-        
+        $imageAnnotator->close();
     }
     
 }
