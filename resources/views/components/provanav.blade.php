@@ -84,14 +84,14 @@
                             id="btn_nav">{{ __('ui.register') }}</a>
                     </div>
                 @else
-                    <div class="align-items-center me-3">
+                    <div class="align-items-center justify-content-center me-3 ">
                         <p class="mt-1 text-center fs-6 fw-semibold">{{ __('ui.hello') }} {{ auth()->user()->name }} !</p>
                         <div class="container-flex">
                             {{-- dropdown area utente --}}
-                            <div class="d-flex justify-content-center">
-                                <div class="dropdown col-6-md-12 me-2">
-                                    <a class="btn custom-button dropdown-toggle " id="dropnav" href="#"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="d-flex justify-content-center align-items-center ">
+                                <div class="dropdown col-6-md-12 me-2 ">
+                                    <a class=" custom-button dropdown-toggle " id="myButton" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -116,9 +116,9 @@
                                         @endif
                                     </ul>
                                 </div>
-                                <div class="col-6-md-12 d-flex justify-content-center">
+                                <div class="col-6-md-12 d-flex justify-content-center mt-1">
 
-                                    <a class="custom-button  d-flex align-items-center justify-content-center"
+                                    <a class="custom-button d-flex justify-content-center align-items-center"
                                         id="btn_nav"
                                         onclick="event.preventDefault(); getElementById('form-logout').submit();"> <svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
