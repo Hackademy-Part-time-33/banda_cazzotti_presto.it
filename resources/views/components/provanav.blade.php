@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md  bg-body-tertiary z-3 sticky-top " id="navbar1" aria-label="Fourth navbar example">
     <div class="container-fluid">
-        <a class="navbar-brand ms-5" href="{{ route('homepage') }}">
+        <a class="navbar-brand ms-5 anm_link" href="{{ route('homepage') }}">
             <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
                 loading="lazy" style="margin-top: -1px;" />
         </a>
@@ -53,7 +53,7 @@
                     @endif
 
                 @endauth
-                <div class="d-flex"></div>
+                <div class="d-flex anm_link"></div>
                 <x-locale lang="it" />
                 <x-locale lang="en" />
                 <x-locale lang="es" />
@@ -64,10 +64,10 @@
 
 
             {{-- search --}}
-            <form id="searchForm" class="inline-block mt-2 me-4" role="search" action="{{ route('articles.search') }}"
+            <form id="searchForm" class="inline-block mt-2 ms-3" role="search" action="{{ route('articles.search') }}"
                 method="GET">
                 <div class="input-group ">
-                    <button id="searchButton" type="button" class="btn ">
+                    <button id="searchButton" type="button" class="btn anm_link">
                         <img id="searchIcon" src="{{ asset('search.svg') }}" height="25" alt="Site Logo" />
                     </button>
                     <input id="searchInput" type="search" name="query" class="search form-control "
@@ -85,7 +85,7 @@
                     </div>
                 @else
                     <div class="align-items-center justify-content-center me-3 ">
-                        <p class="mt-1 text-center fs-6 fw-semibold">{{ __('ui.hello') }} {{ auth()->user()->name }} !</p>
+                        <p class=" text-center fw-semibold">{{ __('ui.hello') }} {{ auth()->user()->name }} !</p>
                         <div class="container-flex">
                             {{-- dropdown area utente --}}
                             <div class="d-flex justify-content-center align-items-center ">

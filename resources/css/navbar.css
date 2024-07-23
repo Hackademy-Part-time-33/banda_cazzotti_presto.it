@@ -29,7 +29,7 @@
 }
 
 .anm_link:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 200ms;
 }
 
@@ -89,9 +89,6 @@
     width: 120px;
 }
 
-.btn_esci {
-    margin-bottom: 500px;
-}
 
 @media (max-width: 576px) {
     .search {
