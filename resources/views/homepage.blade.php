@@ -7,9 +7,20 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+                <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/hero.webp') }}')"
+                    class="mt-2 mb-2 d-flex align-items-center rounded ">
+                    <div class="px-4 py-5 my-5 ">
+                        <img src="{{ asset('fortnite-logo.png') }}" class=" rounded mb-3 ms-2" height="50"
+                            alt="Site Logo" loading="lazy" style="margin-top: -1px;" />
+                        <h1 class="display-6 hero_text">Pre-ordina i nuovi set LEGO®
+                            Fortnite</h1>
+                        <div class="col-lg-6 ">
+                            <p class="lead mb-4 hero_text">Fino a esaurimento scorte. Spedizione dal
+                                giorno
+                                1/10.</p>
 
-                <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/tansformer.webp') }}')"
-                    class="mt-2 mb-2 ">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
