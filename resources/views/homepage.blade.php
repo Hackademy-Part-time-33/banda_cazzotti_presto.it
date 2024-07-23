@@ -148,7 +148,7 @@
             <div class="  col-12 col-md-5">
                 <h2 class="text-danger text-center font-weight-bold">I primi articoli</h2>
 
-
+           <a href="{{ route('articles.index') }}" class="text-decoration-none text-dark">
                 <div class="swiper swiper2 w-100 h-75 rounded bg-tansparent">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper ">
@@ -189,13 +189,14 @@
                 </div>
 
             </div>
-
-
-            {{--    --------FINE SECONDO CAROSELLO --}}
-
-        </div>
-
-    </div>
+        </a>
+         
+          
+                  {{--    --------FINE SECONDO CAROSELLO --}}
+                 
+                        </div>
+        
+                    </div>
 
 
 

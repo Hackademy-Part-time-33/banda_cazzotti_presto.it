@@ -1,7 +1,7 @@
 <x-main>
     <div class="container-fluid">
         <h1>Lista prodotti</h1>
-        <table class="table table-striped"">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>{{__('ui.name')}}</th>
@@ -30,10 +30,16 @@
             <thead>
                 
             </thead>
-            <tbody>
+            <tbody class="">
+            </tbody>
+        </table>
+        <div class="d-flex flex-row justify-content-between flex-wrap">
                 @forelse($articles as $article)
-                <tr>
-                    <td>{{ Str::ucfirst($article->title) }}</td>
+                
+                <x-showCard :article="$article" :width=15 />
+          
+             {{--    <tr>
+                    <td >{{ Str::ucfirst($article->title) }}</td>
                     <td>{{ Str::limit($article->description,20) }}</td>
                     <td>{{ "€".Str::replace('.', ',', sprintf("%.2f", $article->price))}}</td>
                     <td><a href="{{route('byCategory', ['category'=>$article->category])}}">{{ $article->category->name }}</a></td>
@@ -65,7 +71,7 @@
                         
                         <td>
                             <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">{{__('ui.view')}}</a>
-                        </td>
+                        </td> --}}
                         
                         
                         
@@ -91,11 +97,12 @@
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di voler eliminare questo prodotto?')">Elimina</button>
                         </form> --}}
                                
-                </tr>
+                {{-- </tr> --}}
                 @empty
                 @endforelse
-            </tbody>
-        </table>
+            </div>
+        {{--     </tbody>
+        </table> --}}
         {{ $articles->links() }}
     </div>
 </x-main>

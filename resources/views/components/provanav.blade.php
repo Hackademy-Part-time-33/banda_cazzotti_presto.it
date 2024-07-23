@@ -85,7 +85,7 @@
                     </div>
                 @else
                     <div class="align-items-center justify-content-center me-3 ">
-                        <p class=" text-center fw-semibold">{{ __('ui.hello') }} {{ auth()->user()->name }} !</p>
+                        <p class=" text-center fw-semibold">{{ __('ui.hello') }} <a href="{{route('byUser',['user'=> auth()->user()->id])}}">{{ auth()->user()->name }}</a> !</p>
                         <div class="container-flex">
                             {{-- dropdown area utente --}}
                             <div class="d-flex justify-content-center align-items-center ">
