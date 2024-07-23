@@ -4,12 +4,12 @@
 
 
     {{--   IMMAGINE INIZIALE --}}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <div class="container-fluid w-100">
+        <div class="row w-100">
+            <div class="col-12 w-100">
                 <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/hero.webp') }}')"
-                    class="mt-2 mb-2 d-flex align-items-center rounded ">
-                    <div class="px-4 py-5 my-5 ">
+                    class="mt-2 mb-2 d-flex align-items-center rounded  ">
+                    <div class="px-4 py-5 my-5">
                         <img src="{{ asset('fortnite-logo.png') }}" class=" rounded mb-3 ms-2" height="50"
                             alt="Site Logo" loading="lazy" style="margin-top: -1px;" />
                         <h1 class="display-6 hero_text">Pre-ordina i nuovi set LEGO®
@@ -148,55 +148,56 @@
             <div class="  col-12 col-md-5">
                 <h2 class="text-danger text-center font-weight-bold">I primi articoli</h2>
 
-           <a href="{{ route('articles.index') }}" class="text-decoration-none text-dark">
-                <div class="swiper swiper2 w-100 h-75 rounded bg-tansparent">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper ">
-                        <!-- Slides -->
-                        @forelse ($fullArticle as $article)
-                            <div class="swiper-slide w-75 border border-warning border-2 ms-4 bg-danger">
-                                {{--   <x-card :article="$article" :width=15 :height=480  :limit=10 /> --}}
-                                @if ($article->images->isnotEmpty())
-                                    <img src="{{ $article->images->first()->getUrl(500, 500) }}" alt=""
-                                        class="img-fluid">
-                                @else
-                                    <img src="{{ asset('LogoLegoNavbar.png') }}" alt="logolego" class="img-fluid">
-                                @endif
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h4 class="text-center">{{ $article->title }}</h2>
-                                        <p class="text-center">{{ Str::limit($article->description, $limit ?? 150) }}
-                                        </p>
-                                        <h4 class="text-center">{{ $article->price }}</h3>
+                <a href="{{ route('articles.index') }}" class="text-decoration-none text-dark">
+                    <div class="swiper swiper2 w-100 h-75 rounded bg-tansparent">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper ">
+                            <!-- Slides -->
+                            @forelse ($fullArticle as $article)
+                                <div class="swiper-slide w-75 border border-warning border-2 ms-4 bg-danger">
+                                    {{--   <x-card :article="$article" :width=15 :height=480  :limit=10 /> --}}
+                                    @if ($article->images->isnotEmpty())
+                                        <img src="{{ $article->images->first()->getUrl(500, 500) }}" alt=""
+                                            class="img-fluid">
+                                    @else
+                                        <img src="{{ asset('LogoLegoNavbar.png') }}" alt="logolego" class="img-fluid">
+                                    @endif
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h4 class="text-center">{{ $article->title }}</h2>
+                                            <p class="text-center">
+                                                {{ Str::limit($article->description, $limit ?? 150) }}
+                                            </p>
+                                            <h4 class="text-center">{{ $article->price }}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        @empty
-                            <div class="">
-                                <h3>
-                                    Nessun articolo è ancora stato creato !
-                                </h3>
-                            </div>
-                        @endforelse
+                            @empty
+                                <div class="">
+                                    <h3>
+                                        Nessun articolo è ancora stato creato !
+                                    </h3>
+                                </div>
+                            @endforelse
 
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination paginazione2"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev visually-hidden"></div>
+                        <div class="swiper-button-next visually-hidden"></div>
+
+                        <!-- If we need scrollbar -->
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination paginazione2"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev visually-hidden"></div>
-                    <div class="swiper-button-next visually-hidden"></div>
-
-                    <!-- If we need scrollbar -->
-                </div>
 
             </div>
-        </a>
-         
-          
-                  {{--    --------FINE SECONDO CAROSELLO --}}
-                 
-                        </div>
-        
-                    </div>
+            </a>
+
+
+            {{--    --------FINE SECONDO CAROSELLO --}}
+
+        </div>
+
+    </div>
 
 
 
