@@ -12,16 +12,6 @@
     margin: auto;
 }
 
-#btn_nav {
-
-    color: black;
-}
-
-.btn_esci {
-    width: 100px;
-    height: 100%;
-}
-
 #nav_toggler {
     position: absolute;
     right: 1rem;
@@ -39,7 +29,7 @@
 }
 
 .anm_link:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 200ms;
 }
 
@@ -49,6 +39,8 @@
     font-size: 15px;
     border-radius: 10px;
     transition: background-color 0.5s, color 0.5s;
+    text-decoration: none;
+    color: black;
 }
 
 .custom-button:hover {
@@ -62,9 +54,6 @@
 
 }
 
-.custom-bottom.active {
-    background-color: var(--secondary-color);
-}
 
 .nav-active {
     border-bottom: 4px solid var(--primary-color);
@@ -99,6 +88,7 @@
     height: 120px;
     width: 120px;
 }
+
 
 @media (max-width: 576px) {
     .search {
