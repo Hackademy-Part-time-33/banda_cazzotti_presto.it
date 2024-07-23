@@ -1,7 +1,7 @@
 <x-main>
     <div class="container-fluid">
         <h1>Lista prodotti</h1>
-        <table class="table table-striped">
+       {{--  <table class="table table-striped">
             <thead>
                 <tr>
                     <th>{{__('ui.name')}}</th>
@@ -32,12 +32,15 @@
             </thead>
             <tbody class="">
             </tbody>
-        </table>
+        </table> --}}
+
+      {{--   <div class="container"></div>
+        <div class="row"></div> --}}
         <div class="d-flex flex-row justify-content-between flex-wrap">
                 @forelse($articles as $article)
-                
-                <x-showCard :article="$article" :width=15 />
-          
+               <div class="mt-3">
+                <x-showCard :article="$article" :width=300 />
+            </div>
              {{--    <tr>
                     <td >{{ Str::ucfirst($article->title) }}</td>
                     <td>{{ Str::limit($article->description,20) }}</td>
