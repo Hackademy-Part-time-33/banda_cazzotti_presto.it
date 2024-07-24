@@ -108,13 +108,15 @@ class ArticleController extends Controller implements HasMiddleware
         $articles = $category->articles->where('is_accepted', true);
         return view('articles.byCategory',compact('articles','category'));
     }
-
-    public function byUser (User $user)
-
+    
+    public function byUser(User $user)
     {
+        if (!$user) {
+            abort(404, 'Utente non trovato');
+        }
         
         $articles = $user->articles->where('is_accepted', true);
-        return view('articles.byUser',compact('articles','user'));
+        return view('articles.byUser', compact('articles', 'user'));
     }
     
     public function searchArticles(Request $request)
