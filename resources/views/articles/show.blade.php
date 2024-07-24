@@ -9,20 +9,20 @@
         <div class="row {{-- flex-column flex-lg-row --}}">
           
           
-          <div class="col-12 col-lg-7 mt-5 mt-lg-0">
+          <div class="col-12 col-lg-7 mt-5 mt-lg-0 d-flex justify-content-center">
           @if ($article->images->count()>0)
-          <div id="carouselExampleIndicators" class="carousel w-100 carousel-dark slide border border-5 border-warning ">
+          <div id="carouselExampleIndicators" class="h-100 carousel carousel-dark slide border border-5 border-warning ">
            {{--  <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div> --}}
             
-            <div class="carousel-inner">
+            <div class="carousel-inner  w-100 h-100">
             @foreach ($article->images as $key=>$image)
     <div class="carousel-item @if ($loop->first) active @endif">
-                  <div class="w-100 d-flex justify-content-center align-items-center">
-                    <img src="{{ $image->getUrl(500,500) }}" class="" id="img-carousel" alt="Immagine {{$key+1}} dell'articolo {{$article->title}}"></div>
+                  <div class=" d-flex justify-content-center align-items-center">
+                    <img src="{{ $image->getUrl(500,500) }}" class="w-100 h-100" id="img-carousel" alt="Immagine {{$key+1}} dell'articolo {{$article->title}}"></div>
                    
                 </div>
             @endforeach
