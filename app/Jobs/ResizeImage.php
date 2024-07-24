@@ -41,8 +41,8 @@ class ResizeImage implements ShouldQueue
         ->fit(Fit::Crop, $w,$h)
         ->watermark(
             base_path('resources/img/watermark.png'),
-            width: 50,
-            height: 50,
+            width: 75,
+            height: 75,
             paddingX: 5,
             paddingY: 5,
             paddingUnit: Unit:: Percent
