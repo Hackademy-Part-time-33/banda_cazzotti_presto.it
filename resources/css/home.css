@@ -23,6 +23,8 @@
     color: #f8f9fa;
 }
 
+.hero_img {}
+
 .page-link.active,
 .active>.page-link {
     z-index: 2;

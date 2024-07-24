@@ -10,13 +10,13 @@
                 <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/hero.webp') }}')"
                     class="mt-2 mb-2 d-flex align-items-center rounded  ">
                     <div class="px-4 py-5 my-5">
-                        <img src="{{ asset('fortnite-logo.png') }}" class=" img-fluid rounded mb-3 ms-2" height="50"
-                            alt="Site Logo" style="margin-top: -1px;" />
+                        <img src="{{ asset('fortnite-logo.png') }}" class=" img-fluid rounded mb-3 ms-2 hero_img"
+                            height="50" alt="Site Logo" style="margin-top: -1px;" />
                         <h1 class="display-6 hero_text">Pre-ordina i nuovi set LEGO®
                             Fortnite</h1>
                         <div class="col-lg-6 ">
-                            <p class="lead mb-4 hero_text">Fino a esaurimento scorte. Spedizione dal
-                                giorno
+                            <p class=" mb-4 hero_text">Fino a esaurimento scorte. Spedizione dal
+                                giornod
                                 1/10.</p>
 
                         </div>
@@ -33,7 +33,7 @@
 
         <div class="d-flex justify-content-between col-12">
 
-            <div class="container-fluid mt-2">
+            <div class="container-fluid mt-2 iary">
                 <div class="row ">
                     <div class="col-12">
                         <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 row-gap-5 row-gap-lg-0 list-unstyled my-5 "
@@ -106,12 +106,12 @@
 
     {{--  ------NUoviProdotti --}}
     <div class="container mt-3">
-        <div class="row d-flex flex-row  justify-content-between">
+        <div class="row d-flex flex-row  justify-content-between ">
             <div class="  col-12 col-md-5">
                 <h2 class="text-danger text-center font-weight-bold">{{ __('ui.new_products') }}</h2>
 
 
-                <div class="swiper w-75 h-75 w-lg-50  h-lg-75 border border-danger border-5 rounded">
+                <div class="swiper w-75 h-75 w-lg-50  h-lg-100 border border-danger border-5 rounded">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
