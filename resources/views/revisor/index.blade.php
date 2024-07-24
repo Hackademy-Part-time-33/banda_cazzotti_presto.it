@@ -126,12 +126,12 @@
                     <span class="text-warning fs-1 font-bold ">></span>
                 </button>    
                 @endif
-                
-                
-            </div>
-        </div>
+                </div>
+
+
+
         <div class="col-12 col-md-5 d-flex justify-content-center">
-            <div class=" ps-4 d-flex flex-column justify-content-between mt-5 ">
+            <div class=" ps-4 d-flex flex-column justify-content-center mt-5 ">
                 <div>
                     <h1 class="revisiona">{{ $article_to_check->title }}</h1>
                     <h3 class="revisiona"> Autore: {{ $article_to_check->user->name }}</h3>
