@@ -4,14 +4,14 @@
 
 
     {{--   IMMAGINE INIZIALE --}}
-    <div class="container-fluid w-100">
+    <div class="container-fluid w-100 ">
         <div class="row w-100">
-            <div class="col-12 w-100">
+            <div class="col-12">
                 <div id="firtSection" style=" background-image: url('{{ asset('immagini-progetto/hero.webp') }}')"
                     class="mt-2 mb-2 d-flex align-items-center rounded  ">
                     <div class="px-4 py-5 my-5">
-                        <img src="{{ asset('fortnite-logo.png') }}" class=" rounded mb-3 ms-2" height="50"
-                            alt="Site Logo" loading="lazy" style="margin-top: -1px;" />
+                        <img src="{{ asset('fortnite-logo.png') }}" class=" img-fluid rounded mb-3 ms-2" height="50"
+                            alt="Site Logo" style="margin-top: -1px;" />
                         <h1 class="display-6 hero_text">Pre-ordina i nuovi set LEGO®
                             Fortnite</h1>
                         <div class="col-lg-6 ">
@@ -77,23 +77,26 @@
         <div class="row d-flex justify-content-between">
 
             <div class=" col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5 align-items-center ">
-                <img src='immagini-progetto/tansformer.webp' class="img-fluid">
+                <img src='immagini-progetto/tansformer.webp' class="img-fluid rounded">
                 <h2><span>Nuovo set Bumblebee Transformers</span></h2>
                 <p><span>Cattura l'attenzione con il prossimo Autobot nell'universo dei Transformers
                         LEGO®</span></p>
-                <a href="#"><button class="btn btn-outline-danger">{{ __('ui.buy_now') }}</button></a>
+                <a href="#"><button role="button" class="button-74">{{ __('ui.buy_now') }}</button></a>
+
+
+
             </div>
             <div class="  col-lg-3 col-sm-12  d-flex flex-column mt-5 mb-5 align-items-center">
-                <img src='immagini-progetto/stealer.webp ' class="img-fluid">
+                <img src='immagini-progetto/stealer.webp ' class="img-fluid rounded">
                 <h2><span>Scopri le novità</span></h2>
                 <p><span>Esplora i set LEGO® più recenti e straordinari attualmente disponibili</span></p>
-                <a href="#"><button class="btn btn-outline-danger">{{ __('ui.buy_now') }}</button></a>
+                <a href="#"><button class="button-74">{{ __('ui.buy_now') }}</button></a>
             </div>
             <div class="  col-lg-3 col-sm-12   d-flex flex-column mt-5 mb-5 align-items-center">
-                <img src='immagini-progetto\play.webp' class="img-fluid">
+                <img src='immagini-progetto\play.webp' class="img-fluid rounded">
                 <h2><span>Unisciti ai dispettosi Minions</span></h2>
                 <p><span>Dai vita alla casa di Gru con i nuovi set Cattivissimo Me 4 LEGO®</span></p>
-                <a href="#"><button class="btn btn-outline-danger">{{ __('ui.buy_now') }}</button></a>
+                <a href="#"><button class="button-74">{{ __('ui.buy_now') }}</button></a>
             </div>
 
         </div>

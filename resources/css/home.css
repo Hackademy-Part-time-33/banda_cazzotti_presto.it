@@ -5,7 +5,7 @@
     --primary-color: #fdf102;
     --secondary-color: #dc3545;
     --third-color: #f8f9fa;
-    --bs-pagination-active-bg:#dc3545;
+    --bs-pagination-active-bg: #dc3545;
 }
 
 /* -----------HOME */
@@ -23,16 +23,17 @@
     color: #f8f9fa;
 }
 
-.page-link.active, .active > .page-link {
+.page-link.active,
+.active>.page-link {
     z-index: 2;
     /* color: var(--bs-pagination-active-color); */
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
-    
+
 }
 
 .page-link {
-    
+
     color: rgba(33, 37, 41, 0.75) !important;
 }
 
@@ -122,9 +123,87 @@ h1 {
 
 
 
-
-
 .categ_home {
     text-decoration: none;
     color: var(--secondary-color);
+}
+
+
+
+
+
+
+/* CSS */
+.button-78 {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 12px;
+    margin: 0;
+    min-height: 44px;
+    outline: none;
+    overflow: visible;
+    padding: 12px 18px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+}
+
+
+/* CSS */
+.button-74 {
+    background-color: var(--secondary-color);
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: black 4px 4px 0 0;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-74:hover {
+    background-color: #db2537;
+}
+
+.button-74:active {
+    box-shadow: black 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+    }
 }
