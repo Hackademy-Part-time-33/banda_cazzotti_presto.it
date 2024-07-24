@@ -116,19 +116,24 @@
                         <span class="text-warning fs-1 font-bold ">></span>
                     </button>    
                     @endif 
-                </div>
-                </div>
-                @else
-                @for ($i = 1; $i < 6; $i++)
-                
-                <div class="carousel-item    @if($i==1) active @endif "  id="carousel1">
-                    <div class="w-100 h-100  d-flex justify-content-center align-items-center">
-                        <img src="{{ asset("immagini-progetto/prodotto$i.webp") }}" class=" rounded shadow "  alt="immaginesegna" >
+
+                    
+                    @else
+                    @for ($i = 1; $i < 6; $i++)
+                    
+                    <div class="carousel-item    @if($i==1) active @endif "  id="carousel1">
+                        <div class="w-100 h-100  d-flex justify-content-center align-items-center">
+                            <img src="{{ asset("immagini-progetto/prodotto$i.webp") }}" class=" rounded shadow "  alt="immaginesegna" >
+                        </div>
                     </div>
+                
+                    @endfor
+                
+                    @endif
                 </div>
-                @endfor
-            
-                @endif
+                </div>
+               
+           
             </div>
 
  {{--  -------------fineCarosello --}}
