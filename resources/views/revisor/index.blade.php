@@ -26,62 +26,78 @@
                     
                     <div class="carousel-item  @if ($loop->first) active @endif" id="carousel1">                                           
                         
-                        <div class="w-100 h-100  d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-50  d-flex justify-content-center align-items-center">
                             <img src="{{ $image->getUrl(500,500) }}" {{-- class="img-fluid rounded shadow d-block w-75" --}}
                             alt="Immagine {{$key + 1}} dell'a   
                             rticolo {{$article_to_check->title}}">
                         </div>
-                        @if ($image->labels)
-                        @foreach ($image->labels as $label)
-                        #{{ $label}}
-                        @endforeach
-                        @else
-                        <p class="fst-italic">No labels</p>
-                        @endif
-                        
-                        <div class="col-md-8 ps-3">
-                            <div class="card-body">
-                                <h5 class="">Ratings</h5>
+
+
+                       
+                       
+                            <div class="card-body position-absolute bottom-0 bg-secondary ">
+
+
+                                <div class="align-self-end">
+                                    @if ($image->labels)
+                                    <div class="text-warning">
+                                    @foreach ($image->labels as $label)
+                                    #{{ $label}}
+                                    @endforeach
+                                    </div>
+                                    @else
+                                    <p class="fst-italic">No labels</p>
+                                    @endif
+                                    </div>
+
+
+
+                                <h5 class="mt-3 text-danger text-center">Ratings</h5>
                                 
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
+                                <div class="d-flex flex-row">
+
+
+
+                                <div class="justify-content-center m-3">
+                                   
                                         <div class="text-center mx-auto {{ $image->adult}}">
                                         </div>
-                                    </div>
-                                    <div class="col-10">adult</div>
+                                   
+                                    <div class="">adult</div>
                                 </div>
                                 
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
+                                <div class=" justify-content-center m-3">
+                                   
                                         <div class="text-center mx-auto {{ $image->violence}}">
                                         </div>    
-                                    </div>
-                                    <div class="col-10"> violence</div>
+                                   
+                                    <div class=""> violence</div>
                                 </div>
                                 
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
+                                <div class=" justify-content-center m-3">
+                                   
                                         <div class="text-center mx-auto {{ $image->spoof}}">
                                         </div>    
-                                    </div>
-                                    <div class="col-10"> spoof</div>
+                                  
+                                    <div class=""> spoof</div>
                                 </div>
                                 
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
+                                <div class="justify-content-center m-3">
+                                    
                                         <div class="text-center mx-auto {{ $image->racy}}">
                                         </div>    
-                                    </div>
-                                    <div class="col-10">racy</div>
+                                   
+                                    <div class="">racy</div>
                                 </div>
                                 
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
+                                <div class=" justify-content-center m-3">
+                        
                                         <div class="text-center mx-auto {{ $image->medical}}">
                                         </div>    
-                                    </div>
-                                    <div class="col-10">medical</div>
-                                </div>    
+                                   
+                                    <div class="">medical</div>
+                                </div> 
+                                 </div>   
                             </div>    
                         </div>                                
                     </div>    
@@ -145,6 +161,7 @@
     
     
     @else
+
     <div class="row justify-content-center align-items-center height-custom text-center">
         
         <div class="col-12">
