@@ -1,6 +1,6 @@
 <x-main>
     <div class="container-fluid">
-        <h1>Lista prodotti</h1>
+        <h1 class="text-center mt-4">Lista prodotti</h1>
        {{--  <table class="table table-striped">
             <thead>
                 <tr>
