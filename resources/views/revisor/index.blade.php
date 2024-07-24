@@ -24,7 +24,10 @@
                     
                     @foreach ($article_to_check->images as $key=>$image)
                     
-                    <div class="carousel-item  @if ($loop->first) active @endif" id="carousel1">                                           
+                    <div class="carousel-item  @if ($loop->first) active @endif" id="carousel1">         
+                        
+                       <div class="w-100 h-100">
+            
                         
                         <div class="w-100 h-50  d-flex justify-content-center align-items-center">
                             <img src="{{ $image->getUrl(500,500) }}" {{-- class="img-fluid rounded shadow d-block w-75" --}}
@@ -35,7 +38,7 @@
 
                        
                        
-                            <div class="card-body position-absolute bottom-0 bg-secondary ">
+                            <div class="card-body position-absolute bottom-0 bg-secondary w-100">
 
 
                                 <div class="align-self-end">
@@ -99,9 +102,21 @@
                                 </div> 
                                  </div>   
                             </div>    
-                        </div>                                
+                        </div> 
+                                                     
                     </div>    
                     @endforeach
+                    @if ($article_to_check->images->count()>1||$article_to_check->images->count()<0)
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        {{-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> --}}
+                        <span class="text-warning fs-1 font-bold "><</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        {{-- <span class="carousel-control-next-icon" aria-hidden="true"></span> --}}
+                        <span class="text-warning fs-1 font-bold ">></span>
+                    </button>    
+                    @endif 
+                </div>
                 </div>
                 @else
                 @for ($i = 1; $i < 6; $i++)
@@ -112,23 +127,11 @@
                     </div>
                 </div>
                 @endfor
+            
+                @endif
             </div>
-                @endif
-                
-                
-                @if ($article_to_check->images->count()>1||$article_to_check->images->count()<0)
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    {{-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> --}}
-                    <span class="text-warning fs-1 font-bold "><</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    {{-- <span class="carousel-control-next-icon" aria-hidden="true"></span> --}}
-                    <span class="text-warning fs-1 font-bold ">></span>
-                </button>    
-                @endif
-                </div>
 
-
+ {{--  -------------fineCarosello --}}
 
         <div class="col-12 col-md-5 d-flex justify-content-center">
             <div class=" ps-4 d-flex flex-column justify-content-center mt-5 ">
@@ -157,7 +160,7 @@
         </div>
     </div>
     
-    {{--  -------------fineCarosello --}}
+   
     
     
     @else
