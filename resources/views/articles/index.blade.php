@@ -1,6 +1,6 @@
 <x-main>
     <div class="container-fluid">
-        <h1>Lista prodotti</h1>
+        <h1 class="text-center mt-4">Lista prodotti</h1>
        {{--  <table class="table table-striped">
             <thead>
                 <tr>
@@ -36,10 +36,10 @@
 
       {{--   <div class="container"></div>
         <div class="row"></div> --}}
-        <div class="d-flex flex-row justify-content-between flex-wrap">
+        <div class="d-flex flex-row justify-content-center  flex-wrap">
                 @forelse($articles as $article)
-               <div class="mt-3">
-                <x-showCard :article="$article" :width=300 />
+               <div class="m-5">
+                <x-showCard :article="$article" :width=300 :height=450/>
             </div>
              {{--    <tr>
                     <td >{{ Str::ucfirst($article->title) }}</td>

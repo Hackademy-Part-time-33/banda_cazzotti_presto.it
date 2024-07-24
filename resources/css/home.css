@@ -5,6 +5,7 @@
     --primary-color: #fdf102;
     --secondary-color: #dc3545;
     --third-color: #f8f9fa;
+    --bs-pagination-active-bg:#dc3545;
 }
 
 /* -----------HOME */
@@ -20,6 +21,19 @@
 
 .hero_text {
     color: #f8f9fa;
+}
+
+.page-link.active, .active > .page-link {
+    z-index: 2;
+    /* color: var(--bs-pagination-active-color); */
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    
+}
+
+.page-link {
+    
+    color: rgba(33, 37, 41, 0.75) !important;
 }
 
 #primocontenitore {
