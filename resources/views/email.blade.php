@@ -1,2 +1,5 @@
-<p>L'utente {{$content['firstname']}} {{$content['lastname']}} con email {{$content['email']}} ti ha mandato un messaggio: {{$content['message']}}</p>
+<p>L'utente {{$content['firstname']}} {{$content['lastname']}}</p>
+<p>con email: {{$content['email']}}</p>
+<p>ti ha mandato il seguente messaggio:</p>
+<p>{{$content['message']}}</p>
 

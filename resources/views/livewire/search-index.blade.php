@@ -98,7 +98,7 @@
                 <div class="d-flex justify-content-center h3">
                     <select class="d-inline form-select form-select-sm mt-3" wire:model.live='priceOrTitle'
                         style="width:35%">
-                        <option value="">{{__('ui.sorting')}}:</option>
+                        <option value="created_at">{{__('ui.sorting')}}:</option>
                         <option value="title">{{__('ui.title')}}</option>
                         <option selected value="price">{{__('ui.price')}}</option>
                         <option selected value="category_id">{{__('ui.category')}}</option>

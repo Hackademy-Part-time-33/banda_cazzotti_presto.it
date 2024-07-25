@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
     }
 
         Article::factory(50)->create();
-        Article::factory(5)->create([
+        Article::factory(1)->create([
             'is_accepted' => null,
         ]);
        

@@ -1,8 +1,8 @@
 <div>
-    
-    
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-   
-    
+
+    <button onclick="topFunction()" class="bg-danger" id="myBtn" title="Go to top">Top</button>
+
+
+
 </div>

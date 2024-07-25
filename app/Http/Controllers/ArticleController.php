@@ -12,6 +12,7 @@ use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Infomail;
+use App\Models\User;
 use Illuminate\Routing\Middleware\ValidateSignature;
 use Illuminate\Console\View\Components\Info;
 use Illuminate\Support\Facades\Auth;
@@ -30,15 +31,15 @@ class ArticleController extends Controller implements HasMiddleware
         if (Auth::check()) {
             
             if (auth()->user()->is_revisor) {
-                $articles= Article::where('is_accepted', true)->orWhere('is_accepted', false)->orderBy('created_at', 'desc')->paginate(5);
+                $articles= Article::where('is_accepted', true)->orWhere('is_accepted', false)->orderBy('created_at', 'desc')->paginate(6);
                 
             }else{
-                $articles= Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(5);
+                $articles= Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
             }
             
         }
         else {
-            $articles= Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(5);
+            $articles= Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
         }
         
         return view('articles.index', compact('articles'));
@@ -106,6 +107,16 @@ class ArticleController extends Controller implements HasMiddleware
     {
         $articles = $category->articles->where('is_accepted', true);
         return view('articles.byCategory',compact('articles','category'));
+    }
+    
+    public function byUser(User $user)
+    {
+        if (!$user) {
+            abort(404, 'Utente non trovato');
+        }
+        
+        $articles = $user->articles->where('is_accepted', true);
+        return view('articles.byUser', compact('articles', 'user'));
     }
     
     public function searchArticles(Request $request)

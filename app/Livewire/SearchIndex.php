@@ -17,7 +17,7 @@ class SearchIndex extends Component
     use WithPagination;
     public $Direction= 'asc'; 
     
-    public $priceOrTitle='';
+    public $priceOrTitle='created_at';
     public $paginateNumber = 10;
     public $paginateNumberTotal = 10;
     public bool $firstPaginate=true;

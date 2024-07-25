@@ -16,6 +16,7 @@ Route::get('/contatti', [PageController::class, 'contacts'])->name('contacts');
 Route::resource('articles', ArticleController::class);
 
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
+Route::get('/user/{user}', [ArticleController::class, 'byUser'])->name('byUser');
 
 Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
