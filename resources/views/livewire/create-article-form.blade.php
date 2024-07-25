@@ -2,11 +2,7 @@
 
     <h6><span class="text-danger">*</span> <u>contrassegna un campo obbligatorio</u></h6>
 
-    @if (session()->has('success'))
-        <div class="alert alert-success text-center">
-            {{ session('success') }}
-        </div>
-    @endif
+   
     <div class="mb-3">
         <label for="title" class="form-label">* Titolo: </label>
         <input type="text"

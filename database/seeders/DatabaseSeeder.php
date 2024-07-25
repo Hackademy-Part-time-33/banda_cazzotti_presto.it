@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
         ]);
     }
 
+
     $categ = Category::where('name', $this->categories[0])->first();
 
         if(!$categ){
@@ -52,10 +53,14 @@ class DatabaseSeeder extends Seeder
         }
     }
 
-        Article::factory(50)->create();
-        Article::factory(1)->create([
-            'is_accepted' => null,
-        ]);
+    User::factory(20)->create([
+        
+        'is_revisor'=> true,
+    ]);
+        // Article::factory(50)->create();
+        // Article::factory(1)->create([
+        //     'is_accepted' => null,
+        // ]);
        
         
     }

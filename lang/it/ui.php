@@ -32,5 +32,5 @@ return [
     'show_more_articles' => 'Mostra più articoli',
     'search_article' => 'Cerca articoli',
     'featured_sets' => 'Set in evidenza',
-    'user_articles' => 'i Tuoi articoli',
+    'user_articles' => 'I Tuoi articoli',
 ];
