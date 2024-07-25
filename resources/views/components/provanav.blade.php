@@ -64,7 +64,7 @@
 
 
             {{-- search --}}
-            <form id="searchForm" class="inline-block mt-2 ms-3" role="search" action="{{ route('articles.search') }}"
+            <form id="searchForm" class="inline-block mt-2 " role="search" action="{{ route('articles.search') }}"
                 method="GET">
                 <div class="input-group ">
                     <button id="searchButton" type="button" class="btn anm_link">
@@ -100,6 +100,7 @@
                                         </svg>
                                         {{ auth()->user()->name }}
                                     </a>
+
                                     <ul class="dropdown-menu">
                                         <li>
                                             <a class="dropdown-item"
