@@ -1,11 +1,11 @@
 <div class="container">
-    <footer class="row  pt-5 mt-5  d-flex justify-content-center">
+    <footer class="row  pt-5 mt-5    ">
         <hr>
-        <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <div class="col mb-3  ">
+            <a href="/" class="d-flex mb-3 link-body-emphasis text-decoration-none">
                 <img src="{{ asset('LogoLegoNavbar.png') }}" class="bg-danger rounded" height="50" alt="Site Logo"
-                    loading="lazy" style="margin-top: -1px;" />
-                <p class="text-body-secondary pt-5">© 2024</p>
+                    loading="lazy" style="margin-top: ;" />
+                <p class="text-body-secondary pt-4">© 2024</p>
             </a>
 
         </div>

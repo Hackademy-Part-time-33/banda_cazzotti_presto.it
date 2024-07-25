@@ -36,12 +36,13 @@
             <div class="container-fluid mt-2 iary">
                 <div class="row ">
                     <div class="col-12">
-                        <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 row-gap-5 row-gap-lg-0 list-unstyled my-5 "
+                        <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 row-gap-5 row-gap-lg-0 list-unstyled mt-5 pt-5 "
                             id="categorie" data-test="quicklinks" style="background-color: transparent ">
                             @foreach ($category as $category)
                                 <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
                                     <a href="{{ route('byCategory', $category) }}" data-test="quicklink-link-0"
-                                        target="" class="QuickLinks_labelDark__UY_rw categ_home" rel="noreferrer">
+                                        target="" class="QuickLinks_labelDark__UY_rw categ_home mx-2 "
+                                        rel="noreferrer">
                                         <picture data-test="quicklink-image" fit="crop">
                                             <source type="image/webp"
                                                 srcset="{{ asset('immagini-progetto/prodotto' . $category->id . '.webp') }}"
@@ -111,7 +112,7 @@
                 <h2 class="text-danger text-center font-weight-bold">{{ __('ui.new_products') }}</h2>
 
 
-                <div class="swiper w-75 h-75 w-lg-50  h-lg-100 border border-danger border-5 rounded">
+                <div class="swiper w-75 h-75 w-lg-50  h-lg-100 border border-dark py-2 border-3 rounded">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -157,7 +158,7 @@
                         <div class="swiper-wrapper ">
                             <!-- Slides -->
                             @forelse ($fullArticle as $article)
-                                <div class="swiper-slide w-75 border border-warning border-2 ms-4 bg-danger">
+                                <div class="swiper-slide w-75 border border-dark my-3 border-2 ms-4 bg-danger">
                                     {{--   <x-card :article="$article" :width=15 :height=480  :limit=10 /> --}}
                                     @if ($article->images->isnotEmpty())
                                         <img src="{{ $article->images->first()->getUrl(500, 500) }}" alt=""
