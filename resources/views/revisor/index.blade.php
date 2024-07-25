@@ -18,7 +18,7 @@
     @if ($article_to_check)
     <div class="row mt-5">
         <div class="col-12 col-md-5">
-            <div id="carouselExample" class="carousel slide  border border-danger border-5 {{-- overflow-x-hidden --}}" >
+            <div id="carouselExample" class="carousel slide  border border-danger border-5 {{-- overflow-x-hidden --}} " >
                 <div class="carousel-inner">
                     @if ($article_to_check->images->count())
                     
@@ -149,17 +149,18 @@
                 </div>
                 
                 <div class="d-flex pb-4 justify-cointent-around ">
+                     <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="post">
+                        @csrf
+                        @method('PATCH')
+                        <button class="btn btn-danger py-2 px-5 fw-bold m-2">Accetta</button>
+                    </form>
                     <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="post">
                         @csrf
                         @method('PATCH')
                         <button class="btn btn-danger py-2 px-5 fw-bold m-2">Rifiuta</button>
                     </form>
                     
-                    <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="post">
-                        @csrf
-                        @method('PATCH')
-                        <button class="btn btn-danger py-2 px-5 fw-bold m-2">Accetta</button>
-                    </form>
+                   
                 </div>
             </div>
         </div>
