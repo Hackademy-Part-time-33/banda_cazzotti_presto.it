@@ -85,7 +85,7 @@
                     </div>
                 @else
                     <div class="align-items-center justify-content-center me-3 ">
-                        <p class=" text-center fw-semibold">{{ __('ui.hello') }} <a href="{{route('byUser',['user'=> auth()->user()->id])}}">{{ auth()->user()->name }}</a> !</p>
+
                         <div class="container-flex">
                             {{-- dropdown area utente --}}
                             <div class="d-flex justify-content-center align-items-center ">
@@ -105,6 +105,12 @@
                                             <a class="dropdown-item"
                                                 href="{{ route('articles.create') }}">{{ __('ui.insert_ad') }}</a>
                                         </li>
+                                        <li>
+
+                                            <a class="dropdown-item" {{ __('ui.user_articles') }}
+                                                href="{{ route('byUser', ['user' => auth()->user()->id]) }}">{{ __('ui.user_articles') }}</a>
+                                        </li>
+
                                         @if (Auth::user()->is_revisor)
                                             <li>
                                                 <a class=" dropdown-item"
