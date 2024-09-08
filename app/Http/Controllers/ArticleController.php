@@ -66,7 +66,7 @@ class ArticleController extends Controller implements HasMiddleware
         ];
         
         Mail::to($request->email)->send(new Infomail($data));
-        return redirect()->route('homepage')->with('Success', 'Mail Inviata con successo!');
+        return redirect()->route('homepage')->with('success', 'Mail Inviata con successo!');
     }
     
     /**

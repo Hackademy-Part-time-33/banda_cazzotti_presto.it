@@ -70,7 +70,7 @@ class CreateArticleForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        session()->flash('success', 'Articolo creato correttamente');
+        session()->flash('success', 'Articolo creato correttamente in fase di revisione');
         $this->reset();
     }
 

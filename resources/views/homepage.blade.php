@@ -1,7 +1,16 @@
 <x-main>
 
 
-
+    @if (session()->has('success'))
+    <div class="alert alert-success text-center mt-5">
+        {{ session('success') }}
+    </div>
+@endif
+@if (session()->has('message'))
+    <div class="alert alert-success text-center mt-5">
+        {{ session('message') }}
+    </div>
+@endif
 
     {{--   IMMAGINE INIZIALE --}}
     <div class="container-fluid w-100 ">

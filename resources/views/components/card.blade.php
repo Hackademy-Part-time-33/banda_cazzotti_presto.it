@@ -6,7 +6,7 @@
             <h4 class="card-title" >{{Str::limit($article->title, $limit ?? 15) }}</h4>
             <h6 class="card-subtitle ">{{ Str::replace('.', ',', sprintf("%.2f", $article->price))}} €</h6>
             <div class="d-flex justify-content-evenly align-items-center mt-4">
-                <a href="{{route('articles.show', compact('article'))}}" class="btn custom-button me-2">Dettaglio</a>
+                <a href="{{route('articles.show', compact('article'))}}" class="btn custom-button me-2">{{__('ui.view')}}</a>
                 <a href="{{route('byCategory', ['category'=>$article->category])}}" class="btn custom-button @if (request()->routeIs('byCategory')) disabled @endif" >{{$article->category->name}}</a>
             </div>
         </div>
