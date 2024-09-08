@@ -1,4 +1,12 @@
 {
+  "_bootstrap-C1-XIpUa.js": {
+    "file": "assets/bootstrap-C1-XIpUa.js",
+    "name": "bootstrap"
+  },
+  "_bootstrap.esm-DiaGsIN1.js": {
+    "file": "assets/bootstrap.esm-DiaGsIN1.js",
+    "name": "bootstrap.esm"
+  },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
     "file": "assets/bootstrap-icons-BOrJxbIo.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
@@ -12,10 +20,43 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/css/home.css": {
+    "file": "assets/home-Dbn2F28B.css",
+    "src": "resources/css/home.css",
+    "isEntry": true
+  },
+  "resources/css/navbar.css": {
+    "file": "assets/navbar-BL5oLuxW.css",
+    "src": "resources/css/navbar.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
-    "file": "assets/app-DT4W9gV2.js",
+    "file": "assets/app-CUPwBUrd.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.esm-DiaGsIN1.js",
+      "_bootstrap-C1-XIpUa.js"
+    ]
+  },
+  "resources/js/home.js": {
+    "file": "assets/home-CcDJ8cBK.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.esm-DiaGsIN1.js"
+    ]
+  },
+  "resources/js/navbar.js": {
+    "file": "assets/navbar-2QWI5wE-.js",
+    "name": "navbar",
+    "src": "resources/js/navbar.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.esm-DiaGsIN1.js",
+      "_bootstrap-C1-XIpUa.js"
+    ]
   }
 }

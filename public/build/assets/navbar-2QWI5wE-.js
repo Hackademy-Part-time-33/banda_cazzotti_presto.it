@@ -1,0 +1,1 @@
+import"./bootstrap.esm-DiaGsIN1.js";import"./bootstrap-C1-XIpUa.js";document.getElementById("searchButton").addEventListener("click",function(){const e=document.getElementById("searchInput");e.classList.contains("expanded")&&e.value.trim()!==""?document.getElementById("searchForm").submit():(e.classList.toggle("expanded"),e.focus())});
