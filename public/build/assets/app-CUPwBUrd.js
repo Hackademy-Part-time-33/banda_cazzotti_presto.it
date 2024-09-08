@@ -1,1 +1,0 @@
-import"./bootstrap.esm-DiaGsIN1.js";import"./bootstrap-C1-XIpUa.js";let o=document.getElementById("myBtn");window.onscroll=function(){n()};o.addEventListener("click",t);function n(){document.body.scrollTop>20||document.documentElement.scrollTop>20?o.style.display="block":o.style.display="none"}function t(){document.body.scrollTop=0,document.documentElement.scrollTop=0}
