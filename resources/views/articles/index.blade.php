@@ -39,7 +39,7 @@
         <div class="d-flex flex-row justify-content-center  flex-wrap">
                 @forelse($articles as $article)
                <div class="m-5">
-                <x-showCard :article="$article" :width=300 :height=450/>
+                <x-showcard :article="$article" :width=300 :height=450/>
             </div>
              {{--    <tr>
                     <td >{{ Str::ucfirst($article->title) }}</td>
