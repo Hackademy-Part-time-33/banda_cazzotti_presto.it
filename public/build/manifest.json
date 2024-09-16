@@ -60,6 +60,12 @@
       "_bootstrap-C1-XIpUa.js"
     ]
   },
+  "resources/js/readGithub.js": {
+    "file": "assets/readGithub-DBCEDscm.js",
+    "name": "readGithub",
+    "src": "resources/js/readGithub.js",
+    "isEntry": true
+  },
   "resources/js/show.js": {
     "file": "assets/show-DiaGsIN1.js",
     "name": "show",
