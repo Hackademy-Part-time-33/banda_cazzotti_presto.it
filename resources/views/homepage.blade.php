@@ -1,6 +1,5 @@
 <x-main>
-
-
+    @vite(['resources/js/readGithub.js'])
     @if (session()->has('success'))
     <div class="alert alert-success text-center mt-5">
         {{ session('success') }}
