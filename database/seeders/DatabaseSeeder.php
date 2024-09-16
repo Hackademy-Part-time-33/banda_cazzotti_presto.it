@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
         }
     }
 
-    User::factory(20)->create([
+    User::factory(26)->create([
         
         'is_revisor'=> true,
     ]);
@@ -61,7 +61,8 @@ class DatabaseSeeder extends Seeder
         // Article::factory(1)->create([
         //     'is_accepted' => null,
         // ]);
-       
+       $this->call(ArticleSeeder::class);
+       $this->call(ImageSeeder::class);
         
     }
 }
