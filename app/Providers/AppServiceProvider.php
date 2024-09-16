@@ -15,10 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        Paginator::useBootstrapFive();
-        if(Schema::hasTable('categories')){
-            View::share('categories', Category::orderBy('name')->get());
-        }
+        //
     }
 
     /**
