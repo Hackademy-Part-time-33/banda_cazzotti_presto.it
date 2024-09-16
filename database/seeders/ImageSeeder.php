@@ -16,16 +16,19 @@ class ImageSeeder extends Seeder
         $jsonPath= base_path('database/products.json');
         $json=file_get_contents($jsonPath);
         $articles= json_decode($json,true);
-
         foreach($articles as $article){
             Article::create([
-                'title' => $article['title'],
-            'description' => $article['description'],
-            'price' =>  $article['price'],
-            'category_id' =>  $article['category_id'],
-            'user_id' =>  $article['user_id'],
-            'is_accepted'=> $article['is_accepted'],
+                
+    "path"=>$article['title'],
+    "article_id"=> $article['article_id'],
+        "labels"=> $article['labels'],
+    "adult"=> $article['adult'],
+    "spoof"=> $article['spoof'],
+    "medical"=> $article['medical'],
+    "violence"=> $article['violence'],
+    "racy"=> $article['racy'],
             ]);
         }
+        }
     }
-}
+
