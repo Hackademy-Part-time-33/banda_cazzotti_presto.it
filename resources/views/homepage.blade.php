@@ -44,7 +44,7 @@
             <div class="container-fluid mt-2 iary">
                 <div class="row ">
                     <div class="col-12">
-                        <ul class="QuickLinks_ul__WOQOA d-flex justify-content-center grid gap column-gap-3 row-gap-5 row-gap-lg-0 list-unstyled mt-5 pt-5 "
+                        <ul class="QuickLinks_ul__WOQOA d-flex flex-wrap justify-content-center grid gap column-gap-3 row-gap-5 row-gap-lg-0 list-unstyled mt-5 pt-5 "
                             id="categorie" data-test="quicklinks" style="background-color: transparent ">
                             @foreach ($category as $category)
                                 <li data-test="quicklink-link " class="QuickLinks_li__z6b2v ">
