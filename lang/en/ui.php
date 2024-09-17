@@ -33,4 +33,5 @@ return [
     'search_article' => 'Search article',
     'featured_sets' => 'Featured sets',
     'user_articles' => 'Your articles',
+    'user_chats' => 'Your chats',
 ];

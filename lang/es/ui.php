@@ -33,4 +33,5 @@ return [
     'search_article' => 'buscar artículos',
     'featured_sets' => 'Sets destacados',
     'user_articles' => 'tus artículos',
+    'user_chats' => 'Tus chats',
 ];

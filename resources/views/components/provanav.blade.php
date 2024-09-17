@@ -111,6 +111,11 @@
                                             <a class="dropdown-item" {{ __('ui.user_articles') }}
                                                 href="{{ route('byUser', ['user' => auth()->user()->id]) }}">{{ __('ui.user_articles') }}</a>
                                         </li>
+                                        <li>
+
+                                            <a class="dropdown-item" {{ __('ui.user_chats') }}
+                                                href="/chatify">{{ __('ui.user_chats') }}</a>
+                                        </li>
 
                                         @if (Auth::user()->is_revisor)
                                             <li>
