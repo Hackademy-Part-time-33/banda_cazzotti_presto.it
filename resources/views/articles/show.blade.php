@@ -53,6 +53,13 @@
           <p>{{$article->description}}</p>
           <p>Categoria: <a href="{{route('byCategory', ['category' => $article->category])}}">{{$article->category->name}}</a></p>
           <p>Autore del prodotto: <a href="{{route('byUser',['user'=>$article->user->id])}}">{{$article->user->name}}</a></p>
+          @auth
+        
+          
+            @if (auth()->user()->id!=$article->user->id)
+            <p><a class="btn custom-button" href=" /chatify/{{$article->user->id }}" >Contatta Venditore</a></p>
+            @endif
+          @endauth
         </div>
       </div>
     </div>
