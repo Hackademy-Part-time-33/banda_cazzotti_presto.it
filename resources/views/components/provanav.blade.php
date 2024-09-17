@@ -114,7 +114,13 @@
                                         <li>
 
                                             <a class="dropdown-item" {{ __('ui.user_chats') }}
-                                                href="/chatify">{{ __('ui.user_chats') }}</a>
+                                                href="/chatify">{{ __('ui.user_chats') }}
+                                                @if (\App\Models\ChMessage::UnreadMessagesCount()>0 )
+                                                <span
+                                                class="badge rounded-pill bg-danger">{{ \App\Models\ChMessage::UnreadMessagesCount() }}
+                                                </span>                                                    
+                                                @endif
+                                            </a>
                                         </li>
 
                                         @if (Auth::user()->is_revisor)
