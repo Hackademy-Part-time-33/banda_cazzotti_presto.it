@@ -115,11 +115,10 @@
 
                                             <a class="dropdown-item" {{ __('ui.user_chats') }}
                                                 href="/chatify">{{ __('ui.user_chats') }}
-                                                @if (\App\Models\ChMessage::UnreadMessagesCount()>0 )
-                                                <span
-                                                class="badge rounded-pill bg-danger">{{ \App\Models\ChMessage::UnreadMessagesCount() }}
-                                                </span>                                                    
+                                                @if(isset($unreadMessagesCount) && $unreadMessagesCount > 0)
+                                                <span class="badge rounded-pill bg-danger">{{ $unreadMessagesCount }}</span>
                                                 @endif
+
                                             </a>
                                         </li>
 
