@@ -1,10 +1,21 @@
-# Descrizione del Progetto
+## [Link al sito](https://prestolego.marcodevito.it)
+# Funzionalità del Sito
+Il sito offre un’esperienza completa e intuitiva per la pubblicazione e la gestione di annunci. Gli utenti possono registrarsi e accedere a un'area dedicata dove possono creare e pubblicare i loro annunci. Ogni annuncio include informazioni dettagliate come titolo, prezzo e descrizione, e il sistema consente agli utenti di selezionare da una lista di categorie predefinite per facilitare la ricerca e l'organizzazione degli annunci.
 
-Il sito è un'applicazione web sviluppata con Laravel che permette agli utenti di pubblicare e gestire annunci, fornendo funzionalità avanzate come gestione delle immagini, revisione degli annunci e selezione multilingue. Di seguito sono illustrate le principali funzionalità del progetto.
+Una volta effettuato l'accesso, gli utenti possono aggiungere più immagini ai loro annunci in un'unica operazione e visualizzare un'anteprima delle immagini prima della pubblicazione. Nel caso in cui sia necessario apportare modifiche, è possibile rimuovere le immagini singolarmente. Le immagini vengono automaticamente ridimensionate per mantenere un aspetto coerente e ottimizzato sul sito, senza rallentare l’esperienza dell’utente, poiché questo processo avviene in modo asincrono.
 
-## [Link al sito]("https://prestolego.marcodevito.it)
+Il sito implementa inoltre un sistema avanzato di gestione degli annunci attraverso una funzione di revisione. Gli utenti possono fare richiesta per diventare revisori tramite una sezione “Lavora con noi” dedicata, che prevede l'invio di una mail con i dettagli della richiesta. I revisori hanno quindi accesso a una sezione speciale del sito dove possono esaminare gli annunci in attesa, con la possibilità di accettarli o rifiutarli in modo semplice e immediato.
 
-## Funzionalità del Sito
+L’interfaccia del sito è multilingue, offrendo agli utenti la possibilità di selezionare la lingua preferita tramite un sistema di bandiere. Attualmente, sono supportate l'italiano, l'inglese e lo spagnolo, con la possibilità di aggiungere altre lingue extra secondo le esigenze.
+
+Per migliorare ulteriormente l’esperienza utente, il sito integra l'intelligenza artificiale di Google Vision per analizzare le immagini caricate. Questa funzionalità permette di rilevare i volti nelle immagini e applicare automaticamente una censura per garantire la privacy degli utenti. Inoltre, ogni immagine viene arricchita con un watermark, posizionato in modo visibile, per preservare l'originalità dei contenuti.
+
+La ricerca all'interno del sito è facilitata da un sistema full-text che consente di cercare gli annunci in base a titolo, descrizione e categoria. Questa funzione rende la piattaforma uno strumento efficace per trovare rapidamente gli annunci più pertinenti alle proprie esigenze.
+
+In sintesi, il sito si presenta come una piattaforma completa e versatile per la gestione degli annunci, con una particolare attenzione alla sicurezza, alla privacy, e all'efficienza, il tutto corredato da un’interfaccia utente chiara e multilingue.
+
+
+## User stories seguite:
 
 ### 1. Registrazione e Inserimento Annunci (US 1)
 - Gli utenti possono registrarsi e accedere al portale per inserire i loro annunci.
