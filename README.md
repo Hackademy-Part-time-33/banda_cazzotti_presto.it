@@ -2,6 +2,8 @@
 
 Il sito è un'applicazione web sviluppata con Laravel che permette agli utenti di pubblicare e gestire annunci, fornendo funzionalità avanzate come gestione delle immagini, revisione degli annunci e selezione multilingue. Di seguito sono illustrate le principali funzionalità del progetto.
 
+## [Link al sito]("https://prestolego.marcodevito.it)
+
 ## Funzionalità del Sito
 
 ### 1. Registrazione e Inserimento Annunci (US 1)
