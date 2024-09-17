@@ -57,7 +57,7 @@
         
           
             @if (auth()->user()->id!=$article->user->id)
-            <p><a class="btn custom-button" href=" /chatify/{{$article->user->id }}" >Contatta Venditore</a></p>
+            <p><a class="btn custom-button" href=" /chatify/{{$article->user->id }}">Contatta Venditore</a></p>
             @endif
           @endauth
         </div>
