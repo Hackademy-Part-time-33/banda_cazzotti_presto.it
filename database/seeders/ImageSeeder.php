@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Article;
+use App\Models\Image;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,20 +14,21 @@ class ImageSeeder extends Seeder
      */
     public function run(): void
     {
-        $jsonPath= base_path('database/products.json');
+        $jsonPath= base_path('database/images.json');
         $json=file_get_contents($jsonPath);
-        $articles= json_decode($json,true);
-        foreach($articles as $article){
-            Article::create([
+        $images= json_decode($json,true);
+
+        foreach($images as $article){
+            Image::create([
                 
-    "path"=>$article['title'],
+    "path"=>$article['path'],
     "article_id"=> $article['article_id'],
         "labels"=> $article['labels'],
-    "adult"=> $article['adult'],
-    "spoof"=> $article['spoof'],
-    "medical"=> $article['medical'],
-    "violence"=> $article['violence'],
-    "racy"=> $article['racy'],
+    "adult"=> $images[63]['adult'],
+    "spoof"=> $images[63]['spoof'],
+    "medical"=> $images[63]['medical'],
+    "violence"=> $images[63]['violence'],
+    "racy"=> $images[63]['racy'],
             ]);
         }
         }

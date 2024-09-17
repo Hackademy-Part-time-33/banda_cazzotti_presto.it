@@ -13,10 +13,10 @@ class ArticleSeeder extends Seeder
      */
     public function run(): void
     {
-        $jsonPath= base_path('database/images.json');
+        $jsonPath= base_path('database/products.json');
         $json=file_get_contents($jsonPath);
         $articles= json_decode($json,true);
-
+        
         
         foreach($articles as $article){
             Article::create([
